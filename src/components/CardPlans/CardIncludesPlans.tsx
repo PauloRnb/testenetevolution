@@ -2,9 +2,10 @@ import { EthernetPort } from "lucide-react";
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface CardIncludesPlansProps extends HTMLAttributes<HTMLDivElement> {}
-
-export function CardIncludesPlans({ ...rest }: CardIncludesPlansProps) {
+export function CardIncludesPlans({
+  className,
+  ...rest
+}: HTMLAttributes<HTMLDivElement>) {
   return (
     <div className="flex flex-col gap-1">
       <p className="text-xs text-zinc-600 font-medium">INCLUSO NO PLANO:</p>
@@ -13,7 +14,7 @@ export function CardIncludesPlans({ ...rest }: CardIncludesPlansProps) {
           {...rest}
           className={twMerge(
             "w-6 h-6 bg-orange-600 rounded flex items-center justify-center",
-            rest.className
+            className
           )}
         >
           <EthernetPort size={16} className="text-white" />
