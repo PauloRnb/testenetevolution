@@ -11,17 +11,17 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-interface CardButtonModalProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {}
-
-export function CardButtonModal({ ...rest }: CardButtonModalProps) {
+export function CardButtonModal({
+  className,
+  ...rest
+}: ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <button
           {...rest}
           type="button"
-          className={twMerge("text-white", rest.className)}
+          className={twMerge("text-white", className)}
         >
           <CirclePlus size={16} strokeWidth={2} />
         </button>
@@ -37,7 +37,7 @@ export function CardButtonModal({ ...rest }: CardButtonModalProps) {
             <h3 className="text-gray-800 font-semibold text-lg dark:text-white">
               Áreas de Cobertura:
             </h3>
-            <ul className="grid grid-cols-2 gap-y-2 list-disc  list-inside">
+            <ul className="grid grid-cols-2 gap-y-2 list-disc list-inside">
               <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
                 Cigana
               </li>
@@ -61,7 +61,7 @@ export function CardButtonModal({ ...rest }: CardButtonModalProps) {
         </main>
         <DialogFooter>
           <p className="text-gray-700 text-xs dark:text-gray-200 font-medium tracking-[0.01rem]">
-            <span className="text-sm text-orange-600 font-semibold">*</span>
+            <span className="text-sm text-orange-600 font-semibold">*</span>{" "}
             Consulte viabilidade para sua região.
           </p>
         </DialogFooter>
