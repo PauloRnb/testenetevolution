@@ -4,10 +4,9 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { CirclePause, CirclePlay } from "lucide-react";
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
 
-// Slides (pode extrair para outro arquivo futuramente)
+// Slides
 const slides = [
   {
     id: 1,
@@ -36,55 +35,39 @@ const slides = [
 ];
 
 export function EmblaCarousel() {
-  const autoplayDelay = 3000;
+  const autoplayDelay = 5000;
   const autoplayRef = useRef(
-    Autoplay({ delay: autoplayDelay, stopOnInteraction: true })
+    Autoplay({ delay: autoplayDelay, stopOnInteraction: false })
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     autoplayRef.current,
   ]);
 
-  const [progressKey, setProgressKey] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInitialized, setHasInitialized] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   useEffect(() => {
     if (!emblaApi) return;
 
     autoplayRef.current.play();
-    setIsPlaying(true);
-    setHasInitialized(true);
 
-    const onSlideChange = () => {
-      setProgressKey((prev) => prev + 1);
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
     };
-    emblaApi.on("select", onSlideChange);
+
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on("select", onSelect);
+    onSelect();
 
     return () => {
-      emblaApi.off("select", onSlideChange);
+      emblaApi.off("select", onSelect);
     };
   }, [emblaApi]);
 
   const onPointerDown = useCallback(() => {
-    if (!emblaApi || !isPlaying) return;
     autoplayRef.current.stop();
-    setIsPlaying(false);
-    setProgressKey(0);
-  }, [emblaApi, isPlaying]);
-
-  const toggleAutoplay = useCallback(() => {
-    if (!emblaApi) return;
-    if (isPlaying) {
-      autoplayRef.current.stop();
-      setIsPlaying(false);
-      setProgressKey(0);
-    } else {
-      autoplayRef.current.play();
-      setIsPlaying(true);
-      setProgressKey((prev) => prev + 1);
-    }
-  }, [emblaApi, isPlaying]);
+  }, []);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -93,6 +76,11 @@ export function EmblaCarousel() {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
 
   return (
     <div className="embla w-full mx-auto">
@@ -144,6 +132,22 @@ export function EmblaCarousel() {
       </div>
 
       <div className="embla__controls flex items-center justify-between mt-4 px-5 xl:px-0">
+        {/* Dots */}
+        <div className="flex items-center gap-2">
+          {scrollSnaps.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              aria-label={`Ir para o slide ${index + 1}`}
+              className={`w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
+                index === selectedIndex
+                  ? "bg-blue-700 dark:bg-white"
+                  : "bg-gray-300 dark:bg-zinc-600"
+              }`}
+            />
+          ))}
+        </div>
+        {/* Botões esquerda/direita */}
         <div className="embla__buttons flex gap-2">
           <button
             className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
@@ -162,29 +166,6 @@ export function EmblaCarousel() {
             <IoIosArrowDropright size={32} className="md:size-9" />
           </button>
         </div>
-
-        {hasInitialized && isPlaying && (
-          <div className="relative w-36 h-2 bg-transparent border dark:border-zinc-600 border-zinc-400 rounded overflow-hidden">
-            <div
-              key={progressKey}
-              className="absolute top-0 left-0 h-full dark:bg-white bg-blue-700 animate-progress"
-              style={{ animationDuration: `${autoplayDelay}ms` }}
-            />
-          </div>
-        )}
-
-        <button
-          type="button"
-          onClick={toggleAutoplay}
-          aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}
-          className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
-        >
-          {isPlaying ? (
-            <CirclePause size={32} strokeWidth={1.4} className="md:size-9" />
-          ) : (
-            <CirclePlay size={32} strokeWidth={1.4} className="md:size-9" />
-          )}
-        </button>
       </div>
     </div>
   );
