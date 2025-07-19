@@ -97,14 +97,3 @@
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
-
-.rt-BaseTabListTrigger:where([data-state="active"], [data-active]):before {
-  box-sizing: border-box;
-  content: "";
-  background-color: var(--accent-indicator);
-  height: 3px !important;
-  position: absolute;
-  bottom: 0 !important;
-  left: 0;
-  right: 0;
-}
