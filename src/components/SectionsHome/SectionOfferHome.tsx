@@ -2,6 +2,7 @@
 
 import { Tabs } from "@ark-ui/react/tabs";
 import EmblaCarouselPlans from "./EmblaCarouselPlans";
+import EmblaCarousel from "./Plans/EmblaCarousel";
 
 export function SectionOfferHome() {
   return (
@@ -40,7 +41,9 @@ export function SectionOfferHome() {
             <Tabs.Content value="combos" className="py-7">
               <EmblaCarouselPlans />
             </Tabs.Content>
-            <Tabs.Content value="internet" className="py-7"></Tabs.Content>
+            <Tabs.Content value="internet" className="py-7">
+              <EmblaCarousel />
+            </Tabs.Content>
           </Tabs.Root>
         </div>
       </div>

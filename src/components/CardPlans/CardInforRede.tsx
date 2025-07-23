@@ -21,7 +21,7 @@ export function CardInforRede({
         <h3 className="text-zinc-800 font-semibold text-base leading-4 mt-[2px] dark:text-white">
           Infraestrutura de Rede
         </h3>
-        <p className="text-xs leading-[14px] mt-1 text-zinc-600 dark:text-zinc-200">
+        <p className="text-xs w-[270px] leading-[14px] mt-1 text-zinc-600 dark:text-zinc-200">
           Cabeamos todos os dispositivos que necessitam de uma conexão cabeada.
         </p>
       </div>

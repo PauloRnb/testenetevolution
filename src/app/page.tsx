@@ -1,5 +1,6 @@
 import { SectionContent } from "@/components/SectionsHome/SectionContent";
 import { SectionHome } from "@/components/SectionsHome/SectionHome";
+
 import "@radix-ui/themes/styles.css";
 
 export default function Home() {

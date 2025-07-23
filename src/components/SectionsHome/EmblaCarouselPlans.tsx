@@ -1,398 +1,382 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
-import React, { useCallback, useEffect, useState } from "react";
+import { EmblaOptionsType } from "embla-carousel";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from "./EmblaCarouselArrowButton";
 import useEmblaCarousel from "embla-carousel-react";
-import { Card } from "../CardPlans";
-import { Separator } from "../ui/separator";
-import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import { Card } from "@/components/CardPlans"; // Ajuste o caminho conforme seu projeto
+import { Separator } from "@/components/ui/separator";
 
-export default function EmblaCarouselPlans() {
+type PropType = {
+  options?: EmblaOptionsType;
+};
+
+const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    containScroll: "trimSnaps",
+    loop: false,
+    ...options,
   });
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
 
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on("select", onSelect);
-    onSelect();
-  }, [emblaApi, onSelect]);
+  const cards = [
+    <Card.Root key={0} className="dark:bg-zinc-800 border-orange-600">
+      <Card.Top>
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" />
+          <Card.Modal />
+        </Card.Mtop>
+        <Card.Item text="500MEGA" />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className="bg-orange-600"
+            text="Download 500Mbps"
+            textTwo="Upload 250Mbps"
+          />
+          <Separator className="h-[2px] bg-zinc-300 rounded-full dark:bg-orange-600" />
+          <Card.Includes>
+            <Card.Combo>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logotelecine.webp"
+                  alt="Logo Telecine"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logoparamountplus.webp"
+                  alt="Logo Paramount"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </Card.Combo>
+          </Card.Includes>
+          <Card.Price text="109" />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger text="ASSINE AGORA" />
+    </Card.Root>,
+    <Card.Root key={1} className="border-blue-700">
+      <Card.Top className="bg-blue-700">
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Modal />
+        </Card.Mtop>
+        <Card.Item text="600MEGA" />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className="bg-blue-700"
+            text="Download 600Mbps"
+            textTwo="Upload 300Mbps"
+          />
+          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Card.Includes>
+            <Card.Combo>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logotelecine.webp"
+                  alt="Logo Telecine"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logosportv.webp"
+                  alt="Logo SporTV"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logoparamountplus.webp"
+                  alt="Logo Paramount"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </Card.Combo>
+          </Card.Includes>
+          <Card.Price text="123" />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger
+        text="ASSINE AGORA"
+        className="bg-blue-700 hover:bg-blue-500"
+      />
+    </Card.Root>,
+    <Card.Root key={2} className="border-blue-700">
+      <Card.Top className="bg-blue-700">
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Modal />
+        </Card.Mtop>
+        <Card.Item text="600MEGA" />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className="bg-blue-700"
+            text="Download 600Mbps"
+            textTwo="Upload 300Mbps"
+          />
+          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Card.Includes>
+            <Card.Combo>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logoespn.webp"
+                  alt="Logo ESPN"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logosportv.webp"
+                  alt="Logo SporTV"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logoparamountplus.webp"
+                  alt="Logo Paramount"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </Card.Combo>
+          </Card.Includes>
+          <Card.Price text="124" />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger
+        text="ASSINE AGORA"
+        className="bg-blue-700 hover:bg-blue-500"
+      />
+    </Card.Root>,
+    <Card.Root key={3} className="border-blue-700">
+      <Card.Top className="bg-blue-700">
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Modal />
+        </Card.Mtop>
+        <Card.Item text="600MEGA" />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className="bg-blue-700"
+            text="Download 600Mbps"
+            textTwo="300Mbps"
+          />
+          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Card.Includes>
+            <Card.Combo>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logotelecine.webp"
+                  alt="Logo Telecine"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logosportv.webp"
+                  alt="Logo SporTV"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </Card.Combo>
+          </Card.Includes>
+          <Card.Price text="125" />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger
+        text="ASSINE AGORA"
+        className="bg-blue-700 hover:bg-blue-500"
+      />
+    </Card.Root>,
+    <Card.Root key={4} className="border-blue-700">
+      <Card.Top className="bg-blue-700">
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Modal />
+        </Card.Mtop>
+        <Card.Item text="600MEGA" />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className="bg-blue-700"
+            text="Download 600Mbps"
+            textTwo="Upload 300Mbps"
+          />
+          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Card.Includes>
+            <Card.Combo>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logosportv.webp"
+                  alt="Logo SporTV"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logopremiere.webp"
+                  alt="Logo ESPN"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logomax.webp"
+                  alt="Logo Max"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logoparamountplus.webp"
+                  alt="Logo Paramount"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </Card.Combo>
+          </Card.Includes>
+          <Card.Price text="169" />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger
+        text="ASSINE AGORA"
+        className="bg-blue-700 hover:bg-blue-500"
+      />
+    </Card.Root>,
+    <Card.Root key={5} className="border-blue-700">
+      <Card.Top className="bg-blue-700">
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Modal />
+        </Card.Mtop>
+        <Card.Item text="600MEGA" />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className="bg-blue-700"
+            text="Download 600Mbps"
+            textTwo="Upload 300Mbps"
+          />
+          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Card.Includes>
+            <Card.Combo>
+              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                <Image
+                  src="/logomax.webp"
+                  alt="Logo Max"
+                  width={30}
+                  height={30}
+                  priority
+                />
+              </div>
+            </Card.Combo>
+          </Card.Includes>
+          <Card.Price text="119" />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger
+        text="ASSINE AGORA"
+        className="bg-blue-700 hover:bg-blue-500"
+      />
+    </Card.Root>,
+  ];
 
   return (
-    <div className="embla">
+    <section className="embla">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex gap-5">
-          <div className="embla__slide shrink-0 min-w-[335px]">
-            {/* CARD 1 */}
-            <Card.Root className="dark:bg-zinc-800 border-orange-600">
-              <Card.Top>
-                <Card.Mtop>
-                  <Card.Items text="MAIS VENDIDO" />
-                  <Card.Modal />
-                </Card.Mtop>
-                <Card.Item text="500MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="bg-orange-600"
-                    text="Download 500Mbps"
-                    textTwo="Upload 250Mbps"
-                  />
-                  <Separator className="h-[2px] bg-zinc-300 rounded-full dark:bg-orange-600" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logotelecine.webp"
-                          alt="Logo Telecine"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logoparamountplus.webp"
-                          alt="Logo Paramount"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="109" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.Trigger text="ASSINE AGORA" />
-            </Card.Root>
-          </div>
-          <div className="embla__slide shrink-0 min-w-[335px]">
-            {/* CARD 2 */}
-            <Card.Root className="border-blue-700">
-              <Card.Top className="bg-blue-700">
-                <Card.Mtop>
-                  <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-                  <Card.Modal />
-                </Card.Mtop>
-                <Card.Item text="600MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="bg-blue-700"
-                    text="Download 600Mbps"
-                    textTwo="Upload 300Mbps"
-                  />
-                  <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logotelecine.webp"
-                          alt="Logo Telecine"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logosportv.webp"
-                          alt="Logo SporTV"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logoparamountplus.webp"
-                          alt="Logo Paramount"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="123" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.Trigger
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.Root>
-          </div>
-          <div className="embla__slide shrink-0 min-w-[335px]">
-            {/* CARD 3 */}
-            <Card.Root className="border-blue-700">
-              <Card.Top className="bg-blue-700">
-                <Card.Mtop>
-                  <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-                  <Card.Modal />
-                </Card.Mtop>
-                <Card.Item text="600MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="bg-blue-700"
-                    text="Download 600Mbps"
-                    textTwo="Upload 300Mbps"
-                  />
-                  <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logoespn.webp"
-                          alt="Logo ESPN"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logosportv.webp"
-                          alt="Logo SporTV"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logoparamountplus.webp"
-                          alt="Logo Paramount"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="124" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.Trigger
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.Root>
-          </div>
-          <div className="embla__slide shrink-0 min-w-[335px]">
-            {/* CARD 4 */}
-            <Card.Root className="border-blue-700">
-              <Card.Top className="bg-blue-700">
-                <Card.Mtop>
-                  <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-                  <Card.Modal />
-                </Card.Mtop>
-                <Card.Item text="600MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="bg-blue-700"
-                    text="Download 600Mbps"
-                    textTwo="300Mbps"
-                  />
-                  <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logotelecine.webp"
-                          alt="Logo Telecine"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logosportv.webp"
-                          alt="Logo SporTV"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="125" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.Trigger
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.Root>
-          </div>
-          <div className="embla__slide shrink-0 min-w-[335px]">
-            {/* CARD 5 */}
-            <Card.Root className="border-blue-700">
-              <Card.Top className="bg-blue-700">
-                <Card.Mtop>
-                  <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-                  <Card.Modal />
-                </Card.Mtop>
-                <Card.Item text="600MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="bg-blue-700"
-                    text="Download 600Mbps"
-                    textTwo="Upload 300Mbps"
-                  />
-                  <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logosportv.webp"
-                          alt="Logo SporTV"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logopremiere.webp"
-                          alt="Logo ESPN"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logomax.webp"
-                          alt="Logo Max"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logoparamountplus.webp"
-                          alt="Logo Paramount"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="169" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.Trigger
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.Root>
-          </div>
-          <div className="embla__slide shrink-0 min-w-[335px]">
-            {/* CARD 6 */}
-            <Card.Root className="border-blue-700">
-              <Card.Top className="bg-blue-700">
-                <Card.Mtop>
-                  <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-                  <Card.Modal />
-                </Card.Mtop>
-                <Card.Item text="600MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="bg-blue-700"
-                    text="Download 600Mbps"
-                    textTwo="Upload 300Mbps"
-                  />
-                  <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
-                        <Image
-                          src="/logomax.webp"
-                          alt="Logo Max"
-                          width={30}
-                          height={30}
-                          priority
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="119" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.Trigger
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.Root>
-          </div>
+          {cards.map((card, index) => (
+            <div className="embla__slide shrink-0 min-w-[335px]" key={index}>
+              {card}
+            </div>
+          ))}
         </div>
       </div>
-      <div className="flex items-center justify-between mt-4">
-        {/* Dots abaixo do carrossel */}
-        <div className="flex justify-center gap-2">
+
+      <div className="embla__controls flex items-center justify-between mt-4">
+        <div className="embla__dots flex items-center gap-2 md:gap-3">
           {scrollSnaps.map((_, index) => (
-            <button
+            <DotButton
               key={index}
-              onClick={() => emblaApi?.scrollTo(index)}
-              className={`w-[30px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
+              onClick={() => onDotButtonClick(index)}
+              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 ${
                 index === selectedIndex
-                  ? "bg-blue-700 dark:bg-white"
-                  : "bg-gray-300 dark:bg-zinc-600"
+                  ? "embla__dot--selected bg-blue-700 dark:bg-white"
+                  : "bg-zinc-300 dark:bg-zinc-500"
               }`}
             />
           ))}
         </div>
-        <div className="flex items-center gap-5">
-          <button
-            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
-            onClick={scrollPrev}
-            type="button"
-            aria-label="Voltar Slider"
-          >
-            <IoIosArrowDropleft size={32} className="md:size-9" />
-          </button>
-          <button
-            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
-            onClick={scrollNext}
-            type="button"
-            aria-label="Proximo Slider"
-          >
-            <IoIosArrowDropright size={32} className="md:size-9" />
-          </button>
+        <div className="embla__buttons relative flex gap-2">
+          <PrevButton
+            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300"
+            onClick={onPrevButtonClick}
+            disabled={prevBtnDisabled}
+          />
+          <NextButton
+            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300"
+            onClick={onNextButtonClick}
+            disabled={nextBtnDisabled}
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default EmblaCarouselPlans;

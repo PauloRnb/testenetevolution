@@ -139,10 +139,10 @@ export function EmblaCarousel() {
               key={index}
               onClick={() => scrollTo(index)}
               aria-label={`Ir para o slide ${index + 1}`}
-              className={`w-[30px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
+              className={`w-[25px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
                 index === selectedIndex
                   ? "bg-blue-700 dark:bg-white"
-                  : "bg-gray-300 dark:bg-zinc-600"
+                  : "bg-zinc-300 dark:bg-zinc-500"
               }`}
             />
           ))}
