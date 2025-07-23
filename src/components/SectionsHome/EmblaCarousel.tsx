@@ -139,7 +139,7 @@ export function EmblaCarousel() {
               key={index}
               onClick={() => scrollTo(index)}
               aria-label={`Ir para o slide ${index + 1}`}
-              className={`w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
+              className={`w-[30px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
                 index === selectedIndex
                   ? "bg-blue-700 dark:bg-white"
                   : "bg-gray-300 dark:bg-zinc-600"
@@ -153,7 +153,7 @@ export function EmblaCarousel() {
             className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
             onClick={scrollPrev}
             type="button"
-            aria-label="Previous slide"
+            aria-label="Voltar Slider"
           >
             <IoIosArrowDropleft size={32} className="md:size-9" />
           </button>
@@ -161,7 +161,7 @@ export function EmblaCarousel() {
             className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
             onClick={scrollNext}
             type="button"
-            aria-label="Next slide"
+            aria-label="Proximo Slider"
           >
             <IoIosArrowDropright size={32} className="md:size-9" />
           </button>

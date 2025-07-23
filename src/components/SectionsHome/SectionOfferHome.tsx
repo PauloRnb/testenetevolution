@@ -1,6 +1,7 @@
+"use client";
+
 import { Tabs } from "@ark-ui/react/tabs";
-import { Card } from "../CardPlans";
-import { Separator } from "../ui/separator";
+import EmblaCarouselPlans from "./EmblaCarouselPlans";
 
 export function SectionOfferHome() {
   return (
@@ -36,30 +37,10 @@ export function SectionOfferHome() {
               <Tabs.Indicator className="absolute ml-1 bottom-[-6px] h-[4px] w-[160px] translate-x-[0px] bg-blue-700 transition-all duration-300 rounded-full dark:bg-cyan-400" />
             </Tabs.List>
 
-            <Tabs.Content value="combos" className="py-4">
-              {/* CARD MAIN */}
-              <Card.Root>
-                <Card.Top>
-                  <Card.Mtop>
-                    <Card.Items text="MAIS VENDIDO" />
-                    <Card.Modal />
-                  </Card.Mtop>
-                  <Card.Item text="300MEGA" />
-                </Card.Top>
-                <Card.Content>
-                  <Card.Infor>
-                    <Card.List />
-                    <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-                    <Card.Includes />
-                    <Card.Price text="69" />
-                  </Card.Infor>
-                </Card.Content>
-                <Card.Trigger text="ASSINE AGORA" />
-              </Card.Root>
+            <Tabs.Content value="combos" className="py-7">
+              <EmblaCarouselPlans />
             </Tabs.Content>
-            <Tabs.Content value="internet" className="p-4">
-              Vue Content
-            </Tabs.Content>
+            <Tabs.Content value="internet" className="py-7"></Tabs.Content>
           </Tabs.Root>
         </div>
       </div>

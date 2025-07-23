@@ -5,5 +5,5 @@ interface CardContentInforProps {
 }
 
 export function CardContentInfor({ children }: CardContentInforProps) {
-  return <div className="flex flex-col gap-5 ml-[15px]">{children}</div>;
+  return <div className="flex flex-col gap-5">{children}</div>;
 }

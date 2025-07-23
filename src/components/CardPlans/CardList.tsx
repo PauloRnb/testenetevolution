@@ -8,31 +8,43 @@ import {
 import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
-export function CardList({
-  className,
-  ...rest
-}: HTMLAttributes<HTMLDivElement>) {
+interface CardListProps extends HTMLAttributes<HTMLDivElement> {
+  text: string;
+  textTwo: string;
+}
+
+export function CardList({ className, text, textTwo, ...rest }: CardListProps) {
   return (
-    <ul className="grid grid-cols-1 gap-y-1">
+    <ul className="grid grid-cols-1 gap-y-1 ml-[15px]">
       {[
         {
           icon: (
             <CirclePercent
               size={14}
               strokeWidth={1.8}
-              className="text-zinc-600"
+              className="text-zinc-600 dark:text-white"
             />
           ),
           label: "Instalação Grátis",
         },
         {
           icon: (
-            <Headset size={14} strokeWidth={1.8} className="text-zinc-600" />
+            <Headset
+              size={14}
+              strokeWidth={1.8}
+              className="text-zinc-600 dark:text-white"
+            />
           ),
           label: "Suporte Online 24H",
         },
         {
-          icon: <Wifi size={14} strokeWidth={1.8} className="text-zinc-600" />,
+          icon: (
+            <Wifi
+              size={14}
+              strokeWidth={1.8}
+              className="text-zinc-600 dark:text-white"
+            />
+          ),
           label: "Wi-Fi de Alta Performance",
         },
         {
@@ -40,20 +52,20 @@ export function CardList({
             <CloudDownload
               size={14}
               strokeWidth={1.8}
-              className="text-zinc-600"
+              className="text-zinc-600 dark:text-white"
             />
           ),
-          label: "Download 500Mbps",
+          label: text, // Agora funciona como string vinda via props
         },
         {
           icon: (
             <CloudUpload
               size={14}
               strokeWidth={1.8}
-              className="text-zinc-600"
+              className="text-zinc-600 dark:text-white"
             />
           ),
-          label: "Upload 250Mbps",
+          label: textTwo, // Também via props
         },
       ].map(({ icon, label }, index) => (
         <li key={index} className="flex items-center gap-1">
@@ -66,7 +78,9 @@ export function CardList({
           ></div>
           <div className="flex items-center gap-[2px]">
             {icon}
-            <span className="text-sm text-zinc-600">{label}</span>
+            <span className="text-sm text-zinc-600 dark:text-white">
+              {label}
+            </span>
           </div>
         </li>
       ))}

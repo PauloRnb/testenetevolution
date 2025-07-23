@@ -1,12 +1,19 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
-interface CardContentProps {
+interface CardContentProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 }
 
-export function CardRoot({ children }: CardContentProps) {
+export function CardRoot({ children, ...rest }: CardContentProps) {
   return (
-    <div className="w-full bg-white rounded-2xl flex flex-col justify-between p-3 select-none gap-y-5 shadow-sm">
+    <div
+      {...rest}
+      className={twMerge(
+        "w-full bg-white rounded-2xl flex flex-col justify-between p-3 select-none gap-y-5 shadow-sm dark:bg-zinc-800 dark:border-2",
+        rest.className
+      )}
+    >
       {children}
     </div>
   );
