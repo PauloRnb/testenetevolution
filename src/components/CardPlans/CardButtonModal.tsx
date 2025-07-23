@@ -6,13 +6,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { CardButtonMore } from "./CardButtonMore";
+
+import { CirclePlus } from "lucide-react";
 
 export function CardButtonModal() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <CardButtonMore />
+        <button type="button" className="text-white">
+          <CirclePlus size={16} strokeWidth={2} />
+        </button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
