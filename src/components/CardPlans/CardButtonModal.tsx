@@ -1,7 +1,3 @@
-import { ButtonHTMLAttributes } from "react";
-import { twMerge } from "tailwind-merge";
-import { CirclePlus } from "lucide-react";
-
 import {
   Dialog,
   DialogContent,
@@ -10,21 +6,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { CardButtonMore } from "./CardButtonMore";
 
-export function CardButtonModal({
-  className,
-  ...rest
-}: ButtonHTMLAttributes<HTMLButtonElement>) {
+export function CardButtonModal() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button
-          {...rest}
-          type="button"
-          className={twMerge("text-white", className)}
-        >
-          <CirclePlus size={16} strokeWidth={2} />
-        </button>
+        <CardButtonMore />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
