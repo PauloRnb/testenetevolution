@@ -3,12 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { EmblaOptionsType } from "embla-carousel";
-import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import { DotButton, useDotButton } from "./Plans/EmblaCarouselDotButton";
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "./EmblaCarouselArrowButton";
+} from "./Plans/EmblaCarouselArrowButton";
 import useEmblaCarousel from "embla-carousel-react";
 import { Card } from "@/components/CardPlans"; // Ajuste o caminho conforme seu projeto
 import { Separator } from "@/components/ui/separator";
