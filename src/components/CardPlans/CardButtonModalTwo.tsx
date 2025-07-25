@@ -144,7 +144,7 @@ export function CardButtonModalTwo({
                 INCLUSO NO PLANO:
               </p>
               <div className="flex flex-col gap-[2px] mt-1">
-                <div className="w-6 h-6 bg-orange-600 rounded flex items-center justify-center">
+                <div className="w-6 h-6 bg-blue-700 rounded flex items-center justify-center">
                   <EthernetPort size={16} className="text-white" />
                 </div>
                 <div>
