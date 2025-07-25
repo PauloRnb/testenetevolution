@@ -12,6 +12,10 @@ import { CardContentInfor } from "./CardContentInfor";
 import { CardContentTopModal } from "./CardContentTopModal";
 import { CardPlansCombos } from "./CardPlansCombos";
 import { CardInforRede } from "./CardInforRede";
+import { CardButtonSubsCombos } from "./CardButtonSubsCombos";
+import { CardButtonModalCombos } from "./CardButtonModalCombos";
+import { CardBtnModal } from "./CardBtnModal";
+import { CardButtonModalTwo } from "./CardButtonModalTwo";
 
 export const Card = {
   Root: CardRoot,
@@ -25,7 +29,11 @@ export const Card = {
   Item: CardContentItemsTop,
   Items: CardContentTopItems,
   Modal: CardButtonModal,
+  ModalTwo: CardButtonModalTwo,
   Mtop: CardContentTopModal,
   Combo: CardPlansCombos,
   Rede: CardInforRede,
+  BtnCombos: CardButtonSubsCombos,
+  ModalCombos: CardButtonModalCombos,
+  ModalBox: CardBtnModal,
 };

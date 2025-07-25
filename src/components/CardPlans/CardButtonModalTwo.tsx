@@ -17,9 +17,9 @@ import {
   CloudUpload,
   EthernetPort,
 } from "lucide-react";
-import { ReactNode } from "react";
+import { HtmlHTMLAttributes, ReactNode } from "react";
 
-interface CardButtonModalProps {
+interface CardButtonModalTwoProps extends HtmlHTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   textMbOne: string;
   textMbTwo: string;
@@ -29,7 +29,7 @@ interface CardButtonModalProps {
   customContent?: ReactNode;
 }
 
-export function CardButtonModal({
+export function CardButtonModalTwo({
   children,
   textMbOne,
   textMbTwo,
@@ -37,7 +37,7 @@ export function CardButtonModal({
   textPriceOne,
   textPriceTwo,
   customContent,
-}: CardButtonModalProps) {
+}: CardButtonModalTwoProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -57,19 +57,19 @@ export function CardButtonModal({
         <main className="flex flex-col items-start pt-2 gap-8 md:overflow-y-scroll pb-[2rem]">
           <div className="flex flex-col gap-1 w-full px-5">
             <div className="flex flex-col">
-              <h3 className="text-3xl font-bold text-orange-600 leading-[30px]">
+              <h3 className="text-3xl font-bold text-blue-700 leading-[30px]">
                 {textMbOne}
               </h3>
               <p className="text-sm font-medium text-zinc-600 leading-[14px] dark:text-white">
                 100% FIBRA ÓPTICA
               </p>
             </div>
-            <Separator className="!w-10 h-[3px] bg-orange-600 rounded-full" />
+            <Separator className="!w-10 h-[3px] bg-blue-700 rounded-full" />
           </div>
           <div>
             <ul className="grid grid-cols-1 gap-y-1 px-5">
               <li className="flex items-center gap-1">
-                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="w-[2px] h-[14px] bg-blue-700 rounded-full shrink-0"></div>
                 <div className="flex items-center gap-[2px]">
                   <CirclePercent
                     size={14}
@@ -82,7 +82,7 @@ export function CardButtonModal({
                 </div>
               </li>
               <li className="flex items-center gap-1">
-                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="w-[2px] h-[14px] bg-blue-700 rounded-full shrink-0"></div>
                 <div className="flex items-center gap-[2px]">
                   <Headset
                     size={14}
@@ -95,7 +95,7 @@ export function CardButtonModal({
                 </div>
               </li>
               <li className="flex items-center gap-1">
-                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="w-[2px] h-[14px] bg-blue-700 rounded-full shrink-0"></div>
                 <div className="flex items-center gap-[2px]">
                   <Wifi
                     size={14}
@@ -108,7 +108,7 @@ export function CardButtonModal({
                 </div>
               </li>
               <li className="flex items-center gap-1">
-                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="w-[2px] h-[14px] bg-blue-700 rounded-full shrink-0"></div>
                 <div className="flex items-center gap-[2px]">
                   <CloudDownload
                     size={14}
@@ -121,7 +121,7 @@ export function CardButtonModal({
                 </div>
               </li>
               <li className="flex items-center gap-1">
-                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="w-[2px] h-[14px] bg-blue-700 rounded-full shrink-0"></div>
                 <div className="flex items-center gap-[2px]">
                   <CloudUpload
                     size={14}
@@ -159,10 +159,9 @@ export function CardButtonModal({
               </div>
             </div>
           )}
-
           <div className="flex flex-col px-5 gap-2">
             <div>
-              <span className="line-through text-sm text text-orange-600 fontm">
+              <span className="line-through text-sm text text-blue-700 fontm">
                 {textPriceOne}
               </span>
             </div>
@@ -192,7 +191,7 @@ export function CardButtonModal({
         </main>
         <DialogFooter className="bg-zinc-300 fixed bottom-0 w-full h-32 p-5 md:h-24 rounded-t-md dark:bg-zinc-800">
           <p className="text-sm leading-4 text-zinc-700 font-medium dark:text-zinc-300">
-            <span className="text-base text-orange-600">*</span>A velocidade da
+            <span className="text-base text-blue-700">*</span>A velocidade da
             conexão pode sofrer oscilações e pode variar de acordo com alguns
             fatores externos: Distancia, numero de dispositivos conectados
             simultaneamente, sites ou apps acessados e posicionamento do

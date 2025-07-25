@@ -1,14 +1,18 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { AnchorHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface CardButtonSubsProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface CardButtonSubsCombosProps
+  extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
 }
 
-export function CardButtonSubs({ text, ...rest }: CardButtonSubsProps) {
+export function CardButtonSubsCombos({
+  text,
+  ...rest
+}: CardButtonSubsCombosProps) {
   return (
     <a
-      href="https://wa.me/5585997362750?text=Olá, gostaria de saber sobre os planos sem combos."
+      href="https://wa.me/5585997362750?text=Olá, gostaria de saber sobre os planos com combos."
       target="_blank"
       rel="noopener noreferrer"
       {...rest}

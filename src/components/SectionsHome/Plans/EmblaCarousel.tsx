@@ -37,7 +37,17 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Top>
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" />
-          <Card.Modal />
+          <Card.Modal
+            textMbOne="300MEGA"
+            textMbTwo="Download 300Mbps"
+            textMbThree="Upload 150Mbps"
+            textPriceOne="de 74,99"
+            textPriceTwo="69"
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos text="ASSINE AGORA" />
+            </Card.ModalBox>
+          </Card.Modal>
         </Card.Mtop>
         <Card.Item text="300MEGA" />
       </Card.Top>
@@ -61,7 +71,20 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="400MEGA"
+            textMbTwo="Download 400Mbps"
+            textMbThree="Upload 200Mbps"
+            textPriceOne="de 84,99"
+            textPriceTwo="79"
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="400MEGA" />
       </Card.Top>
@@ -88,7 +111,20 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="600MEGA"
+            textMbTwo="Download 600Mbps"
+            textMbThree="Upload 300Mbps"
+            textPriceOne="de 104,99"
+            textPriceTwo="99"
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="600MEGA" />
       </Card.Top>
@@ -115,7 +151,20 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="700MEGA"
+            textMbTwo="Download 700Mbps"
+            textMbThree="Upload 350Mbps"
+            textPriceOne="de 124,99"
+            textPriceTwo="117"
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="700MEGA" />
       </Card.Top>
@@ -142,7 +191,20 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="750MEGA"
+            textMbTwo="Download 750Mbps"
+            textMbThree="Upload 375Mbps"
+            textPriceOne="de 129,99"
+            textPriceTwo="124"
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="750MEGA" />
       </Card.Top>
@@ -169,7 +231,20 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-800" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="800MEGA"
+            textMbTwo="Download 800Mbps"
+            textMbThree="Upload 400Mbps"
+            textPriceOne="de 144,99"
+            textPriceTwo="139"
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="800MEGA" />
       </Card.Top>

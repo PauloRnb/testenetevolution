@@ -38,7 +38,44 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Top>
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" />
-          <Card.Modal />
+          <Card.Modal
+            textMbOne="500MEGA"
+            textMbTwo="Download 500Mbps"
+            textMbThree="Upload 250Mbps"
+            textPriceOne="de 113,99"
+            textPriceTwo="109"
+            customContent={
+              <div className="flex flex-col px-5 gap-1">
+                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+                  INCLUSO NO PLANO:
+                </span>
+                <Card.Combo>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logotelecine.webp"
+                      alt="Logo Telecine"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logoparamountplus.webp"
+                      alt="Logo Paramount"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                </Card.Combo>
+              </div>
+            }
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos text="ASSINE AGORA" />
+            </Card.ModalBox>
+          </Card.Modal>
         </Card.Mtop>
         <Card.Item text="500MEGA" />
       </Card.Top>
@@ -75,13 +112,62 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="109" />
         </Card.Infor>
       </Card.Content>
-      <Card.Trigger text="ASSINE AGORA" />
+      <Card.BtnCombos text="ASSINE AGORA" />
     </Card.Root>,
     <Card.Root key={1} className="border-blue-700">
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="600MEGA"
+            textMbTwo="Download 600Mbps"
+            textMbThree="Upload 300Mbps"
+            textPriceOne="de 128,99"
+            textPriceTwo="123"
+            customContent={
+              <div className="flex flex-col px-5 gap-1">
+                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+                  INCLUSO NO PLANO:
+                </span>
+                <Card.Combo>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logotelecine.webp"
+                      alt="Logo Telecine"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logosportv.webp"
+                      alt="Logo SporTV"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logoparamountplus.webp"
+                      alt="Logo Paramount"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                </Card.Combo>
+              </div>
+            }
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="600MEGA" />
       </Card.Top>
@@ -127,7 +213,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="123" />
         </Card.Infor>
       </Card.Content>
-      <Card.Trigger
+      <Card.BtnCombos
         text="ASSINE AGORA"
         className="bg-blue-700 hover:bg-blue-500"
       />
@@ -136,7 +222,56 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="600MEGA"
+            textMbTwo="Download 600Mbps"
+            textMbThree="Upload 300Mbps"
+            textPriceOne="de 129,99"
+            textPriceTwo="124"
+            customContent={
+              <div className="flex flex-col px-5 gap-1">
+                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+                  INCLUSO NO PLANO:
+                </span>
+                <Card.Combo>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logoespn.webp"
+                      alt="Logo ESPN"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logosportv.webp"
+                      alt="Logo SporTV"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logoparamountplus.webp"
+                      alt="Logo Paramount"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                </Card.Combo>
+              </div>
+            }
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="600MEGA" />
       </Card.Top>
@@ -182,7 +317,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="124" />
         </Card.Infor>
       </Card.Content>
-      <Card.Trigger
+      <Card.BtnCombos
         text="ASSINE AGORA"
         className="bg-blue-700 hover:bg-blue-500"
       />
@@ -191,7 +326,47 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="600MEGA"
+            textMbTwo="Download 600Mbps"
+            textMbThree="Upload 300Mbps"
+            textPriceOne="de 130,99"
+            textPriceTwo="125"
+            customContent={
+              <div className="flex flex-col px-5 gap-1">
+                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+                  INCLUSO NO PLANO:
+                </span>
+                <Card.Combo>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logotelecine.webp"
+                      alt="Logo Telecine"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logosportv.webp"
+                      alt="Logo SporTV"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                </Card.Combo>
+              </div>
+            }
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="600MEGA" />
       </Card.Top>
@@ -228,7 +403,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="125" />
         </Card.Infor>
       </Card.Content>
-      <Card.Trigger
+      <Card.BtnCombos
         text="ASSINE AGORA"
         className="bg-blue-700 hover:bg-blue-500"
       />
@@ -237,7 +412,65 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="600MEGA"
+            textMbTwo="Download 600Mbps"
+            textMbThree="Upload 300Mbps"
+            textPriceOne="de 189,99"
+            textPriceTwo="169"
+            customContent={
+              <div className="flex flex-col px-5 gap-1">
+                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+                  INCLUSO NO PLANO:
+                </span>
+                <Card.Combo>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logosportv.webp"
+                      alt="Logo SporTV"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logopremiere.webp"
+                      alt="Logo ESPN"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logomax.webp"
+                      alt="Logo Max"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logoparamountplus.webp"
+                      alt="Logo Paramount"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                </Card.Combo>
+              </div>
+            }
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="600MEGA" />
       </Card.Top>
@@ -292,7 +525,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="169" />
         </Card.Infor>
       </Card.Content>
-      <Card.Trigger
+      <Card.BtnCombos
         text="ASSINE AGORA"
         className="bg-blue-700 hover:bg-blue-500"
       />
@@ -301,7 +534,38 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.Modal />
+          <Card.ModalTwo
+            textMbOne="600MEGA"
+            textMbTwo="Download 600Mbps"
+            textMbThree="Upload 300Mbps"
+            textPriceOne="de 124,99"
+            textPriceTwo="119"
+            customContent={
+              <div className="flex flex-col px-5 gap-1">
+                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+                  INCLUSO NO PLANO:
+                </span>
+                <Card.Combo>
+                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                    <Image
+                      src="/logomax.webp"
+                      alt="Logo Max"
+                      width={30}
+                      height={30}
+                      priority
+                    />
+                  </div>
+                </Card.Combo>
+              </div>
+            }
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="bg-blue-700 hover:bg-blue-500"
+              />
+            </Card.ModalBox>
+          </Card.ModalTwo>
         </Card.Mtop>
         <Card.Item text="600MEGA" />
       </Card.Top>
@@ -329,7 +593,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="119" />
         </Card.Infor>
       </Card.Content>
-      <Card.Trigger
+      <Card.BtnCombos
         text="ASSINE AGORA"
         className="bg-blue-700 hover:bg-blue-500"
       />
