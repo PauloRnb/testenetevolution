@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { AnchorHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface CardButtonSubsProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
