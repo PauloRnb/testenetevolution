@@ -8,6 +8,15 @@ import {
 } from "@/components/ui/dialog";
 
 import { CirclePlus } from "lucide-react";
+import { Separator } from "../ui/separator";
+import {
+  CirclePercent,
+  Headset,
+  Wifi,
+  CloudDownload,
+  CloudUpload,
+  EthernetPort,
+} from "lucide-react";
 
 export function CardButtonModal() {
   return (
@@ -17,43 +26,152 @@ export function CardButtonModal() {
           <CirclePlus size={16} strokeWidth={2} />
         </button>
       </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
+      <DialogContent className="no-scrollbar w-full md:w-full overflow-y-scroll md:max-h-[672px] md:min-h-[480px] md:max-w-[672px] h-full flex flex-col px-0">
+        <DialogHeader className="h-8 w-fit pl-5">
           <DialogTitle asChild>
-            <h2>TEXTO</h2>
+            <h2 className="text-xl font-medium flex text-zinc-900 w-fit flex-row">
+              INFORMAÇÕES DA OFERTA
+            </h2>
           </DialogTitle>
         </DialogHeader>
-        <main className="flex flex-col items-start justify-between">
-          <div className="w-full flex flex-col gap-4">
-            <h3 className="text-gray-800 font-semibold text-lg dark:text-white">
-              Áreas de Cobertura:
-            </h3>
-            <ul className="grid grid-cols-2 gap-y-2 list-disc list-inside">
-              <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
-                Cigana
+        <Separator className="bg-zinc-300" />
+        <main className="flex flex-col items-start pt-2 gap-16">
+          <div className="flex flex-col gap-1 w-full px-5">
+            <div className="flex flex-col">
+              <h3 className="text-3xl font-bold text-orange-600 leading-[30px]">
+                300MEGA
+              </h3>
+              <p className="text-sm font-medium text-zinc-600 leading-[14px]">
+                100% FIBRA ÓPTICA
+              </p>
+            </div>
+            <Separator className="!w-10 h-[3px] bg-orange-600 rounded-full" />
+          </div>
+          <div>
+            <ul className="grid grid-cols-1 gap-y-1 px-5">
+              <li className="flex items-center gap-1">
+                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="flex items-center gap-[2px]">
+                  <CirclePercent
+                    size={14}
+                    strokeWidth={1.8}
+                    className="text-zinc-600 dark:text-white"
+                  />
+                  <span className="text-sm text-zinc-600 dark:text-white">
+                    Instalação Grátis
+                  </span>
+                </div>
               </li>
-              <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
-                Vila Cazé
+              <li className="flex items-center gap-1">
+                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="flex items-center gap-[2px]">
+                  <Headset
+                    size={14}
+                    strokeWidth={1.8}
+                    className="text-zinc-600 dark:text-white"
+                  />
+                  <span className="text-sm text-zinc-600 dark:text-white">
+                    Suporte Online 24H
+                  </span>
+                </div>
               </li>
-              <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
-                Nova Cigana
+              <li className="flex items-center gap-1">
+                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="flex items-center gap-[2px]">
+                  <Wifi
+                    size={14}
+                    strokeWidth={1.8}
+                    className="text-zinc-600 dark:text-white"
+                  />
+                  <span className="text-sm text-zinc-600 dark:text-white">
+                    Wi-Fi de Alta Performance
+                  </span>
+                </div>
               </li>
-              <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
-                Paumirim
+              <li className="flex items-center gap-1">
+                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="flex items-center gap-[2px]">
+                  <CloudDownload
+                    size={14}
+                    strokeWidth={1.8}
+                    className="text-zinc-600 dark:text-white"
+                  />
+                  <span className="text-sm text-zinc-600 dark:text-white">
+                    Download 300Mbps
+                  </span>
+                </div>
               </li>
-              <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
-                Planalto Caucaia
-              </li>
-              <li className="text-sm font-medium text-gray-700 leading-5 dark:text-gray-300">
-                Padre J. Maria I e II
+              <li className="flex items-center gap-1">
+                <div className="w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0"></div>
+                <div className="flex items-center gap-[2px]">
+                  <CloudUpload
+                    size={14}
+                    strokeWidth={1.8}
+                    className="text-zinc-600 dark:text-white"
+                  />
+                  <span className="text-sm text-zinc-600 dark:text-white">
+                    Upload 150Mbps
+                  </span>
+                </div>
               </li>
             </ul>
           </div>
+          <Separator className="bg-zinc-300" />
+          <div className="flex flex-col gap-1 ml-[15px]">
+            <p className="text-xs text-zinc-600 font-medium dark:text-white">
+              INCLUSO NO PLANO:
+            </p>
+            <div className="flex flex-col gap-[2px] mt-1">
+              <div className="w-6 h-6 bg-orange-600 rounded flex items-center justify-center">
+                <EthernetPort size={16} className="text-white" />
+              </div>
+              <div>
+                <h3 className="text-zinc-800 font-semibold text-base leading-4 mt-[2px] dark:text-white">
+                  Infraestrutura de Rede
+                </h3>
+                <p className="text-xs w-[270px] leading-[14px] mt-1 text-zinc-600 dark:text-zinc-200">
+                  Cabeamos todos os dispositivos que necessitam de uma conexão
+                  cabeada.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col px-5 gap-2">
+            <div>
+              <span className="line-through text-sm text text-orange-600 fontm">
+                de 74,99
+              </span>
+            </div>
+            <div className="flex items-center">
+              <div className="flex flex-col gap-1">
+                <span className="text-xs leading-3 text-zinc-600 font-medium dark:text-zinc-300">
+                  POR
+                </span>
+                <span className="text-xl leading-4 text-zinc-600 font-medium dark:text-zinc-300">
+                  R$
+                </span>
+              </div>
+              <strong className="text-zinc-900 text-6xl leading-[45px] ml-1 dark:text-white">
+                69
+              </strong>
+              <div className="flex flex-col gap-1">
+                <span className="text-2xl leading-5 text-zinc-900 font-medium dark:text-white">
+                  ,99*
+                </span>
+                <span className="text-sm leading-4 text-zinc-600 font-medium dark:text-zinc-300">
+                  /MÊS
+                </span>
+              </div>
+            </div>
+          </div>
         </main>
-        <DialogFooter>
-          <p className="text-gray-700 text-xs dark:text-gray-200 font-medium tracking-[0.01rem]">
-            <span className="text-sm text-orange-600 font-semibold">*</span>{" "}
-            Consulte viabilidade para sua região.
+        <DialogFooter className="bg-zinc-300 fixed bottom-0 w-full h-32 p-5">
+          <p className="text-sm leading-4 text-zinc-700 font-medium">
+            <span className="text-base text-orange-600">*</span>A velocidade da
+            conexão pode sofrer oscilações e pode variar de acordo com alguns
+            fatores externos: Distancia, numero de dispositivos conectados
+            simultaneamente, sites ou apps acessados e posicionamento do
+            roteador na sua residencia.
           </p>
         </DialogFooter>
       </DialogContent>

@@ -9,7 +9,7 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButton";
 import useEmblaCarousel from "embla-carousel-react";
-import { Card } from "@/components/CardPlans"; // Ajuste o caminho conforme seu projeto
+import { Card } from "@/components/CardPlans";
 import { Separator } from "@/components/ui/separator";
 
 type PropType = {
@@ -44,7 +44,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-orange-600"
+            className="bg-orange-600 ml-[15px]"
             text="Download 300Mbps"
             textTwo="Upload 150Mbps"
           />
@@ -68,7 +68,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 400Mbps"
             textTwo="Upload 200Mbps"
           />
@@ -95,7 +95,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
@@ -122,7 +122,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 700Mbps"
             textTwo="350Mbps"
           />
@@ -149,7 +149,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 750Mbps"
             textTwo="Upload 375Mbps"
           />
@@ -176,7 +176,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 800Mbps"
             textTwo="Upload 400Mbps"
           />
@@ -199,7 +199,10 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex gap-5">
           {cards.map((card, index) => (
-            <div className="embla__slide shrink-0 min-w-[335px]" key={index}>
+            <div
+              className="embla__slide shrink-0 w-full sm:w-[335px]"
+              key={index}
+            >
               {card}
             </div>
           ))}

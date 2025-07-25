@@ -15,7 +15,7 @@ interface CardListProps extends HTMLAttributes<HTMLDivElement> {
 
 export function CardList({ className, text, textTwo, ...rest }: CardListProps) {
   return (
-    <ul className="grid grid-cols-1 gap-y-1 ml-[15px]">
+    <ul className="grid grid-cols-1 gap-y-1">
       {[
         {
           icon: (

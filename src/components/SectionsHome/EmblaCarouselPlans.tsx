@@ -45,7 +45,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-orange-600"
+            className="bg-orange-600 ml-[15px]"
             text="Download 500Mbps"
             textTwo="Upload 250Mbps"
           />
@@ -88,7 +88,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
@@ -143,7 +143,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
@@ -198,7 +198,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 600Mbps"
             textTwo="300Mbps"
           />
@@ -244,7 +244,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
@@ -308,7 +308,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700"
+            className="bg-blue-700 ml-[15px]"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
@@ -341,7 +341,10 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
         <div className="embla__container flex gap-5">
           {cards.map((card, index) => (
-            <div className="embla__slide shrink-0 min-w-[335px]" key={index}>
+            <div
+              className="embla__slide shrink-0 w-full sm:w-[335px]"
+              key={index}
+            >
               {card}
             </div>
           ))}
