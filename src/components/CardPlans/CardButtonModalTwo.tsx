@@ -45,7 +45,7 @@ export function CardButtonModalTwo({
           <CirclePlus size={16} strokeWidth={2} />
         </button>
       </DialogTrigger>
-      <DialogContent className="!min-w-full gap-4 border p-6 shadow-lg duration-200 !rounded-none md:w-full flex !min-h-dvh flex-col bg-white px-0 pb-[7.5rem] md:pb-[6.5rem] md:!min-h-[672px] md:!min-w-[672px] md:!rounded-2xl overflow-y-scroll">
+      <DialogContent className="!min-w-full gap-4 border p-6 shadow-lg duration-200 !rounded-none md:w-full flex !min-h-dvh flex-col bg-white px-0 pb-[7.5rem] md:pb-[6.5rem] md:!min-h-[672px] md:!min-w-[672px] md:!rounded-2xl">
         <DialogHeader className="h-8 w-fit pl-5">
           <DialogTitle asChild>
             <h2 className="text-xl font-medium flex text-zinc-900 w-fit flex-row">
