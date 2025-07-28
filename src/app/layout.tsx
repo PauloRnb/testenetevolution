@@ -5,7 +5,6 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import SubHeader from "@/components/SubHeader/SubHeader";
-import "@radix-ui/themes/styles.css";
 
 const figtree = Figtree({
   subsets: ["latin"],
