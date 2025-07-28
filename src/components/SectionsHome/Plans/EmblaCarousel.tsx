@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
@@ -14,6 +14,113 @@ import { Separator } from "@/components/ui/separator";
 
 type PropType = {
   options?: EmblaOptionsType;
+};
+
+type CardData = {
+  mb: string;
+  download: string;
+  upload: string;
+  oldPrice: string;
+  newPrice: string;
+  color: string;
+};
+
+const cardsData: CardData[] = [
+  {
+    mb: "300MEGA",
+    download: "Download 300Mbps",
+    upload: "Upload 150Mbps",
+    oldPrice: "de 74,99",
+    newPrice: "69",
+    color: "orange-600",
+  },
+  {
+    mb: "400MEGA",
+    download: "Download 400Mbps",
+    upload: "Upload 200Mbps",
+    oldPrice: "de 84,99",
+    newPrice: "79",
+    color: "blue-700",
+  },
+  {
+    mb: "600MEGA",
+    download: "Download 600Mbps",
+    upload: "Upload 300Mbps",
+    oldPrice: "de 104,99",
+    newPrice: "99",
+    color: "blue-700",
+  },
+  {
+    mb: "700MEGA",
+    download: "Download 700Mbps",
+    upload: "Upload 350Mbps",
+    oldPrice: "de 124,99",
+    newPrice: "117",
+    color: "blue-700",
+  },
+  {
+    mb: "750MEGA",
+    download: "Download 750Mbps",
+    upload: "Upload 375Mbps",
+    oldPrice: "de 129,99",
+    newPrice: "124",
+    color: "blue-700",
+  },
+  {
+    mb: "800MEGA",
+    download: "Download 800Mbps",
+    upload: "Upload 400Mbps",
+    oldPrice: "de 144,99",
+    newPrice: "139",
+    color: "blue-700",
+  },
+];
+
+const CardItem = ({ data, index }: { data: CardData; index: number }) => {
+  const isFirst = index === 0;
+  const borderColor = isFirst ? "border-orange-600" : `border-${data.color}`;
+  const bgColor = isFirst ? "" : `bg-${data.color}`;
+  const textColor = isFirst ? "" : `text-${data.color}`;
+  const buttonClass = isFirst
+    ? ""
+    : `bg-${data.color} hover:bg-${data.color.replace("700", "500")}`;
+
+  return (
+    <Card.Root className={`${borderColor}`}>
+      <Card.Top className={bgColor}>
+        <Card.Mtop>
+          <Card.Items text="MAIS VENDIDO" className={textColor} />
+          <Card.ModalTwo
+            textMbOne={data.mb}
+            textMbTwo={data.download}
+            textMbThree={data.upload}
+            textPriceOne={data.oldPrice}
+            textPriceTwo={data.newPrice}
+          >
+            <Card.ModalBox>
+              <Card.ModalCombos text="ASSINE AGORA" className={buttonClass} />
+            </Card.ModalBox>
+          </Card.ModalTwo>
+        </Card.Mtop>
+        <Card.Item text={data.mb} />
+      </Card.Top>
+      <Card.Content>
+        <Card.Infor>
+          <Card.List
+            className={`ml-[15px] bg-${data.color}`}
+            text={data.download}
+            textTwo={data.upload}
+          />
+          <Separator className={`h-[2px] bg-zinc-300 rounded-full`} />
+          <Card.Includes>
+            <Card.Rede className={`bg-${data.color}`} />
+          </Card.Includes>
+          <Card.Price text={data.newPrice} />
+        </Card.Infor>
+      </Card.Content>
+      <Card.Trigger text="ASSINE AGORA" className={buttonClass} />
+    </Card.Root>
+  );
 };
 
 const EmblaCarousel: React.FC<PropType> = ({ options }) => {
@@ -32,256 +139,20 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  const cards = [
-    <Card.Root key={0} className="dark:bg-zinc-800 border-orange-600">
-      <Card.Top>
-        <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" />
-          <Card.Modal
-            textMbOne="300MEGA"
-            textMbTwo="Download 300Mbps"
-            textMbThree="Upload 150Mbps"
-            textPriceOne="de 74,99"
-            textPriceTwo="69"
-          >
-            <Card.ModalBox>
-              <Card.ModalCombos text="ASSINE AGORA" />
-            </Card.ModalBox>
-          </Card.Modal>
-        </Card.Mtop>
-        <Card.Item text="300MEGA" />
-      </Card.Top>
-      <Card.Content>
-        <Card.Infor>
-          <Card.List
-            className="bg-orange-600 ml-[15px]"
-            text="Download 300Mbps"
-            textTwo="Upload 150Mbps"
-          />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full dark:bg-orange-600" />
-          <Card.Includes>
-            <Card.Rede />
-          </Card.Includes>
-          <Card.Price text="69" />
-        </Card.Infor>
-      </Card.Content>
-      <Card.Trigger text="ASSINE AGORA" />
-    </Card.Root>,
-    <Card.Root key={1} className="border-blue-700">
-      <Card.Top className="bg-blue-700">
-        <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.ModalTwo
-            textMbOne="400MEGA"
-            textMbTwo="Download 400Mbps"
-            textMbThree="Upload 200Mbps"
-            textPriceOne="de 84,99"
-            textPriceTwo="79"
-          >
-            <Card.ModalBox>
-              <Card.ModalCombos
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.ModalBox>
-          </Card.ModalTwo>
-        </Card.Mtop>
-        <Card.Item text="400MEGA" />
-      </Card.Top>
-      <Card.Content>
-        <Card.Infor>
-          <Card.List
-            className="bg-blue-700 ml-[15px]"
-            text="Download 400Mbps"
-            textTwo="Upload 200Mbps"
-          />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-          <Card.Includes>
-            <Card.Rede className="bg-blue-700" />
-          </Card.Includes>
-          <Card.Price text="79" />
-        </Card.Infor>
-      </Card.Content>
-      <Card.Trigger
-        text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
-      />
-    </Card.Root>,
-    <Card.Root key={2} className="border-blue-700">
-      <Card.Top className="bg-blue-700">
-        <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.ModalTwo
-            textMbOne="600MEGA"
-            textMbTwo="Download 600Mbps"
-            textMbThree="Upload 300Mbps"
-            textPriceOne="de 104,99"
-            textPriceTwo="99"
-          >
-            <Card.ModalBox>
-              <Card.ModalCombos
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.ModalBox>
-          </Card.ModalTwo>
-        </Card.Mtop>
-        <Card.Item text="600MEGA" />
-      </Card.Top>
-      <Card.Content>
-        <Card.Infor>
-          <Card.List
-            className="bg-blue-700 ml-[15px]"
-            text="Download 600Mbps"
-            textTwo="Upload 300Mbps"
-          />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-          <Card.Includes>
-            <Card.Rede className="bg-blue-700" />
-          </Card.Includes>
-          <Card.Price text="99" />
-        </Card.Infor>
-      </Card.Content>
-      <Card.Trigger
-        text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
-      />
-    </Card.Root>,
-    <Card.Root key={3} className="border-blue-700">
-      <Card.Top className="bg-blue-700">
-        <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.ModalTwo
-            textMbOne="700MEGA"
-            textMbTwo="Download 700Mbps"
-            textMbThree="Upload 350Mbps"
-            textPriceOne="de 124,99"
-            textPriceTwo="117"
-          >
-            <Card.ModalBox>
-              <Card.ModalCombos
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.ModalBox>
-          </Card.ModalTwo>
-        </Card.Mtop>
-        <Card.Item text="700MEGA" />
-      </Card.Top>
-      <Card.Content>
-        <Card.Infor>
-          <Card.List
-            className="bg-blue-700 ml-[15px]"
-            text="Download 700Mbps"
-            textTwo="350Mbps"
-          />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-          <Card.Includes>
-            <Card.Rede className="bg-blue-700" />
-          </Card.Includes>
-          <Card.Price text="117" />
-        </Card.Infor>
-      </Card.Content>
-      <Card.Trigger
-        text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
-      />
-    </Card.Root>,
-    <Card.Root key={4} className="border-blue-700">
-      <Card.Top className="bg-blue-700">
-        <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
-          <Card.ModalTwo
-            textMbOne="750MEGA"
-            textMbTwo="Download 750Mbps"
-            textMbThree="Upload 375Mbps"
-            textPriceOne="de 129,99"
-            textPriceTwo="124"
-          >
-            <Card.ModalBox>
-              <Card.ModalCombos
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.ModalBox>
-          </Card.ModalTwo>
-        </Card.Mtop>
-        <Card.Item text="750MEGA" />
-      </Card.Top>
-      <Card.Content>
-        <Card.Infor>
-          <Card.List
-            className="bg-blue-700 ml-[15px]"
-            text="Download 750Mbps"
-            textTwo="Upload 375Mbps"
-          />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-          <Card.Includes>
-            <Card.Rede className="bg-blue-700" />
-          </Card.Includes>
-          <Card.Price text="124" />
-        </Card.Infor>
-      </Card.Content>
-      <Card.Trigger
-        text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
-      />
-    </Card.Root>,
-    <Card.Root key={5} className="border-blue-700">
-      <Card.Top className="bg-blue-700">
-        <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-800" />
-          <Card.ModalTwo
-            textMbOne="800MEGA"
-            textMbTwo="Download 800Mbps"
-            textMbThree="Upload 400Mbps"
-            textPriceOne="de 144,99"
-            textPriceTwo="139"
-          >
-            <Card.ModalBox>
-              <Card.ModalCombos
-                text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
-              />
-            </Card.ModalBox>
-          </Card.ModalTwo>
-        </Card.Mtop>
-        <Card.Item text="800MEGA" />
-      </Card.Top>
-      <Card.Content>
-        <Card.Infor>
-          <Card.List
-            className="bg-blue-700 ml-[15px]"
-            text="Download 800Mbps"
-            textTwo="Upload 400Mbps"
-          />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
-          <Card.Includes>
-            <Card.Rede className="bg-blue-700" />
-          </Card.Includes>
-          <Card.Price text="139" />
-        </Card.Infor>
-      </Card.Content>
-      <Card.Trigger
-        text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
-      />
-    </Card.Root>,
-  ];
+  const cardList = useMemo(
+    () =>
+      cardsData.map((data, index) => (
+        <div key={index} className="embla__slide shrink-0 w-full sm:w-[335px]">
+          <CardItem data={data} index={index} />
+        </div>
+      )),
+    []
+  );
 
   return (
     <section className="embla">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
-        <div className="embla__container flex gap-5">
-          {cards.map((card, index) => (
-            <div
-              className="embla__slide shrink-0 w-full sm:w-[335px]"
-              key={index}
-            >
-              {card}
-            </div>
-          ))}
-        </div>
+        <div className="embla__container flex gap-5">{cardList}</div>
       </div>
 
       <div className="embla__controls flex items-center justify-between mt-4">
