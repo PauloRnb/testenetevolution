@@ -58,22 +58,6 @@ const cardsData: CardData[] = [
     newPrice: "117",
     color: "blue-700",
   },
-  {
-    mb: "750MEGA",
-    download: "Download 750Mbps",
-    upload: "Upload 375Mbps",
-    oldPrice: "de 129,99",
-    newPrice: "124",
-    color: "blue-700",
-  },
-  {
-    mb: "800MEGA",
-    download: "Download 800Mbps",
-    upload: "Upload 400Mbps",
-    oldPrice: "de 144,99",
-    newPrice: "139",
-    color: "blue-700",
-  },
 ];
 
 const CardItem = ({ data, index }: { data: CardData; index: number }) => {
