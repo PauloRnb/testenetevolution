@@ -43,7 +43,7 @@ export function CookiesTerms() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleConsent("rejected")}
-              className="transform-colors dark:focus-visible: rounded border border-zinc-300 px-4 py-2 text-sm duration-200 hover:bg-zinc-100 focus:outline-none focus-visible:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+              className="transform-colors rounded border border-zinc-300 px-4 py-2 text-sm duration-200 hover:bg-zinc-100 focus:outline-none focus-visible:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800 dark:focus-visible:bg-zinc-100"
             >
               Rejeitar
             </button>
