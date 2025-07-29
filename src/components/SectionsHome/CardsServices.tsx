@@ -45,14 +45,14 @@ export function CardsServices() {
             {services.map(({ icon, title, description, link }) => (
               <div
                 key={title}
-                className="shadow-sm border group relative h-[14rem] w-full overflow-hidden rounded-xl transition-all duration-700 dark:border-solid bg-zinc-100 lg:shadow-none lg:hover:shadow-sm dark:bg-zinc-900 dark:border-white"
+                className="shadow-sm border border-zinc-100 group relative h-[14rem] w-full overflow-hidden rounded-xl transition-all duration-700 dark:border-solid bg-zinc-100 lg:shadow-none lg:hover:shadow-sm dark:bg-zinc-900 dark:border-white"
               >
                 <div className="flex flex-col gap-y-4 w-full p-4">
                   <div className="flex flex-col">
                     <div className="w-[2.25rem] h-[2.25rem] flex items-center justify-center bg-blue-700 rounded text-white dark:bg-white dark:text-zinc-800">
                       {icon}
                     </div>
-                    <div className="flex flex-col gap-1 mt-1">
+                    <div className="flex flex-col gap-1 mt-2">
                       <h3 className="text-zinc-800 font-semibold text-xl leading-5 dark:text-white">
                         {title}
                       </h3>

@@ -23,6 +23,7 @@ type CardData = {
   oldPrice: string;
   newPrice: string;
   color: string;
+  badgeText?: string;
 };
 
 const cardsData: CardData[] = [
@@ -33,6 +34,7 @@ const cardsData: CardData[] = [
     oldPrice: "de 74,99",
     newPrice: "69",
     color: "orange-600",
+    badgeText: "MAIS ASSINADO",
   },
   {
     mb: "400MEGA",
@@ -41,6 +43,7 @@ const cardsData: CardData[] = [
     oldPrice: "de 84,99",
     newPrice: "79",
     color: "blue-700",
+    badgeText: "PLANO ULTRA",
   },
   {
     mb: "600MEGA",
@@ -49,6 +52,7 @@ const cardsData: CardData[] = [
     oldPrice: "de 104,99",
     newPrice: "99",
     color: "blue-700",
+    badgeText: "PLANO PREMIUM",
   },
   {
     mb: "700MEGA",
@@ -57,26 +61,30 @@ const cardsData: CardData[] = [
     oldPrice: "de 124,99",
     newPrice: "117",
     color: "blue-700",
+    badgeText: "PLANO MASTER",
   },
 ];
 
 const CardItem = ({ data, index }: { data: CardData; index: number }) => {
   const isFirst = index === 0;
+
   const borderColor = isFirst ? "border-orange-600" : `border-${data.color}`;
   const bgColor = isFirst ? "" : `bg-${data.color}`;
   const textColor = isFirst ? "" : `text-${data.color}`;
   const buttonClass = isFirst
-    ? "focus:bg-orange-500 dark:focus:bg-orange-500"
+    ? "focus-visible:bg-orange-500 dark:focus-visible:bg-orange-500 focus:outline-none"
     : `bg-${data.color} hover:bg-${data.color.replace(
         "700",
         "500"
-      )} focus:outline-none focus:bg-blue-500`;
+      )} focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-blue-500`;
 
   return (
     <Card.Root className={`${borderColor}`}>
       <Card.Top className={bgColor}>
         <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className={textColor} />
+          {data.badgeText && (
+            <Card.Items text={data.badgeText} className={textColor} />
+          )}
           <Card.ModalTwo
             textMbOne={data.mb}
             textMbTwo={data.download}

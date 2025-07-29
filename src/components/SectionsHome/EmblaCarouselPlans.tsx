@@ -73,7 +73,10 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             }
           >
             <Card.ModalBox>
-              <Card.ModalCombos text="ASSINE AGORA" />
+              <Card.ModalCombos
+                text="ASSINE AGORA"
+                className="focus-visible:bg-orange-500 dark:focus-visible:bg-orange-500"
+              />
             </Card.ModalBox>
           </Card.Modal>
         </Card.Mtop>
@@ -121,7 +124,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
     <Card.Root key={1} className="border-blue-700">
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Items text="PLANO FAMÍLIA" className="text-blue-700" />
           <Card.ModalTwo
             textMbOne="600MEGA"
             textMbTwo="Download 600Mbps"
@@ -226,7 +229,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
     <Card.Root key={2} className="border-blue-700">
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Items text="PLANO SPORTS" className="text-blue-700" />
           <Card.ModalTwo
             textMbOne="600MEGA"
             textMbTwo="Download 600Mbps"
@@ -349,7 +352,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
     <Card.Root key={3} className="border-blue-700">
       <Card.Top className="bg-blue-700">
         <Card.Mtop>
-          <Card.Items text="MAIS VENDIDO" className="text-blue-700" />
+          <Card.Items text="PLANO MAX" className="text-blue-700" />
           <Card.ModalTwo
             textMbOne="600MEGA"
             textMbTwo="Download 600Mbps"
