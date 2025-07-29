@@ -24,13 +24,13 @@ export function SectionOfferHome() {
             <Tabs.List className="relative border-b-[8px] border-zinc-200 dark:border-zinc-700">
               <Tabs.Trigger
                 value="combos"
-                className="px-5 py-2 text-base font-medium text-zinc-700 hover:text-blue-500 data-[selected]:text-blue-700 w-[160px] dark:text-white dark:hover:text-cyan-500 dark:data-[selected]:text-cyan-400"
+                className="px-5 py-2 text-base font-medium text-zinc-700 hover:text-blue-500 data-[selected]:text-blue-700 w-[160px] dark:text-white dark:hover:text-cyan-500 dark:data-[selected]:text-cyan-400 focus:text-blue-500 focus:outline-none dark:focus:text-cyan-500"
               >
                 Combos
               </Tabs.Trigger>
               <Tabs.Trigger
                 value="internet"
-                className="px-5 py-2 text-base font-medium text-zinc-700 hover:text-blue-500 data-[selected]:text-blue-700 w-[160px] dark:text-white dark:hover:text-cyan-500 dark:data-[selected]:text-cyan-400"
+                className="px-5 py-2 text-base font-medium text-zinc-700 hover:text-blue-500 data-[selected]:text-blue-700 w-[160px] dark:text-white dark:hover:text-cyan-500 dark:data-[selected]:text-cyan-400 focus:text-blue-500 focus:outline-none dark:focus:text-cyan-500"
               >
                 Internet
               </Tabs.Trigger>
@@ -38,10 +38,10 @@ export function SectionOfferHome() {
               <Tabs.Indicator className="absolute ml-1 bottom-[-6px] h-[4px] w-[160px] translate-x-[0px] bg-blue-700 transition-all duration-300 rounded-full dark:bg-cyan-400" />
             </Tabs.List>
 
-            <Tabs.Content value="combos" className="pt-7">
+            <Tabs.Content value="combos" className="pt-7 focus:outline-none">
               <EmblaCarouselPlans />
             </Tabs.Content>
-            <Tabs.Content value="internet" className="pt-7">
+            <Tabs.Content value="internet" className="pt-7 focus:outline-none">
               <EmblaCarousel />
             </Tabs.Content>
           </Tabs.Root>

@@ -112,7 +112,10 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
           <Card.Price text="109" />
         </Card.Infor>
       </Card.Content>
-      <Card.BtnCombos text="ASSINE AGORA" />
+      <Card.BtnCombos
+        text="ASSINE AGORA"
+        className="focus:outline-none focus:bg-orange-500 dark:focus:bg-orange-500"
+      />
     </Card.Root>,
 
     <Card.Root key={1} className="border-blue-700">
@@ -165,7 +168,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             <Card.ModalBox>
               <Card.ModalCombos
                 text="ASSINE AGORA"
-                className="bg-blue-700 hover:bg-blue-500"
+                className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 dark:focus:bg-blue-500"
               />
             </Card.ModalBox>
           </Card.ModalTwo>
@@ -216,7 +219,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
+        className="bg-blue-700 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 dark:focus:bg-blue-500"
       />
     </Card.Root>,
 
@@ -339,7 +342,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
+        className="bg-blue-700 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 dark:focus:bg-blue-500"
       />
     </Card.Root>,
 
@@ -408,7 +411,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500"
+        className="bg-blue-700 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 dark:focus:bg-blue-500"
       />
     </Card.Root>,
   ];
@@ -434,7 +437,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 ${
+              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-white ${
                 index === selectedIndex
                   ? "embla__dot--selected bg-blue-700 dark:bg-white"
                   : "bg-zinc-300 dark:bg-zinc-500"
@@ -444,12 +447,12 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
         </div>
         <div className="embla__buttons relative flex gap-2">
           <PrevButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300"
+            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
             onClick={onPrevButtonClick}
             disabled={prevBtnDisabled}
           />
           <NextButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300"
+            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
             onClick={onNextButtonClick}
             disabled={nextBtnDisabled}
           />

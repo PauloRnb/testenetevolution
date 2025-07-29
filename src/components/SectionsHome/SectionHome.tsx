@@ -7,7 +7,7 @@ import { EmblaCarousel } from "./EmblaCarousel";
 
 export function SectionHome() {
   return (
-    <section id="section-slider" className="bg-white dark:bg-zinc-900">
+    <section id="section-slider" className="bg-white dark:bg-zinc-800">
       <div className="pb-12 md:pb-24 pt-0 32xl:pt-24 flex flex-col container gap-16">
         <EmblaCarousel />
         <div className="flex flex-col items-center justify-center gap-5 px-5 xl:px-0">

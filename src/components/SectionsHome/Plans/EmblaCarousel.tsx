@@ -66,8 +66,11 @@ const CardItem = ({ data, index }: { data: CardData; index: number }) => {
   const bgColor = isFirst ? "" : `bg-${data.color}`;
   const textColor = isFirst ? "" : `text-${data.color}`;
   const buttonClass = isFirst
-    ? ""
-    : `bg-${data.color} hover:bg-${data.color.replace("700", "500")}`;
+    ? "focus:bg-orange-500 dark:focus:bg-orange-500"
+    : `bg-${data.color} hover:bg-${data.color.replace(
+        "700",
+        "500"
+      )} focus:outline-none focus:bg-blue-500`;
 
   return (
     <Card.Root className={`${borderColor}`}>
@@ -145,7 +148,7 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 ${
+              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-white ${
                 index === selectedIndex
                   ? "embla__dot--selected bg-blue-700 dark:bg-white"
                   : "bg-zinc-300 dark:bg-zinc-500"
@@ -155,12 +158,12 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
         </div>
         <div className="embla__buttons relative flex gap-2">
           <PrevButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300"
+            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
             onClick={onPrevButtonClick}
             disabled={prevBtnDisabled}
           />
           <NextButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300"
+            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
             onClick={onNextButtonClick}
             disabled={nextBtnDisabled}
           />

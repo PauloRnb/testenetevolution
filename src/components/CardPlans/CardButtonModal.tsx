@@ -40,7 +40,7 @@ export function CardButtonModal({
 }: CardButtonModalProps) {
   return (
     <Dialog>
-      <DialogTrigger className="text-white">
+      <DialogTrigger className="text-white focus:outline-none focus:scale-105">
         <CirclePlus size={16} strokeWidth={2} />
       </DialogTrigger>
       <DialogContent className="!min-w-full gap-4 border p-6 shadow-lg duration-200 !rounded-none md:w-full flex !min-h-dvh flex-col bg-white px-0 pb-[7.5rem] md:pb-[6.5rem] md:!min-h-[672px] md:!min-w-[672px] md:!rounded-2xl">

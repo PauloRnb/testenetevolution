@@ -139,7 +139,7 @@ export function EmblaCarousel() {
               key={index}
               onClick={() => scrollTo(index)}
               aria-label={`Ir para o slide ${index + 1}`}
-              className={`w-[25px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 ${
+              className={`w-[25px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 focus:outline-none focus:bg-blue-500 dark:focus:bg-white ${
                 index === selectedIndex
                   ? "bg-blue-700 dark:bg-white"
                   : "bg-zinc-300 dark:bg-zinc-500"
@@ -150,7 +150,7 @@ export function EmblaCarousel() {
         {/* Botões esquerda/direita */}
         <div className="embla__buttons flex gap-2">
           <button
-            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
+            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200 focus:outline-none focus:text-blue-500 dark:focus:text-zinc-300"
             onClick={scrollPrev}
             type="button"
             aria-label="Voltar Slider"
@@ -158,7 +158,7 @@ export function EmblaCarousel() {
             <IoIosArrowDropleft size={32} className="md:size-9" />
           </button>
           <button
-            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200"
+            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200 focus:outline-none focus:text-blue-500 dark:focus:text-zinc-300"
             onClick={scrollNext}
             type="button"
             aria-label="Proximo Slider"
