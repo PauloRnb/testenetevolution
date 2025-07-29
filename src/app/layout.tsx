@@ -5,6 +5,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import SubHeader from "@/components/SubHeader/SubHeader";
+import { CookiesTerms } from "@/components/CookiesTerms/CookiesTerms";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -74,6 +75,7 @@ export default function RootLayout({
             <SubHeader />
             <Header />
             {children}
+            <CookiesTerms />
           </div>
         </ThemeProvider>
       </body>
