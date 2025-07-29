@@ -68,26 +68,7 @@ export function DrawerMain() {
             <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
           </main>
           <div className="flex-1"></div>
-          <SheetFooter className="sticky bottom-0 flex h-20 items-center gap-5 px-5 py-5">
-            <Link
-              href="/Security"
-              className="group flex w-[9.063rem] items-center justify-center gap-1 rounded-full bg-blue-700 p-1.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500 md:text-lg"
-            >
-              <BiSolidCheckShield />
-              <span>Segurança</span>
-            </Link>
-            <Separator
-              orientation="vertical"
-              className="my-7 bg-zinc-200 dark:bg-zinc-500"
-            />
-            <Link
-              prefetch
-              href="/Indicate"
-              className="text-base font-medium text-zinc-600 dark:text-cyan-400"
-            >
-              Indicação
-            </Link>
-          </SheetFooter>
+          <SheetFooter className="sticky bottom-0 flex h-20 items-center gap-5 px-5 py-5"></SheetFooter>
         </SheetContent>
       </Sheet>
     </>

@@ -44,23 +44,7 @@ export function DrawerFiber() {
           </SheetHeader>
           <main className="mt-9 flex flex-col px-5"></main>
           <div className="flex-1"></div>
-          <SheetFooter className="sticky bottom-0 flex h-20 items-center gap-5 px-5 py-5">
-            <Link
-              href="/Security"
-              className="group flex w-[9.063rem] items-center justify-center gap-1 rounded-full bg-blue-700 p-1.5 text-base font-semibold text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500 md:text-lg"
-            >
-              <span>Segurança</span>
-              <BiSolidCheckShield />
-            </Link>
-            <Separator className="bg-zinc-200 dark:bg-zinc-500" />
-            <Link
-              prefetch
-              href="/Indicate"
-              className="text-base font-medium text-zinc-700 dark:text-cyan-400"
-            >
-              Indicação
-            </Link>
-          </SheetFooter>
+          <SheetFooter className="sticky bottom-0 flex h-20 items-center gap-5 px-5 py-5"></SheetFooter>
         </SheetContent>
       </Sheet>
     </>

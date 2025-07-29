@@ -10,7 +10,7 @@ import {
   usePrevNextButtons,
 } from "./Plans/EmblaCarouselArrowButton";
 import useEmblaCarousel from "embla-carousel-react";
-import { Card } from "@/components/CardPlans"; // Ajuste o caminho conforme seu projeto
+import { Card } from "@/components/CardPlans";
 import { Separator } from "@/components/ui/separator";
 
 type PropType = {

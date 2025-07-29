@@ -1,5 +1,6 @@
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
@@ -7,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import { CirclePlus } from "lucide-react";
+import { CirclePlus, CircleX } from "lucide-react";
 import { Separator } from "../ui/separator";
 import {
   CirclePercent,
@@ -46,10 +47,18 @@ export function CardButtonModal({
       <DialogContent className="flex !min-h-dvh !min-w-full flex-col gap-4 !rounded-none border bg-white p-6 px-0 pb-[7.5rem] shadow-lg duration-200 md:!min-h-[672px] md:w-full md:!min-w-[672px] md:!rounded-2xl md:pb-[6.5rem]">
         <DialogHeader className="h-8 w-fit pl-5">
           <DialogTitle asChild>
-            <h2 className="flex w-fit flex-row text-xl font-medium text-zinc-900">
+            <h2 className="flex w-fit flex-row text-xl font-medium text-zinc-900 dark:text-white">
               INFORMAÇÕES DA OFERTA
             </h2>
           </DialogTitle>
+          <DialogClose asChild>
+            <button
+              type="button"
+              className="rounded-xs absolute right-4 top-4 text-zinc-600 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:text-zinc-800 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground dark:text-white dark:focus-visible:text-cyan-400 [&_svg:not([class*='size-'])]:size-7 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+            >
+              <CircleX size={28} />
+            </button>
+          </DialogClose>
         </DialogHeader>
         <Separator className="bg-zinc-300" />
         <main className="flex flex-col items-start gap-8 overflow-y-scroll pb-[2rem] pt-2">
