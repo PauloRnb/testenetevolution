@@ -1,9 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { ChevronRight, Globe } from "lucide-react";
-import { BiSolidCheckShield } from "react-icons/bi";
-import { Separator } from "@/components/ui/separator";
 
 import {
   Sheet,

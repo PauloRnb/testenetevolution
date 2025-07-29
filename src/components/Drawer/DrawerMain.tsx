@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AlignJustify, Combine } from "lucide-react";
-import { BiSolidCheckShield } from "react-icons/bi";
 import { Separator } from "@/components/ui/separator";
 
 import {
