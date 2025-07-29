@@ -34,7 +34,7 @@ export function CookiesTerms() {
                 href="/Cookies"
                 className="font-bold text-zinc-600 hover:text-zinc-700 hover:underline focus:outline-none focus-visible:text-zinc-800 dark:text-cyan-400 dark:focus-visible:text-cyan-500"
               >
-                "Política de Privacidade"
+                &quot;Politica de Privacidade&quot;
               </Link>{" "}
               , autorizando a coleta e uso de dados conforme a LGPD para uma
               navegação segura e personalizada.
