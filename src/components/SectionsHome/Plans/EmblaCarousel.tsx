@@ -75,7 +75,7 @@ const CardItem = ({ data, index }: { data: CardData; index: number }) => {
     ? "focus-visible:bg-orange-500 dark:focus-visible:bg-orange-500 focus:outline-none"
     : `bg-${data.color} hover:bg-${data.color.replace(
         "700",
-        "500"
+        "500",
       )} focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-blue-500`;
 
   return (
@@ -106,7 +106,7 @@ const CardItem = ({ data, index }: { data: CardData; index: number }) => {
             text={data.download}
             textTwo={data.upload}
           />
-          <Separator className={`h-[2px] bg-zinc-300 rounded-full`} />
+          <Separator className={`h-[2px] rounded-full bg-zinc-300`} />
           <Card.Includes>
             <Card.Rede className={`bg-${data.color}`} />
           </Card.Includes>
@@ -137,11 +137,11 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
   const cardList = useMemo(
     () =>
       cardsData.map((data, index) => (
-        <div key={index} className="embla__slide shrink-0 w-full sm:w-[335px]">
+        <div key={index} className="embla__slide w-full shrink-0 sm:w-[335px]">
           <CardItem data={data} index={index} />
         </div>
       )),
-    []
+    [],
   );
 
   return (
@@ -150,13 +150,13 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
         <div className="embla__container flex gap-5">{cardList}</div>
       </div>
 
-      <div className="embla__controls flex items-center justify-between mt-4">
+      <div className="embla__controls mt-4 flex items-center justify-between">
         <div className="embla__dots flex items-center gap-2 md:gap-3">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-white ${
+              className={`embla__dot h-[3px] w-[25px] cursor-pointer rounded-sm border-none transition-colors duration-300 focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-white md:w-[50px] ${
                 index === selectedIndex
                   ? "embla__dot--selected bg-blue-700 dark:bg-white"
                   : "bg-zinc-300 dark:bg-zinc-500"
@@ -166,12 +166,12 @@ const EmblaCarousel: React.FC<PropType> = ({ options }) => {
         </div>
         <div className="embla__buttons relative flex gap-2">
           <PrevButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
+            className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:outline-none focus-visible:text-blue-500 dark:text-white dark:hover:text-zinc-300 dark:focus-visible:text-zinc-300"
             onClick={onPrevButtonClick}
             disabled={prevBtnDisabled}
           />
           <NextButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
+            className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:outline-none focus-visible:text-blue-500 dark:text-white dark:hover:text-zinc-300 dark:focus-visible:text-zinc-300"
             onClick={onNextButtonClick}
             disabled={nextBtnDisabled}
           />

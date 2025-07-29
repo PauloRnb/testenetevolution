@@ -10,8 +10,8 @@ export function CardRoot({ children, ...rest }: CardContentProps) {
     <div
       {...rest}
       className={twMerge(
-        "w-full bg-white rounded-2xl flex flex-col justify-between p-3 select-none gap-y-5 shadow-sm dark:bg-zinc-800 dark:border-2",
-        rest.className
+        "flex w-full select-none flex-col justify-between gap-y-5 rounded-2xl bg-white p-3 shadow-sm dark:border-2 dark:bg-zinc-800",
+        rest.className,
       )}
     >
       {children}

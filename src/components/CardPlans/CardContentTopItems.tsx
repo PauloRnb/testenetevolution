@@ -7,12 +7,12 @@ interface CardContentTopItems extends HTMLAttributes<HTMLSpanElement> {
 
 export function CardContentTopItems({ text, ...rest }: CardContentTopItems) {
   return (
-    <div className="w-[6.563rem] h-4 bg-white rounded-full flex items-center justify-center">
+    <div className="flex h-4 w-[6.563rem] items-center justify-center rounded-full bg-white">
       <span
         {...rest}
         className={twMerge(
           "text-xs font-medium text-orange-600",
-          rest.className
+          rest.className,
         )}
       >
         {text}

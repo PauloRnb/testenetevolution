@@ -65,11 +65,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${figtree.className} antialiased bg-zinc-100 dark:bg-zinc-900`}
+        className={`${figtree.className} bg-zinc-100 antialiased dark:bg-zinc-900`}
         suppressHydrationWarning
       >
         <ThemeProvider>
-          <div className="relative flex flex-col min-h-screen">
+          <div className="relative flex min-h-screen flex-col">
             <SpeedInsights />
             <SubHeader />
             <Header />

@@ -16,7 +16,7 @@ export default function SubHeader() {
   if (isMobile === null) return null; // ou um loader ou placeholder
 
   return (
-    <nav className="sticky top-0 w-full min-w-[375px] bg-blue-700 dark:bg-zinc-800 z-20">
+    <nav className="sticky top-0 z-20 w-full min-w-[375px] bg-blue-700 dark:bg-zinc-800">
       {isMobile ? <SubHeaderMobile /> : <SubHeaderDesktop />}
     </nav>
   );

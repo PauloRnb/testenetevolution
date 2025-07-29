@@ -37,7 +37,7 @@ const slides = [
 export function EmblaCarousel() {
   const autoplayDelay = 5000;
   const autoplayRef = useRef(
-    Autoplay({ delay: autoplayDelay, stopOnInteraction: false })
+    Autoplay({ delay: autoplayDelay, stopOnInteraction: false }),
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -79,11 +79,11 @@ export function EmblaCarousel() {
 
   const scrollTo = useCallback(
     (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi]
+    [emblaApi],
   );
 
   return (
-    <div className="embla w-full mx-auto">
+    <div className="embla mx-auto w-full">
       <div
         className="embla__viewport overflow-hidden"
         ref={emblaRef}
@@ -93,17 +93,17 @@ export function EmblaCarousel() {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="embla__slide flex-shrink-0 bg-blue-700 w-full h-[520px] sm:h-[620px] flex flex-col items-center justify-evenly bg-cover bg-center xl:rounded-lg px-5 md:flex-row md:h-[495px] select-none"
+              className="embla__slide flex h-[520px] w-full flex-shrink-0 select-none flex-col items-center justify-evenly bg-blue-700 bg-cover bg-center px-5 sm:h-[620px] md:h-[495px] md:flex-row xl:rounded-lg"
               style={{ backgroundImage: `url('${slide.bg}')` }}
             >
-              <div className="flex items-center justify-center order-2 md:-order-1">
+              <div className="order-2 flex items-center justify-center md:-order-1">
                 <Image
                   src={slide.imageDesk}
                   alt="Imagem desktop"
                   width={220}
                   height={330}
                   priority
-                  className="hidden md:block rounded-lg"
+                  className="hidden rounded-lg md:block"
                 />
                 <Image
                   src={slide.imageMob}
@@ -111,11 +111,11 @@ export function EmblaCarousel() {
                   width={430}
                   height={242}
                   priority
-                  className="block md:hidden rounded-lg"
+                  className="block rounded-lg md:hidden"
                 />
               </div>
               <div className="flex flex-col items-center justify-center gap-5 sm:items-start sm:justify-start">
-                <h2 className="text-white text-center sm:text-left sm:text-2xl text-lg leading-7 font-semibold">
+                <h2 className="text-center text-lg font-semibold leading-7 text-white sm:text-left sm:text-2xl">
                   {slide.title}
                 </h2>
                 <Image
@@ -131,7 +131,7 @@ export function EmblaCarousel() {
         </div>
       </div>
 
-      <div className="embla__controls flex items-center justify-between mt-4 px-5 xl:px-0">
+      <div className="embla__controls mt-4 flex items-center justify-between px-5 xl:px-0">
         {/* Dots */}
         <div className="flex items-center gap-2">
           {scrollSnaps.map((_, index) => (
@@ -139,7 +139,7 @@ export function EmblaCarousel() {
               key={index}
               onClick={() => scrollTo(index)}
               aria-label={`Ir para o slide ${index + 1}`}
-              className={`w-[25px] md:w-[50px] h-[3px] rounded-full transition-colors duration-300 focus:outline-none focus:bg-blue-500 dark:focus:bg-white ${
+              className={`h-[3px] w-[25px] rounded-full transition-colors duration-300 focus:bg-blue-500 focus:outline-none dark:focus:bg-white md:w-[50px] ${
                 index === selectedIndex
                   ? "bg-blue-700 dark:bg-white"
                   : "bg-zinc-300 dark:bg-zinc-500"
@@ -150,7 +150,7 @@ export function EmblaCarousel() {
         {/* Botões esquerda/direita */}
         <div className="embla__buttons flex gap-2">
           <button
-            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200 focus:outline-none focus:text-blue-500 dark:focus:text-zinc-300"
+            className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:text-blue-500 focus:outline-none dark:text-white dark:hover:text-zinc-300 dark:focus:text-zinc-300"
             onClick={scrollPrev}
             type="button"
             aria-label="Voltar Slider"
@@ -158,7 +158,7 @@ export function EmblaCarousel() {
             <IoIosArrowDropleft size={32} className="md:size-9" />
           </button>
           <button
-            className="text-blue-700 dark:text-white hover:text-blue-500 dark:hover:text-zinc-300 transition-colors duration-200 focus:outline-none focus:text-blue-500 dark:focus:text-zinc-300"
+            className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:text-blue-500 focus:outline-none dark:text-white dark:hover:text-zinc-300 dark:focus:text-zinc-300"
             onClick={scrollNext}
             type="button"
             aria-label="Proximo Slider"

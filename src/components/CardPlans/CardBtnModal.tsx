@@ -6,7 +6,7 @@ interface CardBtnModalProps {
 
 export function CardBtnModal({ children }: CardBtnModalProps) {
   return (
-    <div className="flex items-center justify-center w-full px-5">
+    <div className="flex w-full items-center justify-center px-5">
       {children}
     </div>
   );

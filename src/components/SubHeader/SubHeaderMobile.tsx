@@ -5,7 +5,7 @@ import { ModalCoverage } from "../Modal/ModalCoverage";
 
 export default function SubHeaderMobile() {
   return (
-    <div className="flex items-center justify-between py-4 px-5 lg:px-6">
+    <div className="flex items-center justify-between px-5 py-4 lg:px-6">
       <ModalCoverage />
       <DrawerAcessibility />
     </div>

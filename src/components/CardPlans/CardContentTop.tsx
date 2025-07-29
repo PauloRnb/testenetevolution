@@ -10,8 +10,8 @@ export function CardContentTop({ children, ...rest }: CardContentTopProps) {
     <div
       {...rest}
       className={twMerge(
-        "w-full h-[6.438rem] flex flex-col bg-orange-600 rounded-[0.5rem] p-4 gap-2",
-        rest.className
+        "flex h-[6.438rem] w-full flex-col gap-2 rounded-[0.5rem] bg-orange-600 p-4",
+        rest.className,
       )}
     >
       {children}

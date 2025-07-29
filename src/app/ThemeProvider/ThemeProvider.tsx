@@ -12,8 +12,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         document.createTextNode(
           `* {
             transition: none !important;
-          }`
-        )
+          }`,
+        ),
       );
       document.head.appendChild(css);
 

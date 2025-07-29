@@ -17,8 +17,8 @@ export function CardContentItemsTop({
         <p
           {...rest}
           className={twMerge(
-            "text-3xl leading-[28px] text-white font-bold tracking-tight",
-            rest.className
+            "text-3xl font-bold leading-[28px] tracking-tight text-white",
+            rest.className,
           )}
         >
           {text}
@@ -26,14 +26,14 @@ export function CardContentItemsTop({
         <p
           {...rest}
           className={twMerge(
-            "text-xs leading-[14px] text-white font-medium mb-1",
-            rest.className
+            "mb-1 text-xs font-medium leading-[14px] text-white",
+            rest.className,
           )}
         >
           100% FIBRA ÓPTICA
         </p>
       </div>
-      <Separator className="w-10 h-[2px] bg-white rounded-full" />
+      <Separator className="h-[2px] w-10 rounded-full bg-white" />
     </div>
   );
 }

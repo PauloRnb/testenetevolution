@@ -6,8 +6,8 @@ interface CardIncludesPlansProps {
 
 export function CardIncludesPlans({ children }: CardIncludesPlansProps) {
   return (
-    <div className="flex flex-col gap-1 ml-[15px]">
-      <p className="text-xs text-zinc-600 font-medium dark:text-white">
+    <div className="ml-[15px] flex flex-col gap-1">
+      <p className="text-xs font-medium text-zinc-600 dark:text-white">
         INCLUSO NO PLANO:
       </p>
       {children}

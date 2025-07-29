@@ -7,7 +7,7 @@ import { ModalCoverage } from "../Modal/ModalCoverage";
 
 export default function SubHeaderDesktop() {
   return (
-    <div className="container flex items-center justify-between py-4 gap-5 px-6 32lg:px-0">
+    <div className="container flex items-center justify-between gap-5 px-6 py-4 32lg:px-0">
       <ModalCoverage />
       <ul className="flex items-center justify-end gap-5">
         <li>
@@ -15,7 +15,7 @@ export default function SubHeaderDesktop() {
             href="https://wa.me/5585997362750?text=Olá, estou precisando de um suporte."
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-medium text-base hover:text-zinc-200 transition-colors duration-200 focus:outline-none focus-visible:text-zinc-200 select-none"
+            className="select-none text-base font-medium text-white transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:text-zinc-200"
           >
             Suporte 24H
           </a>
@@ -25,7 +25,7 @@ export default function SubHeaderDesktop() {
             href="https://netevolution.sgp.tsmx.com.br/accounts/central/login/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white font-medium text-base hover:text-zinc-200 transition-colors duration-200 focus:outline-none focus-visible:text-zinc-200 select-none"
+            className="select-none text-base font-medium text-white transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:text-zinc-200"
           >
             2ª Via da Fatura
           </a>
@@ -34,16 +34,16 @@ export default function SubHeaderDesktop() {
           <Link
             prefetch
             href="/Acessibility"
-            className="text-white font-medium text-base hover:text-zinc-200 transition-colors duration-200 focus:outline-none focus-visible:text-zinc-200 select-none"
+            className="select-none text-base font-medium text-white transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:text-zinc-200"
           >
             Acessibilidade
           </Link>
         </li>
         <li aria-hidden>
-          <Separator orientation="vertical" className="w-[1px] h-6 bg-white" />
+          <Separator orientation="vertical" className="h-6 w-[1px] bg-white" />
         </li>
         <li>
-          <ButtonThemeToggle className="flex items-center justify-center p-1.5 gap-1 font-semibold rounded-full focus:outline-none bg-white w-[9.063rem] text-base py-[2px] text-blue-700 dark:bg-cyan-400 dark:text-zinc-800 group transition-colors duration-200 hover:bg-zinc-100 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500 focus-visible:bg-zinc-200 group select-none" />
+          <ButtonThemeToggle className="group flex w-[9.063rem] select-none items-center justify-center gap-1 rounded-full bg-white p-1.5 py-[2px] text-base font-semibold text-blue-700 transition-colors duration-200 hover:bg-zinc-100 focus:outline-none focus-visible:bg-zinc-200 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500" />
         </li>
       </ul>
     </div>

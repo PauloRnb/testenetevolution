@@ -72,8 +72,8 @@ export function CardList({ className, text, textTwo, ...rest }: CardListProps) {
           <div
             {...rest}
             className={twMerge(
-              "w-[2px] h-[14px] bg-orange-600 rounded-full shrink-0",
-              className
+              "h-[14px] w-[2px] shrink-0 rounded-full bg-orange-600",
+              className,
             )}
           ></div>
           <div className="flex items-center gap-[2px]">

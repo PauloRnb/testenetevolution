@@ -34,7 +34,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
   } = usePrevNextButtons(emblaApi);
 
   const cards = [
-    <Card.Root key={0} className="dark:bg-zinc-800 border-orange-600">
+    <Card.Root key={0} className="border-orange-600 dark:bg-zinc-800">
       <Card.Top>
         <Card.Mtop>
           <Card.Items text="MAIS VENDIDO" />
@@ -45,12 +45,12 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             textPriceOne="de 113,99"
             textPriceTwo="109"
             customContent={
-              <div className="flex flex-col px-5 gap-1">
-                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+              <div className="flex flex-col gap-1 px-5">
+                <span className="text-xs font-medium text-zinc-600 dark:text-white">
                   INCLUSO NO PLANO:
                 </span>
                 <Card.Combo>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logotelecine.webp"
                       alt="Logo Telecine"
@@ -59,7 +59,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       priority
                     />
                   </div>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logoparamountplus.webp"
                       alt="Logo Paramount"
@@ -85,14 +85,14 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-orange-600 ml-[15px]"
+            className="ml-[15px] bg-orange-600"
             text="Download 500Mbps"
             textTwo="Upload 250Mbps"
           />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full dark:bg-orange-600" />
+          <Separator className="h-[2px] rounded-full bg-zinc-300 dark:bg-orange-600" />
           <Card.Includes>
             <Card.Combo>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logotelecine.webp"
                   alt="Logo Telecine"
@@ -101,7 +101,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   priority
                 />
               </div>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logoparamountplus.webp"
                   alt="Logo Paramount"
@@ -117,7 +117,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="focus:outline-none focus:bg-orange-500 dark:focus:bg-orange-500"
+        className="focus:bg-orange-500 focus:outline-none dark:focus:bg-orange-500"
       />
     </Card.Root>,
 
@@ -132,12 +132,12 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             textPriceOne="de 128,99"
             textPriceTwo="123"
             customContent={
-              <div className="flex flex-col px-5 gap-1">
-                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+              <div className="flex flex-col gap-1 px-5">
+                <span className="text-xs font-medium text-zinc-600 dark:text-white">
                   INCLUSO NO PLANO:
                 </span>
                 <Card.Combo>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logotelecine.webp"
                       alt="Logo Telecine"
@@ -146,7 +146,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       priority
                     />
                   </div>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logosportv.webp"
                       alt="Logo SporTV"
@@ -155,7 +155,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       priority
                     />
                   </div>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logoparamountplus.webp"
                       alt="Logo Paramount"
@@ -181,14 +181,14 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700 ml-[15px]"
+            className="ml-[15px] bg-blue-700"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Separator className="h-[2px] rounded-full bg-zinc-300" />
           <Card.Includes>
             <Card.Combo>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logotelecine.webp"
                   alt="Logo Telecine"
@@ -197,7 +197,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   priority
                 />
               </div>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logosportv.webp"
                   alt="Logo SporTV"
@@ -206,7 +206,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   priority
                 />
               </div>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logoparamountplus.webp"
                   alt="Logo Paramount"
@@ -222,7 +222,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 dark:focus:bg-blue-500"
+        className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
       />
     </Card.Root>,
 
@@ -237,12 +237,12 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             textPriceOne="de 189,99"
             textPriceTwo="169"
             customContent={
-              <div className="flex flex-col px-5 gap-1">
-                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+              <div className="flex flex-col gap-1 px-5">
+                <span className="text-xs font-medium text-zinc-600 dark:text-white">
                   INCLUSO NO PLANO:
                 </span>
                 <Card.Combo>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logosportv.webp"
                       alt="Logo SporTV"
@@ -251,7 +251,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       priority
                     />
                   </div>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logopremiere.webp"
                       alt="Logo ESPN"
@@ -260,7 +260,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       priority
                     />
                   </div>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logomax.webp"
                       alt="Logo Max"
@@ -269,7 +269,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       priority
                     />
                   </div>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logoparamountplus.webp"
                       alt="Logo Paramount"
@@ -295,14 +295,14 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700 ml-[15px]"
+            className="ml-[15px] bg-blue-700"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Separator className="h-[2px] rounded-full bg-zinc-300" />
           <Card.Includes>
             <Card.Combo>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logosportv.webp"
                   alt="Logo SporTV"
@@ -311,7 +311,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   priority
                 />
               </div>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logopremiere.webp"
                   alt="Logo ESPN"
@@ -320,7 +320,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   priority
                 />
               </div>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logomax.webp"
                   alt="Logo Max"
@@ -329,7 +329,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   priority
                 />
               </div>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logoparamountplus.webp"
                   alt="Logo Paramount"
@@ -345,7 +345,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 dark:focus:bg-blue-500"
+        className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
       />
     </Card.Root>,
 
@@ -360,12 +360,12 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
             textPriceOne="de 124,99"
             textPriceTwo="119"
             customContent={
-              <div className="flex flex-col px-5 gap-1">
-                <span className="text-xs text-zinc-600 font-medium dark:text-white">
+              <div className="flex flex-col gap-1 px-5">
+                <span className="text-xs font-medium text-zinc-600 dark:text-white">
                   INCLUSO NO PLANO:
                 </span>
                 <Card.Combo>
-                  <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+                  <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                     <Image
                       src="/logomax.webp"
                       alt="Logo Max"
@@ -391,14 +391,14 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       <Card.Content>
         <Card.Infor>
           <Card.List
-            className="bg-blue-700 ml-[15px]"
+            className="ml-[15px] bg-blue-700"
             text="Download 600Mbps"
             textTwo="Upload 300Mbps"
           />
-          <Separator className="h-[2px] bg-zinc-300 rounded-full" />
+          <Separator className="h-[2px] rounded-full bg-zinc-300" />
           <Card.Includes>
             <Card.Combo>
-              <div className="w-[1.875rem] h-[1.875rem] flex items-center justify-center rounded-sm overflow-hidden">
+              <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                 <Image
                   src="/logomax.webp"
                   alt="Logo Max"
@@ -414,7 +414,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
-        className="bg-blue-700 hover:bg-blue-500 focus:outline-none focus:bg-blue-500 dark:focus:bg-blue-500"
+        className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
       />
     </Card.Root>,
   ];
@@ -425,7 +425,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
         <div className="embla__container flex gap-5">
           {cards.map((card, index) => (
             <div
-              className="embla__slide shrink-0 w-full sm:w-[335px]"
+              className="embla__slide w-full shrink-0 sm:w-[335px]"
               key={index}
             >
               {card}
@@ -434,13 +434,13 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
         </div>
       </div>
 
-      <div className="embla__controls flex items-center justify-between mt-4">
+      <div className="embla__controls mt-4 flex items-center justify-between">
         <div className="embla__dots flex items-center gap-2 md:gap-3">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`embla__dot w-[25px] md:w-[50px] h-[3px] rounded-sm border-none cursor-pointer transition-colors duration-300 focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-white ${
+              className={`embla__dot h-[3px] w-[25px] cursor-pointer rounded-sm border-none transition-colors duration-300 focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-white md:w-[50px] ${
                 index === selectedIndex
                   ? "embla__dot--selected bg-blue-700 dark:bg-white"
                   : "bg-zinc-300 dark:bg-zinc-500"
@@ -450,12 +450,12 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
         </div>
         <div className="embla__buttons relative flex gap-2">
           <PrevButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
+            className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:outline-none focus-visible:text-blue-500 dark:text-white dark:hover:text-zinc-300 dark:focus-visible:text-zinc-300"
             onClick={onPrevButtonClick}
             disabled={prevBtnDisabled}
           />
           <NextButton
-            className="text-blue-700 dark:text-white hover:text-blue-500 transition-colors duration-200 dark:hover:text-zinc-300 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-zinc-300"
+            className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:outline-none focus-visible:text-blue-500 dark:text-white dark:hover:text-zinc-300 dark:focus-visible:text-zinc-300"
             onClick={onNextButtonClick}
             disabled={nextBtnDisabled}
           />
