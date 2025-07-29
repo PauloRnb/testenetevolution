@@ -20,7 +20,7 @@ export function CookiesTerms() {
 
   return (
     <Dialog open={open}>
-      <DialogContent className="fixed bottom-0 left-0 right-0 top-[initial] z-50 flex !h-fit min-w-full transform-none !rounded-none border-t-zinc-300 bg-white py-4 transition-none dark:border-zinc-600 dark:bg-gray-900">
+      <DialogContent className="fixed bottom-0 left-0 right-0 top-[initial] z-50 flex !h-fit min-w-full transform-none !rounded-none border-t-zinc-300 bg-white py-4 transition-none dark:border-zinc-600 dark:bg-zinc-900">
         <div className="2lg:px-0 container flex flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between lg:px-6">
           <div className="2lg:w-[59.375rem] flex flex-col gap-2 md:w-[34rem] lg:w-[38rem]">
             <DialogTitle asChild>
@@ -49,7 +49,7 @@ export function CookiesTerms() {
             </button>
             <button
               onClick={() => handleConsent("accepted")}
-              className="rounded border border-blue-700 bg-blue-700 px-4 py-2 text-sm text-white transition-colors duration-200 hover:border-blue-500 hover:bg-blue-500 focus:outline-none focus-visible:border-blue-500 focus-visible:bg-blue-500 dark:bg-cyan-400 dark:hover:bg-cyan-500 dark:focus-visible:border-cyan-500 dark:focus-visible:bg-cyan-500"
+              className="rounded border border-blue-700 bg-blue-700 px-4 py-2 text-sm text-white transition-colors duration-200 hover:border-blue-500 hover:bg-blue-500 focus:outline-none focus-visible:border-blue-500 focus-visible:bg-blue-500 dark:border-cyan-400 dark:bg-cyan-400 dark:hover:border-cyan-500 dark:hover:bg-cyan-500 dark:focus-visible:border-cyan-500 dark:focus-visible:bg-cyan-500"
             >
               Aceitar
             </button>
