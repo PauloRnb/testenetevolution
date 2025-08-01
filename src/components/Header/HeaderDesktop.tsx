@@ -69,17 +69,7 @@ export default function HeaderDesktop() {
                       <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
                         ACESSE NOSSA ÁREA DO CLIENTE:
                       </h2>
-
-                      <div className="relative flex flex-col">
-                        <Separator
-                          orientation="horizontal"
-                          className="absolute z-[2] h-[2px] w-10 shrink-0 rounded-full bg-blue-700 dark:bg-white"
-                        />
-                        <Separator
-                          orientation="horizontal"
-                          className="absolute top-[1px] z-[1] h-[1px] w-full shrink-0 rounded-full bg-zinc-300 dark:bg-zinc-400"
-                        />
-                      </div>
+                      <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
                     </div>
                     <p className="w-[18rem] text-sm leading-4 text-zinc-400 dark:text-zinc-200">
                       Pelo nosso app você tem acesso ao seu consumo, acesso a
@@ -146,17 +136,7 @@ export default function HeaderDesktop() {
                       <h2 className="text-sm font-semibold text-white">
                         INTERNET FIBRA
                       </h2>
-                      <div className="relative flex flex-col">
-                        <Separator
-                          orientation="horizontal"
-                          className="absolute z-[2] h-[2px] w-10 shrink-0 rounded-full bg-white"
-                        />
-
-                        <Separator
-                          orientation="horizontal"
-                          className="absolute top-[1px] z-[1] h-[1px] w-full shrink-0 rounded-full bg-zinc-300 dark:bg-zinc-400"
-                        />
-                      </div>
+                      <Separator className="!h-[2px] !w-10 rounded-full bg-white" />
                     </div>
                     <div className="flex w-fit flex-col gap-2">
                       <a
@@ -210,10 +190,7 @@ export default function HeaderDesktop() {
                       <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
                         ACESSE NOSSA ÁREA DO CLIENTE:
                       </h2>
-                      <div className="relative flex flex-col">
-                        <Separator className="rounded-fulls z-[2] h-[2px] w-10 bg-blue-700 dark:bg-white" />
-                        <Separator className="absolute top-[1px] z-[1] h-[1px] rounded-full bg-zinc-300 dark:bg-zinc-400" />
-                      </div>
+                      <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
                     </div>
                     <p className="w-[18rem] text-sm leading-4 text-zinc-400 dark:text-zinc-200">
                       Pelo nosso app você tem acesso ao seu consumo, acesso a
@@ -280,10 +257,7 @@ export default function HeaderDesktop() {
                       <h2 className="text-sm font-semibold text-white">
                         INTERNET FIBRA
                       </h2>
-                      <div className="relative flex flex-col">
-                        <Separator className="absolute z-[2] h-[2px] w-10 rounded-full bg-white" />
-                        <Separator className="absolute top-[1px] z-[1] h-[1px] w-full rounded-full bg-zinc-300 dark:bg-zinc-400" />
-                      </div>
+                      <Separator className="!h-[2px] !w-10 rounded-full bg-white" />
                     </div>
                     <div className="flex w-fit flex-col gap-2">
                       <a
@@ -337,18 +311,7 @@ export default function HeaderDesktop() {
                     <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
                       ACESSE NOSSA ÁREA DO CLIENTE:
                     </h2>
-                    <div className="relative flex flex-col">
-                      <Separator
-                        aria-hidden
-                        orientation="horizontal"
-                        className="absolute z-[2] h-[2px] w-10 shrink-0 rounded-full bg-blue-700 dark:bg-white"
-                      />
-                      <Separator
-                        aria-hidden
-                        orientation="horizontal"
-                        className="absolute top-[1px] z-[1] h-[1px] w-full shrink-0 rounded-full bg-zinc-300 dark:bg-zinc-400"
-                      />
-                    </div>
+                    <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
                   </div>
                   <p className="w-[18rem] text-sm leading-4 text-zinc-400 dark:text-zinc-200">
                     Pelo nosso app você tem acesso ao seu consumo, acesso a suas
@@ -413,18 +376,7 @@ export default function HeaderDesktop() {
                     <h2 className="text-sm font-semibold text-white">
                       INTERNET FIBRA
                     </h2>
-                    <div className="relative flex flex-col">
-                      <Separator
-                        aria-hidden
-                        orientation="horizontal"
-                        className="absolute z-[2] h-[2px] w-10 shrink-0 rounded-full bg-white"
-                      />
-                      <Separator
-                        aria-hidden
-                        orientation="horizontal"
-                        className="absolute top-[1px] z-[1] h-[1px] w-full shrink-0 rounded-full bg-zinc-300 dark:bg-zinc-400"
-                      />
-                    </div>
+                    <Separator className="!h-[2px] !w-10 rounded-full bg-white" />
                   </div>
                   <div className="flex w-fit flex-col gap-2">
                     <a

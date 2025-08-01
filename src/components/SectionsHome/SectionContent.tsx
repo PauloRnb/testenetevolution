@@ -1,3 +1,4 @@
+import { AccordionSection } from "./AccordionSection";
 import { CardsServices } from "./CardsServices";
 import { NetworkInfrastructure } from "./NetworkInfrastructure";
 import { SectionOfferHome } from "./SectionOfferHome";
@@ -10,6 +11,7 @@ export function SectionContent() {
       <CardsServices />
       <NetworkInfrastructure />
       <SelfService />
+      <AccordionSection />
     </section>
   );
 }

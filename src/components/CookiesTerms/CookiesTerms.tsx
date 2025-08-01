@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
@@ -13,8 +12,8 @@ export function CookiesTerms() {
     if (!consent) setOpen(true);
   }, []);
 
-  const handleConsent = (choice: "accepted" | "rejected") => {
-    localStorage.setItem("cookie_consent", choice);
+  const handleConsent = () => {
+    localStorage.setItem("cookie_consent", "accepted");
     setOpen(false);
   };
 
@@ -34,21 +33,15 @@ export function CookiesTerms() {
                 href="/Cookies"
                 className="font-bold text-zinc-600 hover:text-zinc-700 hover:underline focus:outline-none focus-visible:text-zinc-800 dark:text-cyan-400 dark:focus-visible:text-cyan-500"
               >
-                &quot;Politica de Privacidade&quot;
+                &quot;Política de Privacidade&quot;
               </Link>{" "}
               , autorizando a coleta e uso de dados conforme a LGPD para uma
               navegação segura e personalizada.
             </p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center">
             <button
-              onClick={() => handleConsent("rejected")}
-              className="transform-colors rounded border border-zinc-300 px-4 py-2 text-sm duration-200 hover:bg-zinc-100 focus:outline-none focus-visible:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800 dark:focus-visible:bg-zinc-100"
-            >
-              Rejeitar
-            </button>
-            <button
-              onClick={() => handleConsent("accepted")}
+              onClick={handleConsent}
               className="rounded border border-blue-700 bg-blue-700 px-4 py-2 text-sm text-white transition-colors duration-200 hover:border-blue-500 hover:bg-blue-500 focus:outline-none focus-visible:border-blue-500 focus-visible:bg-blue-500 dark:border-cyan-400 dark:bg-cyan-400 dark:hover:border-cyan-500 dark:hover:bg-cyan-500 dark:focus-visible:border-cyan-500 dark:focus-visible:bg-cyan-500"
             >
               Aceitar

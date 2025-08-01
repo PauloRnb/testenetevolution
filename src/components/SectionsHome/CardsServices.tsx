@@ -42,7 +42,7 @@ export function CardsServices() {
             {services.map(({ icon, title, description, link }) => (
               <div
                 key={title}
-                className="group relative h-[14rem] w-full overflow-hidden rounded-xl border border-zinc-100 bg-zinc-100 shadow-sm transition-all duration-700 dark:border-solid dark:border-white dark:bg-zinc-900"
+                className="group relative h-[14rem] w-full select-none overflow-hidden rounded-xl border border-zinc-100 bg-zinc-100 shadow-sm transition-all duration-700 dark:border-solid dark:border-white dark:bg-zinc-900"
               >
                 <div className="flex w-full flex-col gap-y-4 p-4">
                   <div className="flex flex-col">

@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import SubHeader from "@/components/SubHeader/SubHeader";
 import { CookiesTerms } from "@/components/CookiesTerms/CookiesTerms";
+import { Footer } from "@/components/Footer/Footer";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({
             <SubHeader />
             <Header />
             {children}
+            <Footer />
             <CookiesTerms />
           </div>
         </ThemeProvider>
