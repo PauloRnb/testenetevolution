@@ -13,7 +13,28 @@ import {
 } from "@/components/ui/tooltip";
 import { ArrowTopButton } from "../ArrowTopButton/ArrowTopButton";
 
-const footerLinks = [
+// Tipagens
+type FooterLink = {
+  label: string;
+  href: string;
+  external?: boolean;
+  prefetch?: boolean;
+};
+
+type FooterSection = {
+  title: string;
+  links: FooterLink[];
+};
+
+type CardLink = {
+  title: string;
+  href: string;
+  icon: React.ElementType;
+  external?: boolean;
+};
+
+// Dados
+const footerLinks: FooterSection[] = [
   {
     title: "Sobre nós",
     links: [
@@ -55,7 +76,7 @@ const socialLinks = [
   },
 ];
 
-const cardLinks = [
+const cardLinks: CardLink[] = [
   {
     title: "Ajuda",
     href: "/Privacy",
