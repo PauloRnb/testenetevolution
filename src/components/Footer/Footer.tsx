@@ -142,28 +142,28 @@ export function Footer() {
                           <Icon
                             width={24}
                             strokeWidth={1.8}
-                            className="text-zinc-600 group-hover:text-white dark:text-white"
+                            className="text-zinc-600 group-hover:text-white group-focus-visible:text-white dark:text-white"
                           />
                         </div>
                         <div className="flex flex-col gap-1">
-                          <h3 className="text-sm font-semibold leading-4 text-zinc-800 group-hover:text-white dark:text-white sm:text-base">
+                          <h3 className="text-sm font-semibold leading-4 text-zinc-800 group-hover:text-white group-focus-visible:text-white dark:text-white sm:text-base">
                             {title}
                           </h3>
-                          <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 group-hover:bg-white dark:bg-white" />
+                          <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 group-hover:bg-white group-focus-visible:bg-white dark:bg-white" />
                         </div>
                       </div>
                       <div className="flex justify-end">
                         <CircleArrowRight
                           width={24}
                           strokeWidth={1.8}
-                          className="text-blue-700 group-hover:text-white dark:text-cyan-400"
+                          className="text-blue-700 group-hover:text-white group-focus-visible:text-white dark:text-cyan-400 dark:group-focus-visible:text-white"
                         />
                       </div>
                     </>
                   );
 
                   const classes =
-                    "group flex h-36 w-full min-w-[100px] select-none flex-col justify-between rounded-xl bg-zinc-100 p-4 shadow-sm hover:bg-blue-700 dark:bg-zinc-800 dark:hover:bg-zinc-900 dark:hover:ring-2 dark:hover:ring-cyan-400 sm:w-[155px] md:w-[165px] lg:h-[155px] lg:w-[185px]";
+                    "group flex h-36 w-full min-w-[100px] select-none flex-col justify-between rounded-xl bg-zinc-100 p-4 shadow-sm hover:bg-blue-700 dark:bg-zinc-800 dark:hover:bg-zinc-800 dark:hover:ring-2 dark:hover:ring-cyan-400 sm:w-[155px] md:w-[165px] lg:h-[155px] lg:w-[185px] focus:outline-none focus-visible:bg-blue-700 dark:focus-visible:ring-2 dark:focus-visible:ring-cyan-400";
 
                   return external ? (
                     <a
@@ -195,12 +195,9 @@ export function Footer() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 p-1 transition-colors duration-200 hover:bg-blue-700 dark:bg-zinc-800 dark:hover:bg-cyan-400"
+                      className="group flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 p-1 text-blue-700 transition-colors duration-200 hover:bg-blue-700 hover:text-white focus:outline-none focus-visible:bg-blue-700 focus-visible:text-white dark:bg-zinc-800 dark:text-cyan-400 dark:hover:bg-cyan-400 dark:hover:text-zinc-800 dark:focus-visible:bg-cyan-400 dark:focus-visible:text-zinc-800"
                     >
-                      <Icon
-                        size={24}
-                        className="text-blue-700 group-hover:text-white dark:text-cyan-400 dark:group-hover:text-zinc-900"
-                      />
+                      <Icon size={24} />
                     </a>
                   ))}
                 </div>
