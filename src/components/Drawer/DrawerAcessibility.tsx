@@ -28,7 +28,7 @@ export function DrawerAcessibility() {
             <EllipsisVertical size={20} />
           </button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent side="left">
           <SheetHeader className="h-16 items-center bg-blue-700 dark:bg-zinc-900">
             <SheetTitle asChild>
               <h2 className="text-white">Menu Acessível</h2>

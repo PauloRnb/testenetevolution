@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AlignJustify, Combine } from "lucide-react";
@@ -17,9 +18,20 @@ import { DrawerClient } from "./DrawerClient";
 import { DrawerStreaming } from "./DrawerStreaming";
 
 export function DrawerMain() {
+  const [openMain, setOpenMain] = useState(false);
+  const [openFiber, setOpenFiber] = useState(false);
+  const [openClient, setOpenClient] = useState(false);
+  const [openStreaming, setOpenStreaming] = useState(false);
+
+  const closeAllMenus = () => {
+    setOpenMain(false);
+    setOpenFiber(false);
+    setOpenClient(false);
+    setOpenStreaming(false);
+  };
   return (
     <>
-      <Sheet>
+      <Sheet open={openMain} onOpenChange={setOpenMain}>
         <SheetTrigger asChild>
           <button
             aria-label="Abrir menu"
@@ -45,10 +57,15 @@ export function DrawerMain() {
           </SheetHeader>
           <main className="mt-9 flex flex-col px-5">
             {/* Fibra */}
-            <DrawerFiber />
+            <DrawerFiber
+              open={openFiber}
+              onOpenChange={setOpenFiber}
+              onLinkClick={closeAllMenus}
+            />
             <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
             {/* Combos */}
             <Link
+              onClick={closeAllMenus}
               href="/Combos"
               className="flex w-full select-none items-center gap-1 text-base font-medium text-gray-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500 md:text-lg"
             >
@@ -59,10 +76,18 @@ export function DrawerMain() {
             </Link>
             <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
             {/* Streaming */}
-            <DrawerStreaming />
+            <DrawerStreaming
+              open={openStreaming}
+              onOpenChange={setOpenStreaming}
+              onLinkClick={closeAllMenus}
+            />
             <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
             {/* Cliente */}
-            <DrawerClient />
+            <DrawerClient
+              open={openClient}
+              onOpenChange={setOpenClient}
+              onLinkClick={closeAllMenus}
+            />
             <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
           </main>
           <div className="flex-1"></div>
