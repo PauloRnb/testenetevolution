@@ -7,7 +7,7 @@ const services = [
     icon: <Router size={24} strokeWidth={1.8} />,
     title: "Internet",
     description: "Internet 100% fibra óptica, com ultra velocidade.",
-    link: "/Internet",
+    link: "/Fiber",
   },
   {
     icon: <Combine size={24} strokeWidth={1.8} />,
