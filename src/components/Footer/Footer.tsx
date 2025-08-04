@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircleQuestionMark, CircleArrowRight } from "lucide-react";
+import {
+  MessageCircleQuestionMark,
+  CircleArrowRight,
+  ShieldAlert,
+} from "lucide-react";
 import { LiaFacebookF } from "react-icons/lia";
 import { FaInstagramSquare } from "react-icons/fa";
 import { Separator } from "../ui/separator";
@@ -78,12 +82,12 @@ const socialLinks = [
 
 const cardLinks: CardLink[] = [
   {
-    title: "Ajuda",
+    title: "Privacidade",
     href: "/Privacy",
-    icon: MessageCircleQuestionMark,
+    icon: ShieldAlert,
   },
   {
-    title: "Privacidade",
+    title: "Ajuda",
     href: "https://wa.me/5585997362750?text=Olá, Preciso de ajuda, poderia me ajudar?.",
     icon: MessageCircleQuestionMark,
     external: true,

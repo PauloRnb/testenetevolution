@@ -199,11 +199,11 @@ export function CardButtonModal({
         </main>
         <DialogFooter className="fixed bottom-0 h-32 w-full rounded-t-md bg-zinc-300 p-5 dark:bg-zinc-800 md:h-24">
           <p className="text-sm font-medium leading-4 text-zinc-700 dark:text-zinc-300">
-            <span className="text-base text-orange-600">*</span>A velocidade da
-            conexão pode sofrer oscilações e pode variar de acordo com alguns
-            fatores externos: Distancia, numero de dispositivos conectados
-            simultaneamente, sites ou apps acessados e posicionamento do
-            roteador na sua residencia.
+            <span className="text-base leading-[14px] text-orange-600">*</span>A
+            velocidade da conexão pode sofrer oscilações e pode variar de acordo
+            com alguns fatores externos: Distancia, numero de dispositivos
+            conectados simultaneamente, sites ou apps acessados e posicionamento
+            do roteador na sua residencia.
           </p>
         </DialogFooter>
       </DialogContent>
