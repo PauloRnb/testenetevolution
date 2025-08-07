@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export function AccordionSection() {
+export default function AccordionSection() {
   return (
     <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
       <div className="container px-5 xl:px-0">

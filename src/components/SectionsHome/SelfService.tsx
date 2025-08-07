@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Gauge,
   CircleArrowRight,
@@ -24,7 +26,7 @@ const cardItems = [
     icon: Headset,
     title: "Área do cliente",
     description:
-      "Veja suas faturas, plano e consumo através da central do assianate.",
+      "Veja suas faturas, plano e consumo através da central do assinante.",
     href: "https://netevolution.sgp.tsmx.com.br/accounts/central/login/",
   },
   {
@@ -41,11 +43,11 @@ function Card({ icon: Icon, title, description, href }: (typeof cardItems)[0]) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex min-h-[14.063rem] w-full select-none flex-col justify-between rounded-xl bg-zinc-100 p-4 shadow-sm hover:bg-blue-700 dark:bg-zinc-900 dark:hover:bg-zinc-900 dark:hover:ring-2 dark:hover:ring-cyan-400"
+      className="group flex min-h-[14rem] w-full select-none flex-col justify-between rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors hover:bg-blue-700 dark:bg-zinc-900 dark:hover:bg-zinc-900 dark:hover:ring-2 dark:hover:ring-cyan-400"
     >
       <div className="flex items-start">
         <Icon
-          width={24}
+          size={24}
           strokeWidth={1.8}
           className="text-zinc-600 group-hover:text-white dark:text-white"
         />
@@ -65,7 +67,7 @@ function Card({ icon: Icon, title, description, href }: (typeof cardItems)[0]) {
 
       <div className="flex justify-end">
         <CircleArrowRight
-          width={24}
+          size={24}
           strokeWidth={1.8}
           className="text-blue-700 group-hover:text-white dark:text-cyan-400"
         />
@@ -74,7 +76,7 @@ function Card({ icon: Icon, title, description, href }: (typeof cardItems)[0]) {
   );
 }
 
-export function SelfService() {
+export default function SelfService() {
   return (
     <section className="bg-white py-24 dark:bg-zinc-800">
       <div className="container px-5 xl:px-0">
@@ -83,13 +85,13 @@ export function SelfService() {
             Confira nosso autoatendimento
           </h2>
           <p className="text-left text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
-            Com apenas poucos cliques você consegue resolver tudo o que você
-            precisa com nosso autoatendimento, tudo muito rápido e fácil.
+            Com apenas poucos cliques você consegue resolver tudo o que precisa
+            com nosso autoatendimento, tudo muito rápido e fácil.
           </p>
         </header>
 
         <div className="container pt-16">
-          <div className="grid w-full grid-cols-2 gap-4 32md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             {cardItems.map((item, index) => (
               <Card key={index} {...item} />
             ))}

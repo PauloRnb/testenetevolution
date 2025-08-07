@@ -9,7 +9,7 @@ interface ButtonThemeToggleProps {
   iconClassName?: string; // classe do contêiner do ícone
 }
 
-export function ButtonThemeToggle({
+export default function ButtonThemeToggle({
   className = "",
   iconClassName = "",
 }: ButtonThemeToggleProps) {

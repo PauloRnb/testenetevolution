@@ -1,10 +1,12 @@
-import { AccordionSection } from "./AccordionSection";
-import { CardsServices } from "./CardsServices";
-import { NetworkInfrastructure } from "./NetworkInfrastructure";
-import { SectionOfferHome } from "./SectionOfferHome";
-import { SelfService } from "./SelfService";
+import dynamic from "next/dynamic";
 
-export function SectionContent() {
+const SectionOfferHome = dynamic(() => import("./SectionOfferHome"));
+const CardsServices = dynamic(() => import("./CardsServices"));
+const NetworkInfrastructure = dynamic(() => import("./NetworkInfrastructure"));
+const SelfService = dynamic(() => import("./SelfService"));
+const AccordionSection = dynamic(() => import("./AccordionSection"));
+
+export default function SectionContent() {
   return (
     <section id="section-content">
       <SectionOfferHome />

@@ -18,6 +18,25 @@ interface DrawerStreamingProps {
   onLinkClick: () => void;
 }
 
+const streamingSections = [
+  {
+    title: "FILMES E SÉRIES",
+    links: [
+      { href: "/Paramount", label: "Paramount +" },
+      { href: "/Telecine", label: "Telecine" },
+      { href: "/Max", label: "HBO Max" },
+    ],
+  },
+  {
+    title: "ESPORTES",
+    links: [
+      { href: "/Premiere", label: "Premiere" },
+      { href: "/Espn", label: "ESPN" },
+      { href: "/Sportv", label: "SporTV" },
+    ],
+  },
+];
+
 export function DrawerStreaming({
   open,
   onOpenChange,
@@ -49,52 +68,38 @@ export function DrawerStreaming({
             </h2>
           </SheetTitle>
         </SheetHeader>
-        <main className="flex flex-col">
-          <div className="flex flex-col gap-5 pb-0 pl-5 pr-5 pt-5">
-            <div className="mt-4 flex w-fit flex-col gap-1">
-              <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
-                STREAMING:
-              </h2>
-              <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
-            </div>
-            <div className="flex flex-col items-start gap-8">
-              <div className="flex flex-col gap-7">
+
+        <main className="flex flex-col px-5 pt-5">
+          <div className="flex w-fit flex-col gap-1">
+            <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
+              STREAMING:
+            </h2>
+            <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
+          </div>
+
+          <div className="mt-5 flex flex-col gap-8">
+            {streamingSections.map(({ title, links }, i) => (
+              <section key={title} className="flex flex-col gap-7">
                 <h2 className="text-lg font-semibold text-blue-700 dark:text-white">
-                  FILMES E SÉRIES
+                  {title}
                 </h2>
                 <div className="flex flex-col gap-3">
-                  <Link href="/Paramount" onClick={onLinkClick}>
-                    Paramount +
-                  </Link>
-                  <Link href="/Telecine" onClick={onLinkClick}>
-                    Telecine
-                  </Link>
-                  <Link href="/Max" onClick={onLinkClick}>
-                    HBO Max
-                  </Link>
+                  {links.map(({ href, label }) => (
+                    <Link key={href} href={href} onClick={onLinkClick}>
+                      {label}
+                    </Link>
+                  ))}
                 </div>
-              </div>
-              <Separator className="bg-zinc-200" />
-              <div className="flex flex-col gap-7">
-                <h2 className="text-lg font-semibold text-blue-700 dark:text-white">
-                  ESPORTES
-                </h2>
-                <div className="flex flex-col gap-3">
-                  <Link href="/Premiere" onClick={onLinkClick}>
-                    Premiere
-                  </Link>
-                  <Link href="/Espn" onClick={onLinkClick}>
-                    ESPN
-                  </Link>
-                  <Link href="/Sportv" onClick={onLinkClick}>
-                    SporTV
-                  </Link>
-                </div>
-              </div>
-            </div>
+                {i !== streamingSections.length - 1 && (
+                  <Separator className="bg-zinc-200" />
+                )}
+              </section>
+            ))}
           </div>
         </main>
-        <div className="flex-1"></div>
+
+        <div className="flex-1" />
+
         <SheetFooter className="sticky bottom-0 flex h-32 flex-col items-start justify-center gap-5 bg-blue-700 px-5 py-5 dark:bg-zinc-900">
           <div className="flex w-fit flex-col gap-1">
             <h3 className="text-sm font-semibold text-white">STREAMING</h3>

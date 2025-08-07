@@ -1,8 +1,8 @@
 "use client";
 
 import { ChevronRight, Globe } from "lucide-react";
-import { Separator } from "../ui/separator";
 import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
   SheetContent,
@@ -18,6 +18,28 @@ interface DrawerFiberProps {
   onLinkClick: () => void;
 }
 
+const linksCasa = [
+  { href: "/Fiber", label: "Fibra Óptica" },
+  { href: "/Combos", label: "Combos" },
+  { href: "/ConnectedHouse", label: "Casa Conectada" },
+];
+
+const linksEmpresa = [
+  { href: "/Fiber", label: "Fibra Óptica" },
+  { href: "/Dedicated", label: "Link Dedicado" },
+];
+
+const linksInfraestrutura = [
+  {
+    href: "https://wa.me/5585997362750?text=Olá, poderia me informar como funciona essa Rede MESH? Tenho interesse!",
+    label: "Rede MESH",
+  },
+  {
+    href: "https://wa.me/5585997362750?text=Olá, como funciona o programa Ultra Cabo? Pode me fornecer informações?",
+    label: "Ultra Cabo",
+  },
+];
+
 export function DrawerFiber({
   open,
   onOpenChange,
@@ -29,93 +51,88 @@ export function DrawerFiber({
         <button
           aria-label="Abrir menu"
           type="button"
-          className="flex w-full select-none items-center justify-between text-base font-medium text-gray-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500 md:text-lg"
+          className="flex w-full items-center justify-between text-base font-medium text-gray-600 hover:text-blue-700 focus-visible:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500 md:text-lg"
         >
-          <div className="flex items-center gap-1">
+          <span className="flex items-center gap-1">
             <Globe size={20} className="md:size-6" />
-            <span>Internet Fibra</span>
-          </div>
+            Internet Fibra
+          </span>
           <ChevronRight size={16} className="md:size-5" />
         </button>
       </SheetTrigger>
-      <SheetContent>
+
+      <SheetContent aria-labelledby="fiber-title">
         <SheetHeader className="h-16 items-center bg-blue-700 dark:bg-zinc-900">
           <SheetTitle asChild>
-            <h2 className="text-base text-white md:text-lg">
-              <div className="flex items-center gap-1">
+            <h2 id="fiber-title" className="text-base text-white md:text-lg">
+              <span className="flex items-center gap-1">
                 <Globe size={20} className="md:size-6" />
-                <span>Internet Fibra</span>
-              </div>
+                Internet Fibra
+              </span>
             </h2>
           </SheetTitle>
         </SheetHeader>
-        <main className="flex flex-col">
-          <div className="flex flex-col gap-5 pb-0 pl-5 pr-5 pt-5">
-            <div className="mt-4 flex w-fit flex-col gap-1">
-              <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
+
+        <main className="flex flex-col p-5">
+          <section className="mt-4 space-y-6">
+            <div>
+              <h3 className="text-sm font-semibold text-blue-700 dark:text-white">
                 INTERNET:
-              </h2>
-              <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
+              </h3>
+              <Separator className="!h-0.5 !w-10 rounded-full bg-blue-700 dark:bg-white" />
             </div>
-            <div className="flex flex-col items-start gap-8">
-              <div className="flex flex-col gap-7">
-                <h2 className="text-lg font-semibold text-blue-700 dark:text-white">
+
+            <div className="space-y-8">
+              <div>
+                <h4 className="text-lg font-semibold text-blue-700 dark:text-white">
                   PARA SUA CASA
-                </h2>
-                <div className="flex flex-col gap-3">
-                  <Link href="/Fiber" onClick={onLinkClick}>
-                    Fibra Óptica
-                  </Link>
-                  <Link href="/Combos" onClick={onLinkClick}>
-                    Combos
-                  </Link>
-                  <Link href="/ConnectedHouse" onClick={onLinkClick}>
-                    Casa Conectada
-                  </Link>
+                </h4>
+                <div className="mt-2 flex flex-col gap-2">
+                  {linksCasa.map(({ href, label }) => (
+                    <Link key={href} href={href} onClick={onLinkClick}>
+                      {label}
+                    </Link>
+                  ))}
                 </div>
               </div>
-              <Separator className="bg-zinc-200" />
-              <div className="flex flex-col gap-7">
-                <h2 className="text-lg font-semibold text-blue-700 dark:text-white">
+
+              <Separator className="bg-zinc-200 dark:bg-zinc-700" />
+
+              <div>
+                <h4 className="text-lg font-semibold text-blue-700 dark:text-white">
                   PARA SUA EMPRESA
-                </h2>
-                <div className="flex flex-col gap-3">
-                  <Link href="/Fiber" onClick={onLinkClick}>
-                    Fibra Óptica
-                  </Link>
-                  <Link href="/Dedicated" onClick={onLinkClick}>
-                    Link Dedicado
-                  </Link>
+                </h4>
+                <div className="mt-2 flex flex-col gap-2">
+                  {linksEmpresa.map(({ href, label }) => (
+                    <Link key={href} href={href} onClick={onLinkClick}>
+                      {label}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </main>
-        <div className="flex-1" />
-        <SheetFooter className="sticky bottom-0 flex h-32 flex-col items-start justify-center gap-5 bg-blue-700 p-5 dark:bg-zinc-900">
-          <div className="flex w-fit flex-col gap-1">
-            <h3 className="text-sm font-semibold text-white">
+        <div className="flex-1"></div>
+        <SheetFooter className="sticky bottom-0 flex h-28 flex-col items-start gap-4 bg-blue-700 p-5 dark:bg-zinc-900">
+          <div>
+            <h5 className="text-sm font-semibold text-white">
               INFRAESTRUTURA DE REDE
-            </h3>
-            <Separator className="!h-[2px] !w-10 rounded-full bg-white" />
+            </h5>
+            <Separator className="h-0.5 w-10 rounded-full bg-white" />
           </div>
-          <div className="flex w-fit flex-col gap-2">
-            <a
-              href="https://wa.me/5585997362750?text=Olá, poderia me informar como funciona essa Rede MESH? Tenho interesse!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium leading-[14px] text-white transition-colors duration-200 hover:text-zinc-200 dark:text-cyan-400 dark:hover:text-cyan-500"
-            >
-              Rede MESH
-            </a>
-            <a
-              href="https://wa.me/5585997362750?text=Olá, como funciona o programa Ultra Cabo? Pode me fornecer informações?"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium leading-[14px] text-white transition-colors duration-200 hover:text-zinc-200 dark:text-cyan-400 dark:hover:text-cyan-500"
-            >
-              Ultra Cabo
-            </a>
+          <div className="flex flex-col gap-2">
+            {linksInfraestrutura.map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-white hover:text-zinc-200 dark:text-cyan-400 dark:hover:text-cyan-500"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </SheetFooter>
       </SheetContent>
