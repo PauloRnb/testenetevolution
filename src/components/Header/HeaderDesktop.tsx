@@ -64,7 +64,7 @@ export default function HeaderDesktop() {
                 </div>
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="absolute left-0 top-0 w-full select-none data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
-                <main className="flex h-[28.125rem] w-[33.125rem] flex-col justify-between">
+                <main className="flex h-[24.125rem] w-[33.125rem] flex-col justify-between">
                   <div className="flex flex-col gap-5 pb-0 pl-5 pr-5 pt-5">
                     <div className="mt-4 flex w-fit flex-col gap-1">
                       <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
@@ -183,7 +183,7 @@ export default function HeaderDesktop() {
                 />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
-                <main className="flex h-[28.125rem] w-[33.125rem] flex-col justify-between">
+                <main className="flex h-[24.125rem] w-[33.125rem] flex-col justify-between">
                   <div className="flex flex-col gap-5 pb-0 pl-5 pr-5 pt-5">
                     <div className="mt-4 flex w-fit flex-col gap-1">
                       <h2 className="text-balance font-semibold text-blue-700 dark:text-white">
