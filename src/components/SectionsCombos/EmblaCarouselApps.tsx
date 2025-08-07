@@ -48,7 +48,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
           alt="Logo HBO Max"
           width={245}
           height={42}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-[2px]">
@@ -79,7 +79,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
           alt="Logo Paramount Plus"
           width={245}
           height={42}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-[2px]">
@@ -110,7 +110,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
           alt="Logo Telecine"
           width={245}
           height={42}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-[2px]">
@@ -141,7 +141,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
           alt="Logo Premiere"
           width={245}
           height={42}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-[2px]">
@@ -173,7 +173,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
           alt="Logo ESPN"
           width={173}
           height={43}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-[2px]">
@@ -204,7 +204,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
           alt="Logo SporTV"
           width={218}
           height={58}
-          priority
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-[2px]">
