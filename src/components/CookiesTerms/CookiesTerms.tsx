@@ -7,12 +7,13 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 export function CookiesTerms() {
   const [open, setOpen] = useState(false);
 
+  // Sempre abrir o modal ao carregar (sem verificar localStorage)
   useEffect(() => {
-    const consent = localStorage.getItem("cookie_consent");
-    if (!consent) setOpen(true);
+    setOpen(true);
   }, []);
 
   const handleConsent = () => {
+    // Se quiser, pode continuar guardando o consentimento, mas não é necessário
     localStorage.setItem("cookie_consent", "accepted");
     setOpen(false);
   };
@@ -20,8 +21,8 @@ export function CookiesTerms() {
   return (
     <Dialog open={open}>
       <DialogContent className="fixed bottom-0 left-0 right-0 top-[initial] z-50 flex !h-fit min-w-full transform-none !rounded-none border-t-zinc-300 bg-white py-4 transition-none dark:border-zinc-600 dark:bg-zinc-900">
-        <div className="2lg:px-0 container flex flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between lg:px-6">
-          <div className="2lg:w-[59.375rem] flex flex-col gap-2 md:w-[34rem] lg:w-[38rem]">
+        <div className="container flex flex-col items-start justify-center gap-4 md:flex-row md:items-center md:justify-between 32lg:px-0">
+          <div className="flex flex-col gap-2 md:w-[34rem] lg:w-[38rem] 32lg:w-[59.375rem]">
             <DialogTitle asChild>
               <h2 className="text-base font-semibold leading-5 text-zinc-800 dark:text-white">
                 Nosso site armazena cookies para melhorar sua navegação
@@ -42,7 +43,7 @@ export function CookiesTerms() {
           <div className="flex items-center">
             <button
               onClick={handleConsent}
-              className="rounded border border-blue-700 bg-blue-700 px-4 py-2 text-sm text-white transition-colors duration-200 hover:border-blue-500 hover:bg-blue-500 focus:outline-none focus-visible:border-blue-500 focus-visible:bg-blue-500 dark:border-cyan-400 dark:bg-cyan-400 dark:hover:border-cyan-500 dark:hover:bg-cyan-500 dark:focus-visible:border-cyan-500 dark:focus-visible:bg-cyan-500"
+              className="rounded border border-blue-700 bg-blue-700 px-4 py-2 text-sm text-white transition-colors duration-200 hover:border-blue-500 hover:bg-blue-500 focus:outline-none"
             >
               Aceitar
             </button>

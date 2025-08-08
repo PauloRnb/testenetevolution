@@ -38,7 +38,7 @@ export function SectionHome() {
               />
             </a>
             <Link
-              href="/Plans"
+              href="#section-offer-home"
               className="transform-colors group flex h-8 w-40 select-none items-center justify-center gap-1 rounded-full border border-zinc-500 duration-200 hover:border-blue-700 focus:outline-none focus-visible:scale-105 dark:border-white dark:hover:border-cyan-500 md:w-48"
             >
               <span className="transform-colors text-sm font-medium text-zinc-500 duration-200 group-hover:text-blue-700 dark:text-white dark:group-hover:text-cyan-500 md:text-base">
