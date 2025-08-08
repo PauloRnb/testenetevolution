@@ -1,6 +1,6 @@
 "use client";
-
 import Image from "next/image";
+
 import { CirclePlus } from "lucide-react";
 
 import {
@@ -12,74 +12,77 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-export default function ModalCoverage() {
+export function ModalCoverage() {
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button
-          type="button"
-          aria-label="Abrir modal de áreas de cobertura"
-          className="flex items-center gap-1 text-base font-medium text-white transition-opacity hover:opacity-85 focus:outline-none focus-visible:ring-2 focus-visible:ring-white dark:text-cyan-400"
-        >
-          <span>Áreas de Cobertura</span>
-          <CirclePlus size={16} strokeWidth={2.2} />
-        </button>
-      </DialogTrigger>
-
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle asChild>
-            <div className="w-fit">
-              <Image
-                src="/logoblue.svg"
-                alt="Logo Net Evolution - tema claro"
-                width={170}
-                height={33}
-                priority
-                className="block dark:hidden"
-              />
-              <Image
-                src="/logowhite.svg"
-                alt="Logo Net Evolution - tema escuro"
-                width={170}
-                height={33}
-                priority
-                className="hidden dark:block"
-              />
+    <>
+      <Dialog>
+        <DialogTrigger asChild>
+          <button
+            aria-label="Abri modal"
+            className="flex select-none items-center justify-center gap-1 text-base font-medium text-white opacity-100 transition-opacity duration-200 hover:opacity-85 focus:outline-none focus-visible:opacity-85 dark:text-cyan-400"
+          >
+            <span>Áreas de Cobertura</span>
+            <CirclePlus size={16} strokeWidth={2.2} />
+          </button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle asChild>
+              <h2 className="w-fit">
+                <Image
+                  src="/logoblue.svg"
+                  alt="Logo Net Evolution"
+                  width={170}
+                  height={33}
+                  priority
+                  className="block dark:hidden"
+                />
+                <Image
+                  src="/logowhite.svg"
+                  alt="Logo Net Evolution"
+                  width={170}
+                  height={33}
+                  priority
+                  className="hidden dark:block"
+                />
+              </h2>
+            </DialogTitle>
+          </DialogHeader>
+          <main className="flex flex-col items-start justify-between">
+            <div className="flex w-full flex-col gap-4">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+                Áreas de Cobertura:
+              </h3>
+              <ul className="grid list-inside list-disc grid-cols-2 gap-y-2">
+                <li className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
+                  Cigana
+                </li>
+                <li className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
+                  Vila Cazé
+                </li>
+                <li className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
+                  Nova Cigana
+                </li>
+                <li className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
+                  Paumirim
+                </li>
+                <li className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
+                  Planalto Caucaia
+                </li>
+                <li className="text-sm font-medium leading-5 text-gray-700 dark:text-gray-300">
+                  Padre J. Maria I e II
+                </li>
+              </ul>
             </div>
-          </DialogTitle>
-        </DialogHeader>
-
-        <main className="flex flex-col items-start gap-4">
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-            Áreas de Cobertura:
-          </h3>
-          <ul className="grid list-inside list-disc grid-cols-2 gap-y-2">
-            {[
-              "Cigana",
-              "Vila Cazé",
-              "Nova Cigana",
-              "Paumirim",
-              "Planalto Caucaia",
-              "Padre J. Maria I e II",
-            ].map((area) => (
-              <li
-                key={area}
-                className="text-sm font-medium text-gray-700 dark:text-gray-300"
-              >
-                {area}
-              </li>
-            ))}
-          </ul>
-        </main>
-
-        <DialogFooter>
-          <p className="text-xs font-medium text-gray-700 dark:text-gray-200">
-            <span className="text-sm font-semibold text-orange-600">*</span>{" "}
-            Consulte viabilidade para sua região.
-          </p>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+          </main>
+          <DialogFooter>
+            <p className="text-xs font-medium tracking-[0.01rem] text-gray-700 dark:text-gray-200">
+              <span className="text-sm font-semibold text-orange-600">*</span>
+              Consulte viabilidade para sua região.
+            </p>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }

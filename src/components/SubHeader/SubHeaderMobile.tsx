@@ -1,14 +1,7 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const DrawerAcessibility = dynamic(
-  () => import("../Drawer/DrawerAcessibility"),
-  { ssr: false },
-);
-const ModalCoverage = dynamic(() => import("../Modal/ModalCoverage"), {
-  ssr: false,
-});
+import { DrawerAcessibility } from "../Drawer/DrawerAcessibility";
+import { ModalCoverage } from "../Modal/ModalCoverage";
 
 export default function SubHeaderMobile() {
   return (

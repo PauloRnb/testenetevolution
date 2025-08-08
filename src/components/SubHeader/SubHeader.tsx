@@ -1,25 +1,19 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useMediaQuery } from "@/Hooks/useIsMediaQuery";
+import dynamic from "next/dynamic";
 
-// Lazy load com suspense opcional
 const SubHeaderMobile = dynamic(() => import("./SubHeaderMobile"), {
   ssr: false,
-  loading: () => <div className="h-16" />, // ou um Skeleton específico
 });
-
 const SubHeaderDesktop = dynamic(() => import("./SubHeaderDesktop"), {
   ssr: false,
-  loading: () => <div className="h-20" />, // ou um Skeleton específico
 });
 
 export default function SubHeader() {
   const isMobile = useMediaQuery("(max-width: 1024px)");
 
-  if (isMobile === null) {
-    return <div className="h-16 bg-blue-700 dark:bg-zinc-800" />; // placeholder fixo
-  }
+  if (isMobile === null) return null; // ou um loader ou placeholder
 
   return (
     <nav

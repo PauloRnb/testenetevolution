@@ -17,91 +17,83 @@ import { DrawerFiber } from "./DrawerFiber";
 import { DrawerClient } from "./DrawerClient";
 import { DrawerStreaming } from "./DrawerStreaming";
 
-type DrawerName = "fiber" | "client" | "streaming" | null;
-
 export function DrawerMain() {
   const [openMain, setOpenMain] = useState(false);
-  const [openDrawer, setOpenDrawer] = useState<DrawerName>(null);
+  const [openFiber, setOpenFiber] = useState(false);
+  const [openClient, setOpenClient] = useState(false);
+  const [openStreaming, setOpenStreaming] = useState(false);
 
   const closeAllMenus = () => {
     setOpenMain(false);
-    setOpenDrawer(null);
+    setOpenFiber(false);
+    setOpenClient(false);
+    setOpenStreaming(false);
   };
-
-  const toggleDrawer = (drawer: DrawerName) => {
-    setOpenDrawer((current) => (current === drawer ? null : drawer));
-  };
-
   return (
-    <Sheet open={openMain} onOpenChange={setOpenMain}>
-      <SheetTrigger asChild>
-        <button
-          aria-label="Abrir menu"
-          type="button"
-          className="flex items-center justify-center text-zinc-600 focus:outline-none focus-visible:text-zinc-500 dark:text-cyan-400 dark:focus-visible:text-cyan-500"
-        >
-          <AlignJustify size={20} />
-        </button>
-      </SheetTrigger>
-
-      <SheetContent>
-        <SheetHeader className="h-16 items-center bg-blue-700 dark:bg-zinc-900">
-          <SheetTitle asChild>
-            <h2 className="text-base text-white md:text-lg">
-              <Image
-                src="/logowhite.svg"
-                alt="Logo Net Evolution"
-                width={150}
-                height={29}
-                priority
-              />
-            </h2>
-          </SheetTitle>
-        </SheetHeader>
-
-        <main className="mt-9 flex flex-col px-5">
-          {/* Fibra */}
-          <DrawerFiber
-            open={openDrawer === "fiber"}
-            onOpenChange={() => toggleDrawer("fiber")}
-            onLinkClick={closeAllMenus}
-          />
-          <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
-
-          {/* Combos */}
-          <Link
-            href="/Combos"
-            onClick={closeAllMenus}
-            className="flex w-full select-none items-center gap-1 text-base font-medium text-gray-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500 md:text-lg"
+    <>
+      <Sheet open={openMain} onOpenChange={setOpenMain}>
+        <SheetTrigger asChild>
+          <button
+            aria-label="Abrir menu"
+            type="button"
+            className="flex items-center justify-center text-zinc-600 focus:outline-none focus-visible:text-zinc-500 dark:text-cyan-400 dark:focus-visible:text-cyan-500"
           >
-            <div className="flex items-center gap-1">
-              <Combine size={20} className="md:size-6" />
-              <span>Nossos Combos</span>
-            </div>
-          </Link>
-          <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
-
-          {/* Streaming */}
-          <DrawerStreaming
-            open={openDrawer === "streaming"}
-            onOpenChange={() => toggleDrawer("streaming")}
-            onLinkClick={closeAllMenus}
-          />
-          <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
-
-          {/* Cliente */}
-          <DrawerClient
-            open={openDrawer === "client"}
-            onOpenChange={() => toggleDrawer("client")}
-            onLinkClick={closeAllMenus}
-          />
-          <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
-        </main>
-
-        <div className="flex-1" />
-
-        <SheetFooter className="sticky bottom-0 flex h-20 items-center gap-5 px-5 py-5" />
-      </SheetContent>
-    </Sheet>
+            <AlignJustify size={20} />
+          </button>
+        </SheetTrigger>
+        <SheetContent>
+          <SheetHeader className="h-16 items-center bg-blue-700 dark:bg-zinc-900">
+            <SheetTitle asChild>
+              <h2 className="text-base text-white md:text-lg">
+                <Image
+                  src="/logowhite.svg"
+                  alt="Logo Net Evolution"
+                  width={150}
+                  height={29}
+                  priority
+                />
+              </h2>
+            </SheetTitle>
+          </SheetHeader>
+          <main className="mt-9 flex flex-col px-5">
+            {/* Fibra */}
+            <DrawerFiber
+              open={openFiber}
+              onOpenChange={setOpenFiber}
+              onLinkClick={closeAllMenus}
+            />
+            <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
+            {/* Combos */}
+            <Link
+              onClick={closeAllMenus}
+              href="/Combos"
+              className="flex w-full select-none items-center gap-1 text-base font-medium text-gray-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500 md:text-lg"
+            >
+              <div className="flex items-center gap-1">
+                <Combine size={20} className="md:size-6" />
+                <span>Nossos Combos</span>
+              </div>
+            </Link>
+            <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
+            {/* Streaming */}
+            <DrawerStreaming
+              open={openStreaming}
+              onOpenChange={setOpenStreaming}
+              onLinkClick={closeAllMenus}
+            />
+            <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
+            {/* Cliente */}
+            <DrawerClient
+              open={openClient}
+              onOpenChange={setOpenClient}
+              onLinkClick={closeAllMenus}
+            />
+            <Separator className="my-7 bg-zinc-200 dark:bg-zinc-500" />
+          </main>
+          <div className="flex-1"></div>
+          <SheetFooter className="sticky bottom-0 flex h-20 items-center gap-5 px-5 py-5"></SheetFooter>
+        </SheetContent>
+      </Sheet>
+    </>
   );
 }

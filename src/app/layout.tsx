@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "./ThemeProvider/ThemeProvider";
 import { Figtree } from "next/font/google";
-
 import "./globals.css";
-
 import Header from "@/components/Header/Header";
 import SubHeader from "@/components/SubHeader/SubHeader";
 import { CookiesTerms } from "@/components/CookiesTerms/CookiesTerms";
@@ -38,11 +36,11 @@ export const metadata: Metadata = {
       "Net Evolution - Provedor de Internet Fibra Óptica | Conexão Rápida e Estável",
     description:
       "Internet fibra óptica com alta velocidade e estabilidade para residências e empresas. Suporte 24h e planos personalizados.",
-    url: "https://www.seusite.com.br",
+    url: "https://www.seusite.com.br", // coloque aqui o seu domínio real
     siteName: "Net Evolution",
     images: [
       {
-        url: "https://www.seusite.com.br/imagens/og-image.jpg",
+        url: "https://www.seusite.com.br/imagens/og-image.jpg", // substitua pela imagem real
         width: 1200,
         height: 630,
         alt: "Net Evolution - Provedor de Internet 100% Fibra Óptica",
@@ -57,15 +55,15 @@ export const metadata: Metadata = {
       "Net Evolution - Provedor de Internet 100% Fibra Óptica | Conexão Rápida e Estável",
     description:
       "Internet fibra óptica com alta velocidade e estabilidade para residências e empresas. Suporte 24h e planos personalizados.",
-    images: ["https://www.seusite.com.br/imagens/twitter-image.jpg"],
+    images: ["https://www.seusite.com.br/imagens/twitter-image.jpg"], // substitua pela imagem real
   },
 };
 
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
