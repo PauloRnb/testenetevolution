@@ -44,7 +44,7 @@ export function CardButtonModal({
       <DialogTrigger className="text-white focus:scale-105 focus:outline-none">
         <CirclePlus size={16} strokeWidth={2} />
       </DialogTrigger>
-      <DialogContent className="flex !min-h-dvh !min-w-full flex-col gap-4 !rounded-none border bg-white p-6 px-0 pb-[7.5rem] shadow-lg duration-200 md:!min-h-[672px] md:w-full md:!min-w-[672px] md:!rounded-2xl md:pb-[6.5rem]">
+      <DialogContent className="flex !min-h-dvh !min-w-full flex-col gap-4 overflow-hidden !rounded-none border bg-white p-6 px-0 pb-[7.5rem] shadow-lg duration-200 md:!min-h-[672px] md:w-full md:!min-w-[672px] md:!rounded-2xl md:pb-[6.5rem]">
         <DialogHeader className="h-8 w-fit pl-5">
           <DialogTitle asChild>
             <h2 className="flex w-fit flex-row text-xl font-medium text-zinc-900 dark:text-white">
