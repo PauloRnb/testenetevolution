@@ -44,7 +44,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
     >
       <div className="flex h-[10rem] w-full items-center justify-center overflow-hidden rounded-[0.5rem] bg-zinc-900 dark:bg-zinc-800">
         <Image
-          src="/logohbomaxfull.png"
+          src="/logohbomaxfull.webp"
           alt="Logo HBO Max"
           width={245}
           height={42}
@@ -75,7 +75,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
     >
       <div className="flex h-[10rem] w-full items-center justify-center overflow-hidden rounded-[0.5rem] bg-blue-700">
         <Image
-          src="/logoparamountplusfull.png"
+          src="/logoparamountplusfull.webp"
           alt="Logo Paramount Plus"
           width={245}
           height={42}
@@ -106,7 +106,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
     >
       <div className="flex h-[10rem] w-full items-center justify-center overflow-hidden rounded-[0.5rem] bg-rose-600">
         <Image
-          src="/logotelecinefull.png"
+          src="/logotelecinefull.webp"
           alt="Logo Telecine"
           width={245}
           height={42}
@@ -137,7 +137,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
     >
       <div className="flex h-[10rem] w-full items-center justify-center overflow-hidden rounded-[0.5rem] bg-green-700">
         <Image
-          src="/logopremierefull.png"
+          src="/logopremierefull.webp"
           alt="Logo Premiere"
           width={245}
           height={42}
@@ -169,7 +169,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
     >
       <div className="flex h-[10rem] w-full items-center justify-center overflow-hidden rounded-[0.5rem] bg-red-600">
         <Image
-          src="/logoespnfull.png"
+          src="/logoespnfull.webp"
           alt="Logo ESPN"
           width={173}
           height={43}
@@ -200,7 +200,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
     >
       <div className="flex h-[10rem] w-full items-center justify-center overflow-hidden rounded-[0.5rem] bg-blue-950">
         <Image
-          src="/logosportvfull.png"
+          src="/logosportvfull.webp"
           alt="Logo SporTV"
           width={218}
           height={58}

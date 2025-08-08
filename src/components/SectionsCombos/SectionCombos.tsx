@@ -58,7 +58,7 @@ export function SectionCombos() {
               width={401}
               height={315}
               loading="lazy"
-              className="hidden w-full xl:block"
+              className="hidden xl:block"
             />
           </div>
         </div>
