@@ -3,12 +3,20 @@ import { twMerge } from "tailwind-merge";
 
 interface CardButtonSubsProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
+  message: string;
 }
 
-export function CardButtonSubs({ text, ...rest }: CardButtonSubsProps) {
+export function CardButtonSubs({
+  text,
+  message,
+  ...rest
+}: CardButtonSubsProps) {
+  const numeroWhatsApp = "5585997362750";
+  const href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
+
   return (
     <a
-      href="https://wa.me/5585997362750?text=Olá, gostaria de saber sobre os planos sem combos."
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       {...rest}

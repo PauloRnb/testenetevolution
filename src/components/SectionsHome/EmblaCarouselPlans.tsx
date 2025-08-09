@@ -117,6 +117,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
+        message="Olá gostaria de assinar o plano: 500Mbps + Telecine e Paramount."
         className="focus:bg-orange-500 focus:outline-none dark:focus:bg-orange-500"
       />
     </Card.Root>,
@@ -222,6 +223,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
+        message="Olá gostaria de assinar o plano: 600Mbps + Telecine, SporTV e Paramount."
         className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
       />
     </Card.Root>,
@@ -345,6 +347,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
+        message="Olá gostaria de assinar o plano: 600Mbps + SporTV, Premiere, HBO Max e Paramount."
         className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
       />
     </Card.Root>,
@@ -414,6 +417,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
       </Card.Content>
       <Card.BtnCombos
         text="ASSINE AGORA"
+        message="Olá gostaria de assinar o plano: 600Mbps + HBO Max."
         className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
       />
     </Card.Root>,

@@ -23,13 +23,17 @@ export function SectionCombos() {
               </div>
               <div className="flex items-center justify-center gap-4 md:justify-start">
                 <a
-                  href="#"
+                  href="https://wa.me/5585997362750?text=Olá, gostaria de assinar o plano com combos. Poderia me enviar os planos?"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="select-none rounded border border-white bg-white px-2 py-[2px] text-lg font-medium text-blue-500 transition-colors duration-200 hover:bg-transparent hover:text-white"
                 >
                   ASSINE AGORA
                 </a>
                 <a
-                  href="#"
+                  href="https://wa.me/5585997362750?text=Olá, gostaria de saber sobre os planos com combos."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="select-none rounded border border-white bg-transparent px-2 py-[2px] text-lg font-medium text-white transition-colors duration-200 hover:bg-white hover:text-blue-500"
                 >
                   SABER MAIS
