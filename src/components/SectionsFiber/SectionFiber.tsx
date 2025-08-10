@@ -100,76 +100,76 @@ export function SectionFiber() {
           <div className="pt-16">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 32md:grid-cols-4">
               {/* Card 1 */}
-              <div className="group relative h-[7.5rem] w-full overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:bg-zinc-900">
+              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
                 <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white">
+                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
                     <Globe
                       size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900"
+                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
                     />
                   </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white md:text-xl">
+                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
                     Internet fibra
                   </h3>
                 </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 md:text-base">
+                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
                   Fibra óptica de última geração.
                 </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white"></div>
+                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
               </div>
               {/* Card 2 */}
-              <div className="group relative h-[7.5rem] w-full overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:bg-zinc-900">
+              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
                 <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white">
+                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
                     <Headset
                       size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900"
+                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
                     />
                   </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white md:text-xl">
+                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
                     Atendimento
                   </h3>
                 </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 md:text-base">
+                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
                   Suporte online 24hrs.
                 </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white"></div>
+                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
               </div>
               {/* Card 3 */}
-              <div className="group relative h-[7.5rem] w-full overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:bg-zinc-900">
+              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
                 <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white">
+                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
                     <Airplay
                       size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900"
+                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
                     />
                   </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white md:text-xl">
+                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
                     Streaming
                   </h3>
                 </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 md:text-base">
+                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
                   Os melhores apps de streaming.
                 </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white"></div>
+                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
               </div>
               {/* Card 4 */}
-              <div className="group relative h-[7.5rem] w-full overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:bg-zinc-900">
+              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
                 <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white">
+                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
                     <CirclePercent
                       size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900"
+                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
                     />
                   </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white md:text-xl">
+                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
                     Indicação
                   </h3>
                 </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 md:text-base">
+                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
                   Indicou, ganhou desconto.
                 </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white"></div>
+                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
               </div>
             </div>
           </div>
