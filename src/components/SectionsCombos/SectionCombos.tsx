@@ -69,7 +69,7 @@ export function SectionCombos() {
       </section>
       <section className="py-24">
         <div className="container px-5 xl:px-0">
-          <header className="flex max-w-4xl flex-col gap-y-1 text-left">
+          <div className="flex max-w-4xl flex-col gap-y-1 text-left">
             <h2 className="text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
               Confira nossos combos
             </h2>
@@ -77,7 +77,7 @@ export function SectionCombos() {
               Temos as melhores ofertas de combos para você e toda sua família
               maratonar filmes, séries e muito futebol ao vivo.
             </p>
-          </header>
+          </div>
 
           <div className="pt-16">
             <EmblaCarouselPlans />

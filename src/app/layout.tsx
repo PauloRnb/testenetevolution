@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description:
     "Na Net Evolution, oferecemos internet 100% fibra óptica com conexão rápida, estável e excelente custo-benefício para sua casa ou empresa. Atendimento regional com suporte 24h.",
   keywords: [
+    "internet",
     "internet fibra óptica",
     "internet 100% fibra",
     "internet 100% fibra óptica",
@@ -29,6 +30,14 @@ export const metadata: Metadata = {
     "internet empresarial",
     "conexão fibra óptica",
     "internet banda larga",
+    "link",
+    "link dedicado",
+    "ip",
+    "ip fixo",
+    "lan",
+    "lan-to-lan",
+    "lan to lan",
+    "ftth",
   ],
   authors: [{ name: "Net Evolution" }],
   openGraph: {

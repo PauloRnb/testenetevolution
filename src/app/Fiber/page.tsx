@@ -1,8 +1,12 @@
-"use client";
-
 import { SectionContentFiber } from "@/components/SectionsFiber/SectionContentFiber";
 
 import "@radix-ui/themes/styles.css";
+
+export const metadata = {
+  title: "Internet 100% Fibra | Net Evolution",
+  description:
+    "Internet 100% fibra Net Evolution: conexão confiável e rápida para streaming, jogos e home office com atendimento especializado.",
+};
 
 export default function Combos() {
   return (
