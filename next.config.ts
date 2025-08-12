@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)", // aplica para todas as rotas
+        source: "/(.*)",
         headers: [
           // Evita clickjacking
           {
@@ -24,16 +24,15 @@ const nextConfig: NextConfig = {
           // Bloqueia APIs não utilizadas
           {
             key: "Permissions-Policy",
-            value: "geolocation=()", // pode adicionar mais se necessário
+            value: "geolocation=()",
           },
-          // Regras de carregamento de recursos (compatível com WhatsApp e fontes do Google)
           {
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
               img-src 'self' https: data:;
-              script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
-              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+              script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+              style-src 'self' https://fonts.googleapis.com;
               font-src 'self' https://fonts.gstatic.com;
               connect-src 'self' https://www.google-analytics.com;
               frame-src 'self' https://www.youtube.com https://player.vimeo.com https://wa.me;

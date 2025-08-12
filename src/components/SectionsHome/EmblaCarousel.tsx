@@ -93,8 +93,7 @@ export function EmblaCarousel() {
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="embla__slide flex h-[520px] w-full flex-shrink-0 select-none flex-col items-center justify-evenly bg-blue-700 bg-cover bg-center px-5 sm:h-[620px] md:h-[495px] md:flex-row xl:rounded-lg"
-              style={{ backgroundImage: `url('${slide.bg}')` }}
+              className="embla__slide flex h-[520px] w-full flex-shrink-0 select-none flex-col items-center justify-evenly bg-gradient-to-r from-blue-500 to-blue-700 bg-cover bg-center px-5 sm:h-[620px] md:h-[495px] md:flex-row xl:rounded-lg"
             >
               <div className="order-2 flex items-center justify-center md:-order-1">
                 <Image
@@ -161,7 +160,7 @@ export function EmblaCarousel() {
             className="text-blue-700 transition-colors duration-200 hover:text-blue-500 focus:text-blue-500 focus:outline-none dark:text-white dark:hover:text-zinc-300 dark:focus:text-zinc-300"
             onClick={scrollNext}
             type="button"
-            aria-label="Proximo Slider"
+            aria-label="Próximo Slider"
           >
             <IoIosArrowDropright size={32} className="md:size-9" />
           </button>
