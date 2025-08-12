@@ -48,7 +48,7 @@ export function SectionCompanies() {
               width={748}
               height={321}
               priority={true}
-              className="block w-full rounded-t-2xl md:hidden"
+              className="block w-full select-none rounded-t-2xl md:hidden"
             />
             <Image
               src="/companiespagestablet.webp"
@@ -56,7 +56,7 @@ export function SectionCompanies() {
               width={436}
               height={343}
               loading="lazy"
-              className="hidden md:block xl:hidden"
+              className="hidden select-none md:block xl:hidden"
             />
             <Image
               src="/companiespagestablet.webp"
@@ -64,16 +64,17 @@ export function SectionCompanies() {
               width={401}
               height={315}
               loading="lazy"
-              className="hidden xl:block"
+              className="hidden select-none xl:block"
             />
           </div>
         </div>
       </section>
+
       <section className="py-24">
         <div className="container px-5 xl:px-0">
           <div className="flex max-w-4xl flex-col gap-y-1 text-left">
             <h2 className="text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
-              Nossos planos empresariais
+              Planos para empresas
             </h2>
             <p className="text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
               Nossos planos garantem uma conexão segura, suporte especializado e
@@ -103,6 +104,7 @@ export function SectionCompanies() {
           </div>
         </div>
       </section>
+
       <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
         <div className="container px-5 xl:px-0">
           <div className="flex max-w-4xl flex-col gap-y-1 text-left">

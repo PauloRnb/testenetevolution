@@ -36,7 +36,7 @@ const EmblaCarouselProducts: React.FC<PropType> = ({ options }) => {
   const cards = [
     <div
       key={0}
-      className="h-[21.25rem] w-full rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
+      className="h-[21.25rem] w-full select-none rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
     >
       <div className="relative h-full w-full overflow-hidden rounded-[0.375rem] bg-[#121418]">
         <div className="h-full w-full bg-[linear-gradient(rgba(67,70,72,0)_0%,rgba(15,15,15,1)_75%,rgba(18,20,24,1)_100%),url('/wificardbg.webp')] bg-cover bg-center duration-500"></div>
@@ -61,7 +61,7 @@ const EmblaCarouselProducts: React.FC<PropType> = ({ options }) => {
 
     <div
       key={1}
-      className="h-[21.25rem] w-full rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
+      className="h-[21.25rem] w-full select-none rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
     >
       <div className="relative h-full w-full overflow-hidden rounded-[0.375rem] bg-[#121418]">
         <div className="h-full w-full bg-[linear-gradient(rgba(67,70,72,0)_0%,rgba(15,15,15,1)_75%,rgba(18,20,24,1)_100%),url('/linkdedicadocardbg.webp')] bg-cover bg-center duration-500"></div>
@@ -88,7 +88,7 @@ const EmblaCarouselProducts: React.FC<PropType> = ({ options }) => {
 
     <div
       key={2}
-      className="h-[21.25rem] w-full rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
+      className="h-[21.25rem] w-full select-none rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
     >
       <div className="relative h-full w-full overflow-hidden rounded-[0.375rem]">
         <div className="h-full w-full bg-[linear-gradient(rgba(67,70,72,0)_0%,rgba(15,15,15,1)_75%,rgba(18,20,24,1)_100%),url('/ipfixocardbg.webp')] bg-cover bg-center duration-500"></div>
@@ -113,7 +113,7 @@ const EmblaCarouselProducts: React.FC<PropType> = ({ options }) => {
 
     <div
       key={3}
-      className="h-[21.25rem] w-full rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
+      className="h-[21.25rem] w-full select-none rounded-xl bg-zinc-100 p-3 shadow-sm dark:bg-zinc-900"
     >
       <div className="relative h-full w-full overflow-hidden rounded-[0.375rem] bg-[#121418]">
         <div className="h-full w-full bg-[linear-gradient(rgba(67,70,72,0)_0%,rgba(15,15,15,1)_75%,rgba(18,20,24,1)_100%),url('/lantolancardbg.webp')] bg-cover bg-center duration-500"></div>

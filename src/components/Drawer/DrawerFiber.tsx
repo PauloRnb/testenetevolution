@@ -83,8 +83,8 @@ export function DrawerFiber({
                   <Link href="/Fiber" onClick={onLinkClick}>
                     Fibra Óptica
                   </Link>
-                  <Link href="/Dedicated" onClick={onLinkClick}>
-                    Link Dedicado
+                  <Link href="/Companies" onClick={onLinkClick}>
+                    Empresas
                   </Link>
                 </div>
               </div>
