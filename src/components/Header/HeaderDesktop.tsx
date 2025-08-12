@@ -59,7 +59,7 @@ export default function HeaderDesktop() {
                   <ChevronDown
                     aria-hidden
                     size={20}
-                    className="duration-[250] relative transition-transform ease-in group-data-[state=open]:-rotate-180"
+                    className="duration-\[250\] relative transition-transform ease-in group-data-[state=open]:-rotate-180"
                   />
                 </div>
               </NavigationMenu.Trigger>
@@ -179,7 +179,7 @@ export default function HeaderDesktop() {
                 <ChevronDown
                   aria-hidden
                   size={20}
-                  className="duration-[250] relative transition-transform ease-in group-data-[state=open]:-rotate-180"
+                  className="duration-\[250\] relative transition-transform ease-in group-data-[state=open]:-rotate-180"
                 />
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
@@ -297,7 +297,7 @@ export default function HeaderDesktop() {
               <ChevronDown
                 aria-hidden
                 size={20}
-                className="duration-[250] relative transition-transform ease-in group-data-[state=open]:-rotate-180"
+                className="duration-\[250\] relative transition-transform ease-in group-data-[state=open]:-rotate-180"
               />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className="absolute left-0 top-0 w-full data-[motion=from-end]:animate-enterFromRight data-[motion=from-start]:animate-enterFromLeft data-[motion=to-end]:animate-exitToRight data-[motion=to-start]:animate-exitToLeft sm:w-auto">
