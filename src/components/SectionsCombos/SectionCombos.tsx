@@ -28,7 +28,7 @@ export function SectionCombos() {
                   rel="noopener noreferrer"
                   className="select-none rounded border border-white bg-white px-2 py-[2px] text-lg font-medium text-blue-500 transition-colors duration-200 hover:bg-transparent hover:text-white"
                 >
-                  ASSINE AGORA
+                  ASSINE JÁ
                 </a>
                 <a
                   href="https://wa.me/5585997362750?text=Olá, gostaria de saber sobre os planos com combos."
@@ -62,7 +62,7 @@ export function SectionCombos() {
               width={401}
               height={315}
               loading="lazy"
-              className="hidden xl:block"
+              className="hidden w-full xl:block"
             />
           </div>
         </div>

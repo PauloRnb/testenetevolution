@@ -31,6 +31,7 @@ const cards = [
           <Card.ModalBox>
             <Card.ModalCombos
               text="ASSINE AGORA"
+              message="Olá gostaria de assinar o plano: 300Mbps | R$69,99."
               className="focus:outline-none focus-visible:bg-orange-500 dark:focus-visible:bg-orange-500"
             />
           </Card.ModalBox>
@@ -53,7 +54,7 @@ const cards = [
       </Card.Infor>
     </Card.Content>
     <Card.BtnCombos
-      message="Olá gostaria de assinar o plano: 300Mbps por R69,99."
+      message="Olá gostaria de assinar o plano: 300Mbps | R$69,99."
       text="ASSINE AGORA"
       className="focus:bg-orange-500 focus:outline-none dark:focus:bg-orange-500"
     />
@@ -73,6 +74,7 @@ const cards = [
           <Card.ModalBox>
             <Card.ModalCombos
               text="ASSINE AGORA"
+              message="Olá gostaria de assinar o plano: 400Mbps | R$79,99."
               className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
             />
           </Card.ModalBox>
@@ -96,7 +98,7 @@ const cards = [
     </Card.Content>
     <Card.BtnCombos
       text="ASSINE AGORA"
-      message="Olá gostaria de assinar o plano: 400Mbps por R79,99."
+      message="Olá gostaria de assinar o plano: 400Mbps | R$79,99."
       className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
     />
   </Card.Root>,
@@ -115,6 +117,7 @@ const cards = [
           <Card.ModalBox>
             <Card.ModalCombos
               text="ASSINE AGORA"
+              message="Olá gostaria de assinar o plano: 600Mbps | R$99,99."
               className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
             />
           </Card.ModalBox>
@@ -138,7 +141,7 @@ const cards = [
     </Card.Content>
     <Card.BtnCombos
       text="ASSINE AGORA"
-      message="Olá gostaria de assinar o plano: 600Mbps por R99,99."
+      message="Olá gostaria de assinar o plano: 600Mbps | R$99,99."
       className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
     />
   </Card.Root>,
@@ -157,6 +160,7 @@ const cards = [
           <Card.ModalBox>
             <Card.ModalCombos
               text="ASSINE AGORA"
+              message="Olá gostaria de assinar o plano: 700Mbps | R$116,99."
               className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
             />
           </Card.ModalBox>
@@ -180,7 +184,7 @@ const cards = [
     </Card.Content>
     <Card.BtnCombos
       text="ASSINE AGORA"
-      message="Olá gostaria de assinar o plano: 700Mbps por R116,99."
+      message="Olá gostaria de assinar o plano: 700Mbps | R$116,99."
       className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
     />
   </Card.Root>,

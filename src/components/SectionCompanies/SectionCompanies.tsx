@@ -30,7 +30,7 @@ export function SectionCompanies() {
                   rel="noopener noreferrer"
                   className="select-none rounded border border-white bg-white px-2 py-[2px] text-lg font-medium text-blue-500 transition-colors duration-200 hover:bg-transparent hover:text-white"
                 >
-                  ASSINE AGORA
+                  ASSINE JÁ
                 </a>
                 <a
                   href="https://wa.me/5585997362750?text=Olá, gostaria de saber mais sobre os planos empresariais"
@@ -64,7 +64,7 @@ export function SectionCompanies() {
               width={401}
               height={315}
               loading="lazy"
-              className="hidden select-none xl:block"
+              className="hidden w-full select-none xl:block"
             />
           </div>
         </div>

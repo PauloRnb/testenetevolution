@@ -10,60 +10,59 @@ export function SectionFiber() {
       <section className="flex w-full flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container h-full md:px-5 md:pr-0 lg:px-6 32lg:px-0">
           <div className="flex h-full flex-col items-center justify-between gap-5 md:flex-row 32md:gap-8">
-            <div className="flex flex-col gap-y-4 px-5 pt-12 md:px-0 md:pt-0">
-              <div className="flex flex-col gap-y-[2px]">
+            <div className="flex flex-col gap-y-8 px-5 pt-12 md:px-0 md:pt-0">
+              <div className="flex flex-col gap-y-1">
                 <h1 className="text-center text-2xl font-semibold text-white sm:text-3xl md:text-left 32md:text-4xl lg:text-5xl">
-                  Internet 100% Fibra!
+                  Fibra Óptica!
                 </h1>
+                <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
+                  Experimente a ultra velocidade da fibra óptica, com conexão
+                  estável e segura para navegar, jogar e assistir sem travar, em
+                  qualquer dispositivo e a qualquer hora.
+                </p>
               </div>
-              <div className="flex items-center justify-center md:justify-start">
-                <Image
-                  src="/cardofferfiber.webp"
-                  alt="Mulher com celular na mão olhando pro lado."
-                  width={414}
-                  height={136}
-                  priority={true}
-                  className="select-none"
-                />
-              </div>
-              <div className="flex flex-col items-center gap-2 md:items-start">
+              <div className="flex items-center justify-center gap-4 md:justify-start">
                 <a
-                  href="https://wa.me/5585997362750?text=Olá, gostaria de assinar o plano promocional 500Mbps por R$74,99."
+                  href="https://wa.me/5585997362750?text=Olá, gostaria de saber assinar o plano 500Mbps por R$74,99, que é junto com o programa cliente fiel."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="select-none rounded border border-white bg-white px-2 py-[2px] text-lg font-medium text-blue-500 transition-colors duration-200 hover:bg-transparent hover:text-white"
                 >
-                  ASSINE AGORA
+                  ASSINE JÁ
                 </a>
-                <p className="text-center text-xs font-medium text-white md:text-left">
-                  *Oferta válida somente para novos clientes.
-                </p>
+                <a
+                  href="https://wa.me/5585997362750?text=Olá, gostaria de saber mais sobre o plano 500Mbps com o programa cliente fiel."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="select-none rounded border border-white bg-transparent px-2 py-[2px] text-lg font-medium text-white transition-colors duration-200 hover:bg-white hover:text-blue-500"
+                >
+                  SABER MAIS
+                </a>
               </div>
             </div>
             <Image
-              src="/bannermodelpagefibersmall.webp"
-              alt="Mulher com celular na mão olhando pro lado."
-              width={299}
-              height={240}
-              loading="lazy"
-              className="block select-none rounded-t-2xl md:hidden"
+              src="/fiberpagesmobilessmall.webp"
+              alt="Mulher com telefone com olhos fechados feliz comemorando."
+              width={748}
+              height={321}
+              priority={true}
+              className="block w-full rounded-t-2xl md:hidden"
             />
             <Image
-              src="/bannermodelpagefiber.webp"
-              alt="Mulher com celular na mão olhando pro lado."
-              width={428}
+              src="/fiberpagestablet.webp"
+              alt="Mulher com telefone com olhos fechados feliz comemorando."
+              width={436}
               height={343}
               loading="lazy"
-              className="hidden select-none md:block xl:hidden"
+              className="hidden md:block xl:hidden"
             />
-
             <Image
-              src="/bannermodelpagefiber.webp"
-              alt="Mulher com celular na mão olhando pro lado."
-              width={412}
-              height={330}
+              src="/fiberpagestablet.webp"
+              alt="Mulher com telefone com olhos fechados feliz comemorando."
+              width={401}
+              height={315}
               loading="lazy"
-              className="hidden select-none xl:block"
+              className="hidden w-full xl:block"
             />
           </div>
         </div>

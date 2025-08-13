@@ -4,15 +4,20 @@ import { twMerge } from "tailwind-merge";
 interface CardButtonModalCombosProps
   extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
+  message: string;
 }
 
 export function CardButtonModalCombos({
   text,
+  message,
   ...rest
 }: CardButtonModalCombosProps) {
+  const numeroWhatsApp = "5585997362750";
+  const href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(message)}`;
+
   return (
     <a
-      href="https://wa.me/5585997362750?text=Olá, gostaria de saber sobre os planos com combos."
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       {...rest}

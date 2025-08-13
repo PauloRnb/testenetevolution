@@ -1,4 +1,4 @@
-import { Router, ChevronRight, Combine, Airplay } from "lucide-react";
+import { Router, ChevronRight, Combine, Building2 } from "lucide-react";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
 
@@ -16,10 +16,10 @@ const services = [
     link: "/Combos",
   },
   {
-    icon: <Airplay size={24} strokeWidth={1.8} />,
-    title: "Streaming",
-    description: "Curta seus filmes, séries e futebol 24h.",
-    link: "/Streaming",
+    icon: <Building2 size={24} strokeWidth={1.8} />,
+    title: "Empresas",
+    description: "Temos a solução para sua empresa.",
+    link: "/Companies",
   },
 ];
 
