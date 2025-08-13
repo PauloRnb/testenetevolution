@@ -1,17 +1,17 @@
-import { SectionContentParamount } from "@/components/SectionParamount/SectionContentParamount";
+import { SectionTelecine } from "@/components/SectionTelecine/SectionTelecine";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {
-  title: "Paramount + Internet Fibra | Net Evolution",
+  title: "Telecine + Internet Fibra | Net Evolution",
   description:
     "Internet 100% fibra Net Evolution: conexão confiável e rápida para streaming, jogos e home office com atendimento especializado.",
 };
 
-export default function Paramount() {
+export default function Telecine() {
   return (
     <div className="z-[1] min-w-[375px] flex-1">
       <main className="min-w-[375px]">
-        <SectionContentParamount />
+        <SectionTelecine />
       </main>
     </div>
   );

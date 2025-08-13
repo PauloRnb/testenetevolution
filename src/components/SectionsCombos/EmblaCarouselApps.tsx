@@ -92,7 +92,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
         </p>
       </div>
       <Link
-        href="/Max"
+        href="/Paramount"
         className="absolute bottom-0 left-0 flex h-14 w-full items-center justify-center gap-2 rounded-b-xl bg-blue-700 text-base font-medium text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
       >
         SABER MAIS
@@ -123,7 +123,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
         </p>
       </div>
       <Link
-        href="/Max"
+        href="/Telecine"
         className="absolute bottom-0 left-0 flex h-14 w-full items-center justify-center gap-2 rounded-b-xl bg-blue-700 text-base font-medium text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
       >
         SABER MAIS
@@ -155,7 +155,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
         </p>
       </div>
       <Link
-        href="/Max"
+        href="/Premiere"
         className="absolute bottom-0 left-0 flex h-14 w-full items-center justify-center gap-2 rounded-b-xl bg-blue-700 text-base font-medium text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
       >
         SABER MAIS
@@ -186,7 +186,7 @@ const EmblaCarouselApps: React.FC<PropType> = ({ options }) => {
         </p>
       </div>
       <Link
-        href="/Max"
+        href="/Espn"
         className="absolute bottom-0 left-0 flex h-14 w-full items-center justify-center gap-2 rounded-b-xl bg-blue-700 text-base font-medium text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
       >
         SABER MAIS

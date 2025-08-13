@@ -5,7 +5,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import SubHeader from "@/components/SubHeader/SubHeader";
-import { CookiesTerms } from "@/components/CookiesTerms/CookiesTerms";
+//import { CookiesTerms } from "@/components/CookiesTerms/CookiesTerms";
 import { Footer } from "@/components/Footer/Footer";
 
 const figtree = Figtree({
@@ -86,7 +86,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-            <CookiesTerms />
+            {/* <CookiesTerms />  */}
           </div>
         </ThemeProvider>
       </body>
