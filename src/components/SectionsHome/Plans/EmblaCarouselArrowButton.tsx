@@ -57,6 +57,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
+      aria-label="Voltar slider"
       className="embla__button embla__button--prev"
       type="button"
       {...restProps}
@@ -72,6 +73,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
+      aria-label="Passar slider"
       className="embla__button embla__button--next"
       type="button"
       {...restProps}

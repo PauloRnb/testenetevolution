@@ -41,7 +41,10 @@ export function CardButtonModal({
 }: CardButtonModalProps) {
   return (
     <Dialog>
-      <DialogTrigger className="text-white focus:scale-105 focus:outline-none">
+      <DialogTrigger
+        className="text-white focus:scale-105 focus:outline-none"
+        aria-label="Abrir modal"
+      >
         <CirclePlus size={16} strokeWidth={2} />
       </DialogTrigger>
       <DialogContent className="flex !min-h-dvh !min-w-full flex-col gap-4 overflow-hidden !rounded-none border bg-white p-6 px-0 pb-[7.5rem] shadow-lg duration-200 md:!min-h-[672px] md:w-full md:!min-w-[672px] md:!rounded-2xl md:pb-[6.5rem]">
