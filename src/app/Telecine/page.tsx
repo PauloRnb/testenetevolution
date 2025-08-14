@@ -1,4 +1,4 @@
-import { SectionTelecine } from "@/components/SectionTelecine/SectionTelecine";
+import { SectionContentTelecine } from "@/components/SectionTelecine/SectionContentTelecine";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {
@@ -11,7 +11,7 @@ export default function Telecine() {
   return (
     <div className="z-[1] min-w-[375px] flex-1">
       <main className="min-w-[375px]">
-        <SectionTelecine />
+        <SectionContentTelecine />
       </main>
     </div>
   );

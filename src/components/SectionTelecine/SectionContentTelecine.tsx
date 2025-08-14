@@ -1,11 +1,11 @@
-"use cliente";
+"use client";
 
-import { SectionTelecine } from "./SectionTelecine";
+import { PageTelecine } from "./PageTelecine";
 
 export function SectionContentTelecine() {
   return (
     <section id="section-content">
-      <SectionTelecine />
+      <PageTelecine />
     </section>
   );
 }

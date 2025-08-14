@@ -4,6 +4,7 @@ import EmblaCarouselPlans from "../SectionsHome/EmblaCarouselPlans";
 import Image from "next/image";
 
 import EmblaCarouselApps from "./EmblaCarouselApps";
+import { TitlePages } from "../TitlePages/TitlesPages";
 
 export function SectionCombos() {
   return (
@@ -67,17 +68,14 @@ export function SectionCombos() {
           </div>
         </div>
       </section>
+      {/* Section Plans */}
       <section className="py-24">
         <div className="container px-5 xl:px-0">
-          <div className="flex max-w-4xl flex-col gap-y-1 text-left">
-            <h2 className="text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
-              Confira nossos combos
-            </h2>
-            <p className="text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
-              Temos as melhores ofertas de combos para você e toda sua família
-              maratonar filmes, séries e muito futebol ao vivo.
-            </p>
-          </div>
+          <TitlePages
+            titleMain="Confira nossos combos"
+            descriptionTitle="Temos as melhores ofertas de combos para você e toda sua família maratonar filmes, séries e muito futebol ao vivo."
+            align="left"
+          />
 
           <div className="pt-16">
             <EmblaCarouselPlans />
@@ -86,15 +84,13 @@ export function SectionCombos() {
       </section>
       <section className="bg-white py-24 dark:bg-zinc-800">
         <div className="container px-5 xl:px-0">
-          <header className="flex max-w-4xl flex-col gap-y-1 text-left">
-            <h2 className="text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
-              Nossos streaming
-            </h2>
-            <p className="text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
-              Aqui você encontra os melhores streamings para você e sua família
-              se divertirem à vontade.
-            </p>
-          </header>
+          <TitlePages
+            titleMain="Nossos streaming"
+            descriptionTitle="Aqui você encontra os melhores streamings para você e sua família 
+            
+            se divertirem à vontade."
+            align="left"
+          />
 
           <div className="pt-16">
             <EmblaCarouselApps />

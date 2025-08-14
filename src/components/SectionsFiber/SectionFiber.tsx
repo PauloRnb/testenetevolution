@@ -3,10 +3,13 @@
 import Image from "next/image";
 import EmblaCarousel from "../SectionsHome/Plans/EmblaCarousel";
 import { Globe, CirclePercent, Airplay, Headset } from "lucide-react";
+import { TitlePages } from "../TitlePages/TitlesPages";
+import { CardBenefits } from "./FiberPageComponents/CardBenefits";
 
 export function SectionFiber() {
   return (
     <>
+      {/* Section Banner */}
       <section className="flex w-full flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container h-full md:px-5 md:pr-0 lg:px-6 32lg:px-0">
           <div className="flex h-full flex-col items-center justify-between gap-5 md:flex-row 32md:gap-8">
@@ -67,110 +70,77 @@ export function SectionFiber() {
           </div>
         </div>
       </section>
+
+      {/* Section Plans */}
       <section className="py-24">
         <div className="container px-5 xl:px-0">
-          <header className="flex max-w-4xl flex-col gap-y-1 text-left">
-            <h2 className="text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
-              Ofertas sem apps
-            </h2>
-            <p className="text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
-              Nossos planos fibra óptica sem apps incluso, feito pra você voar
-              com nossa conexão.
-            </p>
-          </header>
+          <TitlePages
+            titleMain="Ofertas sem apps"
+            descriptionTitle="Nossos planos fibra óptica sem apps incluso, feito pra você voar com nossa conexão."
+            align="left"
+          />
 
           <div className="pt-16">
             <EmblaCarousel />
           </div>
         </div>
       </section>
+
+      {/* Section Cards Benefits */}
       <section className="bg-white py-24 dark:bg-zinc-800">
         <div className="container px-5 xl:px-0">
-          <header className="flex max-w-4xl flex-col gap-y-1 text-left">
-            <h2 className="text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
-              Aqui você tem benefícios
-            </h2>
-            <p className="text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
-              Com a nossa internet fibra óptica, você conta com muito mais do
-              que apenas velocidade. Garantimos estabilidade, segurança e
-              suporte rápido sempre que precisar.
-            </p>
-          </header>
+          <TitlePages
+            titleMain="Aqui você tem benefícios"
+            descriptionTitle="Com a nossa internet fibra óptica, você conta com muito mais do que apenas velocidade. Garantimos estabilidade, segurança e suporte rápido sempre que precisar."
+            align="left"
+          />
 
           <div className="pt-16">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 32md:grid-cols-4">
               {/* Card 1 */}
-              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
-                <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
-                    <Globe
-                      size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
-                    />
-                  </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
-                    Internet fibra
-                  </h3>
-                </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
-                  Fibra óptica de última geração.
-                </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
-              </div>
+              <CardBenefits
+                icon={
+                  <Globe
+                    size={24}
+                    className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
+                  />
+                }
+                title="Internet fibra"
+                description="Fibra óptica de última geração."
+              />
               {/* Card 2 */}
-              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
-                <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
-                    <Headset
-                      size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
-                    />
-                  </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
-                    Atendimento
-                  </h3>
-                </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
-                  Suporte online 24hrs.
-                </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
-              </div>
+              <CardBenefits
+                icon={
+                  <Headset
+                    size={24}
+                    className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
+                  />
+                }
+                title="Atendimento"
+                description="Suporte online 24hrs."
+              />
               {/* Card 3 */}
-              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
-                <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
-                    <Airplay
-                      size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
-                    />
-                  </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
-                    Streaming
-                  </h3>
-                </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
-                  Os melhores apps de streaming.
-                </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
-              </div>
+              <CardBenefits
+                icon={
+                  <Airplay
+                    size={24}
+                    className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
+                  />
+                }
+                title="Straming"
+                description="Os melhores apps de streaming."
+              />
               {/* Card 4 */}
-              <div className="group relative h-[7.5rem] w-full select-none overflow-hidden rounded-xl bg-zinc-100 p-4 shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:border dark:border-white dark:bg-zinc-900 dark:hover:border-cyan-400 dark:hover:bg-transparent">
-                <div className="flex items-center gap-2">
-                  <div className="flex h-[2.25rem] w-[2.25rem] items-center justify-center rounded-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400">
-                    <CirclePercent
-                      size={24}
-                      className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
-                    />
-                  </div>
-                  <h3 className="text-base font-semibold text-zinc-900 group-hover:text-white dark:text-white dark:group-hover:text-cyan-400 md:text-xl">
-                    Indicação
-                  </h3>
-                </div>
-                <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
-                  Indicou, ganhou desconto.
-                </p>
-                <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
-              </div>
+              <CardBenefits
+                icon={
+                  <CirclePercent
+                    size={24}
+                    className="text-white group-hover:text-blue-700 dark:text-zinc-900 dark:group-hover:text-zinc-800"
+                  />
+                }
+                title="Indicação"
+                description="Indicou? Ganhou desconto."
+              />
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { EthernetPort } from "lucide-react";
 import { Separator } from "../ui/separator";
 

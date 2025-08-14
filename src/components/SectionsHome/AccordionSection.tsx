@@ -6,20 +6,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { TitlePages } from "../TitlePages/TitlesPages";
 
 export function AccordionSection() {
   return (
     <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
       <div className="container px-5 xl:px-0">
-        <header className="flex max-w-4xl flex-col gap-y-1">
-          <h2 className="text-left text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">
-            Perguntas frequentes
-          </h2>
-          <p className="text-left text-base font-medium leading-4 text-zinc-500 dark:text-zinc-300 md:text-xl lg:text-2xl">
-            Dúvidas rápidas? A gente responde aqui. Confira abaixo as perguntas
-            mais comuns sobre nossos planos, instalação e suporte.
-          </p>
-        </header>
+        <TitlePages
+          titleMain="Perguntas frequentes"
+          descriptionTitle="Dúvidas rápidas? A gente responde aqui. Confira abaixo as perguntas
+            mais comuns sobre nossos planos, instalação e suporte."
+          align="left"
+        />
 
         <div className="container pt-16">
           <div>
