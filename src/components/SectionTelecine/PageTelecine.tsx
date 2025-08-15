@@ -4,6 +4,7 @@ import { TitlePages } from "../TitlePages/TitlesPages";
 import { SectionAdvantages } from "./SectionAdvantages";
 import { SectionPlansTelecine } from "./SectionPlansTelecine";
 import Image from "next/image";
+import { CardBannersStreaming } from "../SectionParamount/ParamountPageComponents/CardBannersStreaming";
 
 export function PageTelecine() {
   return (
@@ -68,18 +69,39 @@ export function PageTelecine() {
       <SectionPlansTelecine />
       {/* Section Cards Advantages */}
       <SectionAdvantages />
-
-      <section className="bg-white py-24 dark:bg-zinc-800">
+      {/* Section Cards Banner */}
+      <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
         <div className="container px-5 xl:px-0">
           <TitlePages
-            titleMain="Alguns destaques no Telecine"
-            descriptionTitle="Com a melhor internet fibra, curta os maiores sucessos do cinema
-              no Telecine com alta qualidade de streaming. Conexão confiável
-              para toda a família."
+            titleMain="Aproveite os melhores conteúdos"
+            descriptionTitle="Aqui você aproveita histórias emocionantes, aventuras épicas e muito entretenimento para maratonar quando quiser."
             align="left"
           />
 
-          <div className="pt-16"></div>
+          <div className="pt-16">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+              <CardBannersStreaming
+                imageBanner="/todotempotelecineimage.webp"
+                altImage="Banner Libertadores | Paramount+"
+                titleMain="Drama"
+                descriptionTtitle="Aqui você assiste aos dramas mais emocionantes. Assine Telecine."
+              />
+
+              <CardBannersStreaming
+                imageBanner="/vitoriatelecineimage.webp"
+                altImage="Banner Série Yellowstone | Paramount+"
+                titleMain="Biografia"
+                descriptionTtitle="Aqui você acompanha histórias reais e inspiradoras. Assine Telecine."
+              />
+
+              <CardBannersStreaming
+                imageBanner="/apocalipstelecineimage.webp"
+                altImage="Banner Série Yellowstone | Paramount+"
+                titleMain="Policial"
+                descriptionTtitle="Aqui você acompanha os melhores filmes policiais. Assine Telecine."
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>

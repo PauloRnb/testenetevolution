@@ -5,15 +5,13 @@ import { Card } from "../CardPlans";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
 
-export function SectionPlansTelecine() {
+export function SectionPlansPremiere() {
   return (
     <section className="py-24">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Ofertas Telecine"
-          descriptionTitle="Com a melhor internet fibra, curta os maiores sucessos do cinema
-              no Telecine com alta qualidade de streaming. Conexão confiável
-              para toda a família."
+          titleMain="Ofertas Premiere"
+          descriptionTitle="Com a melhor internet fibra, assista aos jogos ao vivo e aos maiores clássicos do futebol no Premiere com transmissão em alta definição. Conexão estável para não perder nenhum lance."
           align="left"
         />
 
@@ -37,8 +35,8 @@ export function SectionPlansTelecine() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logotelecine.webp"
-                              alt="Logo do Telecine"
+                              src="/logopremiere.webp"
+                              alt="Logo do Premiere"
                               width={30}
                               height={30}
                               priority
@@ -51,7 +49,7 @@ export function SectionPlansTelecine() {
                     <Card.ModalBox>
                       <Card.ModalCombos
                         text="ASSINE AGORA"
-                        message="Olá gostaria de assinar o plano: 500Mbps + Telecine | R$109,99."
+                        message="Olá gostaria de assinar o plano: 500Mbps + Paramount | R$109,99."
                         className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 dark:focus:bg-blue-500"
                       />
                     </Card.ModalBox>
@@ -71,8 +69,8 @@ export function SectionPlansTelecine() {
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logotelecine.webp"
-                          alt="Logo Paramount"
+                          src="/logopremiere.webp"
+                          alt="Logo do Premiere"
                           width={30}
                           height={30}
                           priority
@@ -107,8 +105,8 @@ export function SectionPlansTelecine() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logotelecine.webp"
-                              alt="Logo Paramount"
+                              src="/logopremiere.webp"
+                              alt="Logo do Premiere"
                               width={30}
                               height={30}
                               priority
@@ -121,7 +119,7 @@ export function SectionPlansTelecine() {
                     <Card.ModalBox>
                       <Card.ModalCombos
                         text="ASSINE AGORA"
-                        message="Olá gostaria de assinar o plano: 600Mbps + Telecine | R$114,99."
+                        message="Olá gostaria de assinar o plano: 600Mbps + Paramount | R$114,99."
                         className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 dark:focus:bg-blue-500"
                       />
                     </Card.ModalBox>
@@ -141,8 +139,8 @@ export function SectionPlansTelecine() {
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logotelecine.webp"
-                          alt="Logo Paramount"
+                          src="/logopremiere.webp"
+                          alt="Logo do Premiere"
                           width={30}
                           height={30}
                           priority
