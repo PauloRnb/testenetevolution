@@ -73,10 +73,12 @@ const socialLinks = [
   {
     href: "https://www.instagram.com/netevolution.ofc/",
     icon: FaInstagramSquare,
+    label: "Instagram",
   },
   {
     href: "#",
     icon: LiaFacebookF,
+    label: "Facebook",
   },
 ];
 
@@ -115,6 +117,7 @@ export function Footer() {
                           href={href}
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={label}
                           className="max-w-fit text-lg font-medium text-zinc-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-500 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500"
                         >
                           {label}
@@ -124,6 +127,7 @@ export function Footer() {
                           key={label}
                           href={href}
                           prefetch={prefetch}
+                          aria-label={label}
                           className="max-w-fit text-lg font-medium text-zinc-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-500 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500"
                         >
                           {label}
@@ -175,12 +179,18 @@ export function Footer() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={title}
                       className={classes}
                     >
                       {cardContent}
                     </a>
                   ) : (
-                    <Link key={title} href={href} className={classes}>
+                    <Link
+                      key={title}
+                      href={href}
+                      aria-label={`Ir para a página de ${title}`}
+                      className={classes}
+                    >
                       {cardContent}
                     </Link>
                   );
@@ -193,12 +203,13 @@ export function Footer() {
                   Nossas redes sociais
                 </h4>
                 <div className="flex items-center gap-4">
-                  {socialLinks.map(({ href, icon: Icon }) => (
+                  {socialLinks.map(({ href, icon: Icon, label }) => (
                     <a
                       key={href}
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Visite nosso perfil no ${label}`}
                       className="group flex h-10 w-10 items-center justify-center rounded-full bg-zinc-100 p-1 text-blue-700 transition-colors duration-200 hover:bg-blue-700 hover:text-white focus:outline-none focus-visible:bg-blue-700 focus-visible:text-white dark:bg-zinc-800 dark:text-cyan-400 dark:hover:bg-cyan-400 dark:hover:text-zinc-800 dark:focus-visible:bg-cyan-400 dark:focus-visible:text-zinc-800"
                     >
                       <Icon size={24} />
@@ -235,7 +246,11 @@ export function Footer() {
               <div className="hidden md:block">
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link href="/" className="select-none focus:outline-none">
+                    <Link
+                      href="/"
+                      aria-label="Página inicial da Net Evolution"
+                      className="select-none focus:outline-none"
+                    >
                       <Image
                         src="/logowhite.svg"
                         alt="Logo Net Evolution"
