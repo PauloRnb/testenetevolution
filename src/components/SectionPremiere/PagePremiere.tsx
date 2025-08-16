@@ -88,17 +88,17 @@ export function PagePremiere() {
               />
 
               <CardBannersStreaming
-                imageBanner="/vitoriatelecineimage.webp"
-                altImage="Banner Série Yellowstone | Paramount+"
-                titleMain="Biografia"
-                descriptionTtitle="Aqui você acompanha histórias reais e inspiradoras. Assine Telecine."
+                imageBanner="/copadobrimage.webp"
+                altImage="Banner Copa Betano do Brasil."
+                titleMain="Copa do Brasil"
+                descriptionTtitle="A Copa do Brasil é ainda mais emocionante no Premiere."
               />
 
               <CardBannersStreaming
-                imageBanner="/apocalipstelecineimage.webp"
-                altImage="Banner Série Yellowstone | Paramount+"
-                titleMain="Policial"
-                descriptionTtitle="Aqui você acompanha os melhores filmes policiais. Assine Telecine."
+                imageBanner="/copinhasicredipremiere.webp"
+                altImage="Banner Copinha Sicredi."
+                titleMain="Copinha Sicredi"
+                descriptionTtitle="Futebol de base com cobertura completa para os verdadeiros apaixonados."
               />
             </div>
           </div>

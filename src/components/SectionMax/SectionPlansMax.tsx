@@ -5,13 +5,13 @@ import { Card } from "../CardPlans";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
 
-export function SectionPlansPremiere() {
+export function SectionPlansMax() {
   return (
     <section className="py-24">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Ofertas Premiere"
-          descriptionTitle="Com a melhor internet fibra, assista aos jogos ao vivo e aos maiores clássicos do futebol no Premiere."
+          titleMain="Ofertas HBO Max"
+          descriptionTitle="Aproveite as melhores ofertas da Max e assista a séries e filmes exclusivos com preços imperdíveis."
           align="left"
         />
 
@@ -35,8 +35,8 @@ export function SectionPlansPremiere() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logopremiere.webp"
-                              alt="Logo do Premiere"
+                              src="/logomax.webp"
+                              alt="Logo Paramount"
                               width={30}
                               height={30}
                               priority
@@ -69,8 +69,8 @@ export function SectionPlansPremiere() {
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logopremiere.webp"
-                          alt="Logo do Premiere"
+                          src="/logomax.webp"
+                          alt="Logo Paramount"
                           width={30}
                           height={30}
                           priority
@@ -90,7 +90,7 @@ export function SectionPlansPremiere() {
             <Card.Root className="border-blue-700 md:w-[335px]">
               <Card.Top className="bg-blue-700">
                 <Card.Mtop>
-                  <Card.Items text="PLANO FAMÍLIA" className="text-blue-700" />
+                  <Card.Items text="INDIVIDUAL" className="text-blue-700" />
                   <Card.ModalTwo
                     textMbOne="600MEGA"
                     textMbTwo="Download 600Mbps"
@@ -105,8 +105,8 @@ export function SectionPlansPremiere() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logopremiere.webp"
-                              alt="Logo do Premiere"
+                              src="/logomax.webp"
+                              alt="Logo Paramount"
                               width={30}
                               height={30}
                               priority
@@ -139,8 +139,8 @@ export function SectionPlansPremiere() {
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logopremiere.webp"
-                          alt="Logo do Premiere"
+                          src="/logomax.webp"
+                          alt="Logo Paramount"
                           width={30}
                           height={30}
                           priority

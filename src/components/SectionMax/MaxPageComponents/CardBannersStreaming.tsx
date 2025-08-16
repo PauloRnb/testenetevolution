@@ -3,14 +3,16 @@ import Image from "next/image";
 interface BannerCardProps {
   imageBanner: string;
   altImage: string;
-  titleMain: string;
+  imageCardBanner: string;
+  altImageCardBanner: string;
   descriptionTtitle: string;
 }
 
 export function CardBannersStreaming({
   imageBanner,
   altImage,
-  titleMain,
+  imageCardBanner,
+  altImageCardBanner,
   descriptionTtitle,
 }: BannerCardProps) {
   return (
@@ -29,7 +31,14 @@ export function CardBannersStreaming({
 
         {/* Textos */}
         <div className="absolute inset-0 z-10 flex flex-col justify-end px-6 pb-12 text-white">
-          <h3 className="text-2xl font-semibold">{titleMain}</h3>
+          <Image
+            src={imageCardBanner}
+            alt={altImageCardBanner}
+            width={150}
+            height={67}
+            className="select-none"
+            loading="lazy"
+          />
           <p className="mt-2 h-[3rem] text-base font-medium md:h-[6.25rem] 32md:h-[4.688rem] xl:h-[3.75rem]">
             {descriptionTtitle}
           </p>

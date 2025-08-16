@@ -9,13 +9,13 @@ import {
 
 import { TitlePages } from "../TitlePages/TitlesPages";
 
-export function AccordionPremiere() {
+export function AccordionEspn() {
   return (
     <section className="bg-white py-24 dark:bg-zinc-800">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Duvidas sobre o Premiere?"
-          descriptionTitle="Descubra como funciona o streaming, os recursos de replay, a qualidade de transmissão e tudo o que o Premiere oferece para você acompanhar futebol quando e onde quiser."
+          titleMain="Duvidas sobre a ESPN?"
+          descriptionTitle="Tire suas dúvidas sobre a programação, os esportes disponíveis, a forma de acesso e todos os benefícios de ter a ESPN no seu plano."
           align="left"
         />
 
@@ -24,20 +24,20 @@ export function AccordionPremiere() {
             <Accordion type="single" collapsible className="w-full select-none">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-lg font-semibold text-zinc-800">
-                  O que é o Premiere?
+                  O que é a ESPN?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance font-medium text-zinc-600 dark:text-zinc-300">
                   <p>
-                    O Premiere é o serviço de pay-per-view de esportes, focado
-                    principalmente em futebol. Ele transmite jogos ao vivo,
-                    reprises e conteúdos exclusivos de campeonatos nacionais e
-                    internacionais.
+                    A ESPN é um dos maiores canais de esportes do mundo, com
+                    transmissões ao vivo, reprises, análises e programas
+                    exclusivos sobre futebol, NBA, NFL, tênis, automobilismo e
+                    muito mais.
                   </p>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-lg font-semibold text-zinc-800">
-                  Como faço para assinar o Premiere?
+                  Como faço para assinar a ESPN?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance font-medium text-zinc-600 dark:text-zinc-300">
                   <p>
@@ -61,24 +61,25 @@ export function AccordionPremiere() {
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-lg font-semibold text-zinc-800">
-                  Quais campeonatos posso assistir no Premiere?
+                  A ESPN transmite jogos ao vivo?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance font-medium text-zinc-600 dark:text-zinc-300">
                   <p>
-                    Você pode acompanhar o Brasileirão Série A e B, Copa do
-                    Brasil, estaduais e outros campeonatos selecionados,
-                    dependendo do pacote contratado.
+                    Sim! A ESPN transmite ao vivo os principais eventos
+                    esportivos do Brasil e do mundo, com comentários
+                    especializados e alta definição.
                   </p>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-lg font-semibold text-zinc-800">
-                  Posso assistir a reprises e melhores momentos?
+                  A ESPN tem programas além dos jogos?
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance font-medium text-zinc-600 dark:text-zinc-300">
                   <p>
-                    Sim! O Premiere oferece replays, destaques e melhores
-                    momentos para você não perder nenhum lance importante.
+                    Sim! Além das transmissões ao vivo, você encontra o
+                    SportsCenter, programas de análise, entrevistas exclusivas e
+                    bastidores do esporte.
                   </p>
                 </AccordionContent>
               </AccordionItem>

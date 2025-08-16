@@ -1,57 +1,60 @@
 "use client";
 
+import { CardAdvantages } from "../SectionTelecine/TelecinePageComponets/CardAdvantages";
 import { TitlePages } from "../TitlePages/TitlesPages";
+import {
+  GalleryVerticalEnd,
+  UserRoundCog,
+  TabletSmartphone,
+} from "lucide-react";
 
-import { Radio, Video, SkipBack } from "lucide-react";
-import { CardAdvantagesPremiere } from "./PremierePageComponets/CardAdvantagesPremiere";
-
-export function SectionAdvantagesPremiere() {
+export function SectionAdvantagesMax() {
   return (
     <section className="bg-white py-24 dark:bg-zinc-800">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Vantagens do Premiere"
-          descriptionTitle="Assista aos jogos mais emocionantes com o Premiere incluso no seu plano. Partidas ao vivo, reprises e canais exclusivos."
+          titleMain="Vantagens da HBO Max"
+          descriptionTitle="Desfrute do melhor do entretenimento com a HBO Max. Filmes, séries e conteúdos exclusivos em alta qualidade, disponíveis quando e onde você quiser."
           align="left"
         />
 
         <div className="pt-16">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {/* Card 1 */}
-            <CardAdvantagesPremiere
-              title="AO VIVO"
+            <CardAdvantages
+              title="VARIEDADES"
               icon={
-                <Radio
+                <GalleryVerticalEnd
                   size={44}
                   strokeWidth={1.4}
                   className="text-zinc-600 dark:text-white"
                 />
               }
-              description="Assista aos campeonatos nacionais e internacionais."
+              description="Filmes, séries, animações e documentários só na HBO Max."
             />
             {/* Card 2 */}
-            <CardAdvantagesPremiere
-              title="COBERTURA"
+            <CardAdvantages
+              title="CONTROLE"
               icon={
-                <Video
+                <UserRoundCog
                   size={44}
                   strokeWidth={1.4}
                   className="text-zinc-600 dark:text-white"
                 />
               }
-              description="Comentários, análises e programas esportivos."
+              description="Crie perfis individuais para cada usuário."
             />
             {/* Card 3 */}
-            <CardAdvantagesPremiere
-              title="REPLAYS"
+            <CardAdvantages
+              title="MOBILIDADE"
               icon={
-                <SkipBack
+                <TabletSmartphone
                   size={44}
                   strokeWidth={1.4}
                   className="text-zinc-600 dark:text-white"
                 />
               }
-              description="Não perdeu um lance? É possível assistir novamente.."
+              description="Continue assistindo de onde parou, em qualquer dispositivo."
             />
           </div>
         </div>

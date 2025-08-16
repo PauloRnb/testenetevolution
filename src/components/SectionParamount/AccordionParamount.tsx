@@ -14,8 +14,8 @@ export function AccordionParamount() {
     <section className="bg-white py-24 dark:bg-zinc-800">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Duvidas sobre o Paramount+"
-          descriptionTitle="Ficou com alguma dúvida? A gente responde, confira algumas das dúvidas mais frequentes."
+          titleMain="Duvidas sobre o Paramount+?"
+          descriptionTitle="Descubra como funciona o streaming, os recursos de download, a qualidade de vídeo e tudo o que o Paramount+ oferece para você curtir filmes, séries e esportes quando e onde quiser."
           align="left"
         />
 

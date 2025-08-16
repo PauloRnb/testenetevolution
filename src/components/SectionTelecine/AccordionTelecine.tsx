@@ -15,7 +15,7 @@ export function AccordionTelecine() {
       <div className="container px-5 xl:px-0">
         <TitlePages
           titleMain="Duvidas sobre o Telecine"
-          descriptionTitle="Ficou com alguma dúvida? A gente responde, confira algumas das dúvidas mais frequentes."
+          descriptionTitle="Descubra como funciona o streaming, os recursos de download, a qualidade de vídeo e tudo o que o Telecine oferece."
           align="left"
         />
 

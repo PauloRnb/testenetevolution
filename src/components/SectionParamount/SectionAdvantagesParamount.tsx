@@ -10,9 +10,7 @@ export function SectionAdvantagesParamount() {
       <div className="container px-5 xl:px-0">
         <TitlePages
           titleMain="Vantagens do Paramount+"
-          descriptionTitle="Curta os maiores sucessos do cinema com o Telecine incluso no seu
-              plano. Estreias, clássicos e canais ao vivo para toda a família,
-              onde e quando quiser."
+          descriptionTitle="Curta os maiores sucessos do cinema com Tenha acesso a filmes, séries e esportes ao vivo com o Paramount+."
           align="left"
         />
 

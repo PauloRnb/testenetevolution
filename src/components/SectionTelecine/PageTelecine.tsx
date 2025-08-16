@@ -82,21 +82,21 @@ export function PageTelecine() {
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               <CardBannersStreaming
                 imageBanner="/todotempotelecineimage.webp"
-                altImage="Banner Libertadores | Paramount+"
+                altImage="Banner filme Todo Tempo que Temos | Telecine."
                 titleMain="Drama"
                 descriptionTtitle="Aqui você assiste aos dramas mais emocionantes. Assine Telecine."
               />
 
               <CardBannersStreaming
                 imageBanner="/vitoriatelecineimage.webp"
-                altImage="Banner Série Yellowstone | Paramount+"
-                titleMain="Biografia"
+                altImage="Banner filme Vitoria | Telecine"
+                titleMain="Biografia."
                 descriptionTtitle="Aqui você acompanha histórias reais e inspiradoras. Assine Telecine."
               />
 
               <CardBannersStreaming
                 imageBanner="/apocalipstelecineimage.webp"
-                altImage="Banner Série Yellowstone | Paramount+"
+                altImage="Banner filme Depois do Apocalipse | Telecine."
                 titleMain="Policial"
                 descriptionTtitle="Aqui você acompanha os melhores filmes policiais. Assine Telecine."
               />

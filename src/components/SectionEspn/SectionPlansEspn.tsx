@@ -5,13 +5,13 @@ import { Card } from "../CardPlans";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
 
-export function SectionPlansPremiere() {
+export function SectionPlansEspn() {
   return (
     <section className="py-24">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Ofertas Premiere"
-          descriptionTitle="Com a melhor internet fibra, assista aos jogos ao vivo e aos maiores clássicos do futebol no Premiere."
+          titleMain="Ofertas ESPN"
+          descriptionTitle="Com a melhor internet fibra, assista aos grandes duelos do futebol e outros esportes ao vivo na ESPN, com qualidade e sem interrupções."
           align="left"
         />
 
@@ -35,8 +35,8 @@ export function SectionPlansPremiere() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logopremiere.webp"
-                              alt="Logo do Premiere"
+                              src="/logoespn.webp"
+                              alt="Logo da ESPN"
                               width={30}
                               height={30}
                               priority
@@ -69,8 +69,8 @@ export function SectionPlansPremiere() {
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logopremiere.webp"
-                          alt="Logo do Premiere"
+                          src="/logoespn.webp"
+                          alt="Logo da ESPN"
                           width={30}
                           height={30}
                           priority
@@ -105,8 +105,8 @@ export function SectionPlansPremiere() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logopremiere.webp"
-                              alt="Logo do Premiere"
+                              src="/logoespn.webp"
+                              alt="Logo da ESPN"
                               width={30}
                               height={30}
                               priority
@@ -139,8 +139,8 @@ export function SectionPlansPremiere() {
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logopremiere.webp"
-                          alt="Logo do Premiere"
+                          src="/logoespn.webp"
+                          alt="Logo da ESPN"
                           width={30}
                           height={30}
                           priority
