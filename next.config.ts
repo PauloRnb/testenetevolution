@@ -1,27 +1,18 @@
 import type { NextConfig } from "next";
 
+// Import do Critters usando require para compatibilidade com TS
+const Critters = require("critters-webpack-plugin");
+
 const nextConfig: NextConfig = {
   async headers() {
     return [
       {
         source: "/(.*)",
         headers: [
-          {
-            key: "X-Frame-Options",
-            value: "DENY",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "strict-origin-when-cross-origin",
-          },
-          {
-            key: "Permissions-Policy",
-            value: "geolocation=()",
-          },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "geolocation=()" },
           {
             key: "Content-Security-Policy",
             value: `
@@ -39,6 +30,19 @@ const nextConfig: NextConfig = {
         ],
       },
     ];
+  },
+
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(
+        new Critters({
+          preload: "swap", // Preload do CSS crítico
+          compress: true, // Comprime CSS crítico inline
+          pruneSource: true, // Remove CSS crítico do bundle final
+        }),
+      );
+    }
+    return config;
   },
 };
 
