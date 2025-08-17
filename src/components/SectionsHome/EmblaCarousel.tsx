@@ -101,7 +101,7 @@ export function EmblaCarousel() {
                   alt="Imagem desktop"
                   width={220}
                   height={330}
-                  fetchPriority="high"
+                  priority
                   className="hidden rounded-lg md:block"
                 />
                 <Image
@@ -109,12 +109,12 @@ export function EmblaCarousel() {
                   alt="Imagem mobile"
                   width={430}
                   height={242}
-                  fetchPriority="high"
+                  priority
                   className="block rounded-lg md:hidden"
                 />
               </div>
-              <div className="flex flex-col items-center justify-center gap-5 sm:items-start sm:justify-start">
-                <h2 className="text-center text-lg font-semibold leading-7 text-white sm:text-left sm:text-2xl">
+              <div className="flex flex-col items-center justify-center gap-5 sm:items-center sm:justify-start md:items-start">
+                <h2 className="items-center text-center text-lg font-semibold leading-7 text-white sm:text-left sm:text-2xl">
                   {slide.title}
                 </h2>
                 <Image
@@ -122,7 +122,8 @@ export function EmblaCarousel() {
                   alt="Card"
                   width={430}
                   height={139}
-                  fetchPriority="high"
+                  priority
+                  className="w-full rounded-lg object-cover sm:w-[21rem]"
                 />
               </div>
             </div>

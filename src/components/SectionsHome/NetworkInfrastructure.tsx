@@ -2,6 +2,7 @@
 
 import { EthernetPort } from "lucide-react";
 import { Separator } from "../ui/separator";
+import Image from "next/image";
 
 export function NetworkInfrastructure() {
   return (
@@ -38,16 +39,18 @@ export function NetworkInfrastructure() {
                   internet fibra e tenha acesso a todos os nossos benefícios.
                 </p>
               </div>
-
               <Separator
                 orientation="vertical"
                 className="hidden !h-40 !w-px rounded-full bg-zinc-200 32md:block"
               />
-
-              <img
+              <Image
                 src="/networkinfrastructureimage.webp"
                 alt="PC conectado via cabo ao roteador"
                 className="mt-6 w-full sm:w-[21rem]"
+                width={336}
+                height={224}
+                priority
+                sizes="(max-width: 640px) 100vw, 21rem"
               />
             </div>
 
