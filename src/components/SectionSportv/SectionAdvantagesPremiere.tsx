@@ -2,56 +2,56 @@
 
 import { TitlePages } from "../TitlePages/TitlesPages";
 
-import { Radio, Video, SkipBack } from "lucide-react";
-import { CardAdvantagesPremiere } from "./PremierePageComponets/CardAdvantagesPremiere";
+import { Medal, Mic, Clapperboard } from "lucide-react";
+import { CardAdvantagesSportv } from "./PremierePageComponets/CardAdvantagesSportv";
 
 export function SectionAdvantagesPremiere() {
   return (
     <section className="bg-white py-24 dark:bg-zinc-800">
       <div className="container px-5 xl:px-0">
         <TitlePages
-          titleMain="Vantagens do Premiere"
-          descriptionTitle="Assista aos jogos mais emocionantes com o Premiere incluso no seu plano. Partidas ao vivo, reprises e canais exclusivos."
+          titleMain="Vantagens do SporTV"
+          descriptionTitle="Curta os principais campeonatos, programas exclusivos e transmissões em alta definição, tudo em um só canal para você não perder nenhum lance."
           align="left"
         />
 
         <div className="pt-16">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {/* Card 1 */}
-            <CardAdvantagesPremiere
-              title="AO VIVO"
+            <CardAdvantagesSportv
+              title="VARIEDADES"
               icon={
-                <Radio
+                <Medal
                   size={44}
                   strokeWidth={1.4}
                   className="text-zinc-600 dark:text-white"
                 />
               }
-              description="Assista aos campeonatos nacionais e internacionais."
+              description="Muito além do futebol: vôlei, basquete e automobilismo."
             />
             {/* Card 2 */}
-            <CardAdvantagesPremiere
-              title="COBERTURA"
+            <CardAdvantagesSportv
+              title="DEBATES"
               icon={
-                <Video
+                <Mic
                   size={44}
                   strokeWidth={1.4}
                   className="text-zinc-600 dark:text-white"
                 />
               }
-              description="Comentários, análises e programas esportivos."
+              description="Programas com comentaristas renomados, entrevistas e análises."
             />
             {/* Card 3 */}
-            <CardAdvantagesPremiere
-              title="REPLAYS"
+            <CardAdvantagesSportv
+              title="PRODUÇÃO"
               icon={
-                <SkipBack
+                <Clapperboard
                   size={44}
                   strokeWidth={1.4}
                   className="text-zinc-600 dark:text-white"
                 />
               }
-              description="Não perdeu um lance? É possível assistir novamente."
+              description="Imagens em alta definição, múltiplas câmeras e recursos de replay."
             />
           </div>
         </div>
