@@ -31,19 +31,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.plugins.push(
-        new Critters({
-          preload: "swap", // Preload do CSS crítico
-          compress: true, // Comprime CSS crítico inline
-          pruneSource: true, // Remove CSS crítico do bundle final
-        }),
-      );
-    }
-    return config;
-  },
 };
 
 export default nextConfig;
