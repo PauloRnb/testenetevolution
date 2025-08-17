@@ -20,7 +20,7 @@ export function PageEspn() {
                   alt="Logo do Telecine"
                   width={142}
                   height={35}
-                  priority={true}
+                  priority
                 />
                 <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
                   Acompanhe os principais esportes do mundo na ESPN. Jogos de

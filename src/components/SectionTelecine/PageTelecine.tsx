@@ -20,7 +20,7 @@ export function PageTelecine() {
                   alt="Logo do Telecine"
                   width={208}
                   height={48}
-                  priority={true}
+                  priority
                 />
                 <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
                   Assista aos maiores sucessos do cinema com o Telecine incluso
@@ -34,7 +34,7 @@ export function PageTelecine() {
                   alt="Logo do Telecine"
                   width={208}
                   height={48}
-                  priority={true}
+                  priority
                 />
               </div>
             </div>
@@ -43,7 +43,7 @@ export function PageTelecine() {
               alt="Banner filme Emilia Pérez | Telecine"
               width={748}
               height={321}
-              priority={true}
+              priority
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image

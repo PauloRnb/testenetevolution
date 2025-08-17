@@ -46,7 +46,7 @@ export function SectionCombos() {
               alt="Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal."
               width={748}
               height={321}
-              priority={true}
+              priority
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image

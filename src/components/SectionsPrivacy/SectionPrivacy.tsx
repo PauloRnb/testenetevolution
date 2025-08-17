@@ -29,7 +29,7 @@ export function SectionPrivacy() {
               alt="Mulher com telefone com olhos fechados feliz comemorando."
               width={748}
               height={321}
-              priority={true}
+              priority
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image

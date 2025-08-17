@@ -20,7 +20,7 @@ export function SectionMax() {
                   alt="Logo da HBO Max"
                   width={208}
                   height={48}
-                  priority={true}
+                  priority
                 />
                 <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
                   Assista ao melhor do cinema, séries e esportes com o
@@ -34,7 +34,7 @@ export function SectionMax() {
                   alt="Logo da Net Evolution"
                   width={176}
                   height={34}
-                  priority={true}
+                  priority
                 />
               </div>
             </div>
@@ -43,7 +43,7 @@ export function SectionMax() {
               alt="Banner Série Star Trek | Paramount+"
               width={748}
               height={321}
-              priority={true}
+              priority
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image
@@ -51,7 +51,7 @@ export function SectionMax() {
               alt="Banner Série Star Trek | Paramount+"
               width={436}
               height={343}
-              loading="lazy"
+              priority
               className="hidden md:block xl:hidden"
             />
             <Image
