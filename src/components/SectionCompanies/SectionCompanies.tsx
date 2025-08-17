@@ -47,7 +47,7 @@ export function SectionCompanies() {
               alt="Mulher trabalhando na empresa com notebook."
               width={748}
               height={321}
-              priority={true}
+              priority
               className="block w-full select-none rounded-t-2xl md:hidden"
             />
             <Image

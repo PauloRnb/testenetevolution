@@ -102,6 +102,7 @@ export function EmblaCarousel() {
                   width={220}
                   height={330}
                   priority
+                  fetchPriority="high"
                   className="hidden rounded-lg md:block"
                 />
                 <Image
@@ -110,6 +111,7 @@ export function EmblaCarousel() {
                   width={430}
                   height={242}
                   priority
+                  fetchPriority="high"
                   className="block rounded-lg md:hidden"
                 />
               </div>
@@ -123,6 +125,7 @@ export function EmblaCarousel() {
                   width={430}
                   height={139}
                   priority
+                  fetchPriority="high"
                   className="w-full rounded-lg object-cover sm:w-[21rem]"
                 />
               </div>

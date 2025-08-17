@@ -34,7 +34,7 @@ export function PageEspn() {
                   alt="Logo do Telecine"
                   width={208}
                   height={48}
-                  priority={true}
+                  priority
                 />
               </div>
             </div>
@@ -43,7 +43,7 @@ export function PageEspn() {
               alt="Banner filme Emilia Pérez | Telecine"
               width={748}
               height={321}
-              priority={true}
+              priority
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image

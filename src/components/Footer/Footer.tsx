@@ -64,7 +64,7 @@ const footerLinks: FooterSection[] = [
     links: [
       { label: "Fibra", href: "/Fiber", prefetch: true },
       { label: "Combos", href: "/Combos", prefetch: true },
-      { label: "Empresas", href: "/Companies" },
+      { label: "Empresas", href: "/Companies", prefetch: false },
     ],
   },
 ];
