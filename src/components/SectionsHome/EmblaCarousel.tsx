@@ -110,8 +110,7 @@ export function EmblaCarousel() {
                   alt="Imagem mobile"
                   width={430}
                   height={242}
-                  priority
-                  fetchPriority="high"
+                  loading="lazy"
                   className="block rounded-lg md:hidden"
                 />
               </div>
@@ -124,8 +123,7 @@ export function EmblaCarousel() {
                   alt="Card"
                   width={430}
                   height={139}
-                  priority
-                  fetchPriority="high"
+                  loading="lazy"
                   className="w-full rounded-lg object-cover sm:w-[21rem]"
                 />
               </div>
