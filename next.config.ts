@@ -1,8 +1,5 @@
 import type { NextConfig } from "next";
 
-// Import do Critters usando require para compatibilidade com TS
-const Critters = require("critters-webpack-plugin");
-
 const nextConfig: NextConfig = {
   async headers() {
     return [
