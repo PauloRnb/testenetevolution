@@ -1,4 +1,4 @@
-import { SectionContentIndicate } from "@/components/SectionsIndicate/SectionContentIndicate";
+import { SectionContentIndicate } from "@/components/SectionIndicate/SectionContentIndicate";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {
