@@ -32,7 +32,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     Política de Privacidade
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex w-full flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Na NetEvolution, valorizamos a transparência e a
@@ -51,7 +51,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     Nenhum dado pessoal coletado
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex w-full flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Não solicitamos cadastros, e não pedimos seu nome, e-mail,

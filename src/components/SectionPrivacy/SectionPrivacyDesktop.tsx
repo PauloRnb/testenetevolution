@@ -18,7 +18,7 @@ export function SectionPrivacyDesktop() {
               defaultValue="politics"
               className="flex items-start gap-x-12 32md:flex-col"
             >
-              <Tabs.List className="relative flex w-full flex-col rounded-xl bg-white py-3 dark:border-zinc-700 32md:flex-row 32md:rounded-none 32md:border-b-[8px] 32md:border-zinc-200 32md:bg-transparent">
+              <Tabs.List className="relative flex flex-col rounded-xl bg-white py-3 dark:border-zinc-700 32md:w-full 32md:flex-row 32md:rounded-none 32md:border-b-[8px] 32md:border-zinc-200 32md:bg-transparent">
                 <Tabs.Trigger
                   value="politics"
                   className="py-2 text-xl font-semibold text-zinc-700 hover:text-blue-500 focus:text-blue-500 focus:outline-none data-[selected]:text-blue-700 dark:text-white dark:hover:text-cyan-500 dark:focus:text-cyan-500 dark:data-[selected]:text-cyan-400 md:w-[150px] md:px-5 md:text-left 32md:text-center"
@@ -89,8 +89,8 @@ export function SectionPrivacyDesktop() {
                 className="focus:outline-none 32md:pt-7"
               >
                 <CardContentPrivacy
-                  titleMain="Links Para WhatsApp"
-                  descriptionTitle="Alguns links do nosso site podem direcionar você para o WhatsApp para falar diretamente com nossa equipe. Esses links são apenas um meio de comunicação, e qualquer informação compartilhada nesse canal fica sujeita à política de privacidade do próprio WhatsApp."
+                  titleMain="Comunicação e Serviços Externos"
+                  descriptionTitle="Alguns links do nosso site podem direcionar você para serviços de terceiros, como WhatsApp, Central do Assinante do SGP, Fast.com, Google Play e Apple Store. Esses links são apenas meios de acesso ou comunicação, e qualquer informação compartilhada nesses canais fica sujeita às políticas de privacidade de cada serviço. Nosso site não coleta dados pessoais ao utilizar esses links."
                 />
               </Tabs.Content>
 
@@ -100,7 +100,7 @@ export function SectionPrivacyDesktop() {
               >
                 <CardContentPrivacy
                   titleMain="Cookies e Tecnologias Semelhantes"
-                  descriptionTitle="Alguns links do nosso site podem direcionar você para o WhatsApp para falar diretamente com nossa equipe. Esses links são apenas um meio de comunicação, e qualquer informação compartilhada nesse canal fica sujeita à política de privacidade do próprio WhatsApp."
+                  descriptionTitle="Utilizamos cookies e tecnologias semelhantes apenas para melhorar a navegação e o desempenho do site. Esses dados são anônimos e não permitem identificar visitantes individualmente. Você pode gerenciar ou desativar cookies diretamente pelo seu navegador, se desejar."
                 />
               </Tabs.Content>
 
@@ -110,7 +110,7 @@ export function SectionPrivacyDesktop() {
               >
                 <CardContentPrivacy
                   titleMain="Segurança do Site"
-                  descriptionTitle="Alguns links do nosso site podem direcionar você para o WhatsApp para falar diretamente com nossa equipe. Esses links são apenas um meio de comunicação, e qualquer informação compartilhada nesse canal fica sujeita à política de privacidade do próprio WhatsApp."
+                  descriptionTitle="Embora não coletemos informações pessoais, adotamos medidas de segurança para garantir que o site funcione corretamente e que sua experiência de navegação seja sempre segura."
                 />
               </Tabs.Content>
 
@@ -120,7 +120,7 @@ export function SectionPrivacyDesktop() {
               >
                 <CardContentPrivacy
                   titleMain="Atualizações Desta Política"
-                  descriptionTitle="Alguns links do nosso site podem direcionar você para o WhatsApp para falar diretamente com nossa equipe. Esses links são apenas um meio de comunicação, e qualquer informação compartilhada nesse canal fica sujeita à política de privacidade do próprio WhatsApp."
+                  descriptionTitle="Podemos atualizar esta Política de Privacidade de tempos em tempos. Recomendamos que você consulte esta página regularmente para se manter informado sobre eventuais mudanças."
                 />
               </Tabs.Content>
             </Tabs.Root>
