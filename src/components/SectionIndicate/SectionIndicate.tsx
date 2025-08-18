@@ -18,7 +18,7 @@ export function SectionIndicate() {
                   Compartilhe nossa internet com seus amigos e ganhe
                   recompensas. Cada indicação aprovada traz benefícios
                   exclusivos para você e para quem você indicou, tornando sua
-                  experiência ainda mais vantajosa."
+                  experiência ainda mais vantajosa.
                 </p>
               </div>
               <a
