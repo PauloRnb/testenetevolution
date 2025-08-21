@@ -55,7 +55,7 @@ export function SectionCompanies() {
               alt="Mulher trabalhando na empresa com notebook."
               width={436}
               height={343}
-              loading="lazy"
+              priority
               className="hidden select-none md:block xl:hidden"
             />
             <Image
@@ -63,7 +63,7 @@ export function SectionCompanies() {
               alt="Mulher trabalhando na empresa com notebook."
               width={401}
               height={315}
-              loading="lazy"
+              priority
               className="hidden w-full select-none xl:block"
             />
           </div>

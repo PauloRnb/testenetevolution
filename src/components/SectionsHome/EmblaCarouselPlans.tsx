@@ -56,7 +56,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Telecine"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -65,7 +65,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Paramount"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </Card.Combo>
@@ -99,7 +99,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Telecine"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -108,7 +108,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Paramount"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
             </Card.Combo>
@@ -145,7 +145,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Telecine"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -154,7 +154,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo SporTV"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -163,7 +163,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Paramount"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </Card.Combo>
@@ -197,7 +197,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Telecine"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -206,7 +206,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo SporTV"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -215,7 +215,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Paramount"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
             </Card.Combo>
@@ -252,7 +252,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo SporTV"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -261,7 +261,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo ESPN"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -270,7 +270,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Max"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -279,7 +279,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Paramount"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </Card.Combo>
@@ -313,7 +313,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo SporTV"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -322,7 +322,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo ESPN"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -331,7 +331,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Max"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
               <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
@@ -340,7 +340,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Paramount"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
             </Card.Combo>
@@ -377,7 +377,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                       alt="Logo Max"
                       width={30}
                       height={30}
-                      priority
+                      loading="lazy"
                     />
                   </div>
                 </Card.Combo>
@@ -411,7 +411,7 @@ const EmblaCarouselPlans: React.FC<PropType> = ({ options }) => {
                   alt="Logo Max"
                   width={30}
                   height={30}
-                  priority
+                  loading="lazy"
                 />
               </div>
             </Card.Combo>

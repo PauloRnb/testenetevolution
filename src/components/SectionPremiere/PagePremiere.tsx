@@ -20,7 +20,7 @@ export function PagePremiere() {
                   alt="Logo do Telecine"
                   width={208}
                   height={48}
-                  priority={true}
+                  priority
                 />
                 <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
                   Acompanhe todos os jogos do Brasileirão e outros campeonatos
@@ -51,7 +51,7 @@ export function PagePremiere() {
               alt="Banner filme Emilia Pérez | Telecine"
               width={436}
               height={343}
-              loading="lazy"
+              priority
               className="hidden md:block xl:hidden"
             />
             <Image
@@ -59,7 +59,7 @@ export function PagePremiere() {
               alt="Banner filme Emilia Pérez | Telecine"
               width={401}
               height={315}
-              loading="lazy"
+              priority
               className="hidden w-full xl:block"
             />
           </div>

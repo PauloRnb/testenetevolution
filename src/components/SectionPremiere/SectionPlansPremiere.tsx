@@ -39,7 +39,7 @@ export function SectionPlansPremiere() {
                               alt="Logo do Premiere"
                               width={30}
                               height={30}
-                              priority
+                              loading="lazy"
                             />
                           </div>
                         </Card.Combo>
@@ -73,7 +73,7 @@ export function SectionPlansPremiere() {
                           alt="Logo do Premiere"
                           width={30}
                           height={30}
-                          priority
+                          loading="lazy"
                         />
                       </div>
                     </Card.Combo>
@@ -109,7 +109,7 @@ export function SectionPlansPremiere() {
                               alt="Logo do Premiere"
                               width={30}
                               height={30}
-                              priority
+                              loading="lazy"
                             />
                           </div>
                         </Card.Combo>
@@ -143,7 +143,7 @@ export function SectionPlansPremiere() {
                           alt="Logo do Premiere"
                           width={30}
                           height={30}
-                          priority
+                          loading="lazy"
                         />
                       </div>
                     </Card.Combo>

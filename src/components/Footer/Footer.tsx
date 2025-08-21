@@ -256,7 +256,7 @@ export function Footer() {
                         alt="Logo Net Evolution"
                         width={180}
                         height={35}
-                        priority
+                        loading="lazy"
                       />
                     </Link>
                   </TooltipTrigger>

@@ -51,7 +51,7 @@ export function PageSportv() {
               alt="Banner filme Emilia Pérez | Telecine"
               width={436}
               height={343}
-              loading="lazy"
+              priority
               className="hidden md:block xl:hidden"
             />
             <Image
@@ -59,7 +59,7 @@ export function PageSportv() {
               alt="Banner filme Emilia Pérez | Telecine"
               width={401}
               height={315}
-              loading="lazy"
+              priority
               className="hidden w-full xl:block"
             />
           </div>

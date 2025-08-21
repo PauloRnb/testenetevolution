@@ -41,7 +41,7 @@ export function SectionPlansTelecine() {
                               alt="Logo do Telecine"
                               width={30}
                               height={30}
-                              priority
+                              loading="lazy"
                             />
                           </div>
                         </Card.Combo>
@@ -75,7 +75,7 @@ export function SectionPlansTelecine() {
                           alt="Logo Paramount"
                           width={30}
                           height={30}
-                          priority
+                          loading="lazy"
                         />
                       </div>
                     </Card.Combo>
@@ -111,7 +111,7 @@ export function SectionPlansTelecine() {
                               alt="Logo Paramount"
                               width={30}
                               height={30}
-                              priority
+                              loading="lazy"
                             />
                           </div>
                         </Card.Combo>
@@ -145,7 +145,7 @@ export function SectionPlansTelecine() {
                           alt="Logo Paramount"
                           width={30}
                           height={30}
-                          priority
+                          loading="lazy"
                         />
                       </div>
                     </Card.Combo>

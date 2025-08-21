@@ -59,7 +59,7 @@ export function SectionMax() {
               alt="Banner Série Star Trek | Paramount+"
               width={401}
               height={315}
-              loading="lazy"
+              priority
               className="hidden w-full xl:block"
             />
           </div>
