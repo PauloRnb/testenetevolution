@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { SectionPrivacyDesktop } from "./SectionPrivacyDesktop";
 import { SectionPrivacyMobile } from "./SectionPrivacyMobile";
 
 export function SectionPrivacy() {
@@ -54,8 +53,6 @@ export function SectionPrivacy() {
 
       {/* Section Terms Mobile */}
       <SectionPrivacyMobile />
-      {/* Section Terms Desk */}
-      <SectionPrivacyDesktop />
     </>
   );
 }

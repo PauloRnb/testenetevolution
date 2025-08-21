@@ -49,7 +49,7 @@ export function NetworkInfrastructure() {
                 className="mt-6 w-full sm:w-[21rem]"
                 width={336}
                 height={224}
-                priority
+                loading="lazy"
                 sizes="(max-width: 640px) 100vw, 21rem"
               />
             </div>
