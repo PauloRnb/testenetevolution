@@ -48,7 +48,7 @@ export function SectionFiber() {
               alt="Mulher com telefone com olhos fechados feliz comemorando."
               width={748}
               height={321}
-              priority
+              priority={true}
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image
@@ -56,7 +56,7 @@ export function SectionFiber() {
               alt="Mulher com telefone com olhos fechados feliz comemorando."
               width={436}
               height={343}
-              loading="lazy"
+              priority={true}
               className="hidden md:block xl:hidden"
             />
             <Image
@@ -64,7 +64,7 @@ export function SectionFiber() {
               alt="Mulher com telefone com olhos fechados feliz comemorando."
               width={401}
               height={315}
-              loading="lazy"
+              priority={true}
               className="hidden w-full xl:block"
             />
           </div>

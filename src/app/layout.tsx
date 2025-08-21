@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "./ThemeProvider/ThemeProvider";
 import { Figtree } from "next/font/google";
 import "./globals.css";
@@ -102,12 +103,13 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">
-            <SpeedInsights />
             <SubHeader />
             <Header />
             {children}
             <Footer />
             <CookiesTerms />
+            <SpeedInsights />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
