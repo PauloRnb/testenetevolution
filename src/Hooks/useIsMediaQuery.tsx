@@ -1,25 +1,26 @@
-"use client";
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 
 export function useMediaQuery(query: string): boolean {
-  // Aqui já inicializa com o valor atual, no client
   const [matches, setMatches] = useState(() => {
     if (typeof window === "undefined") return false; // fallback SSR
     return window.matchMedia(query).matches;
   });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (typeof window === "undefined") return;
 
     const media = window.matchMedia(query);
-    const listener = () => setMatches(media.matches);
+    const listener = () => {
+      if (media.matches !== matches) setMatches(media.matches);
+    };
 
     media.addEventListener("change", listener);
-    // Atualiza imediatamente caso tenha mudado
-    setMatches(media.matches);
+
+    // Atualiza inicial caso tenha diferença
+    if (media.matches !== matches) setMatches(media.matches);
 
     return () => media.removeEventListener("change", listener);
-  }, [query]);
+  }, [query, matches]);
 
   return matches;
 }

@@ -87,11 +87,6 @@ export const metadata: Metadata = {
       "Internet fibra óptica com alta velocidade e estabilidade para residências e empresas. Suporte 24h e planos personalizados.",
     images: ["/imagens/twitter-image.jpg"],
   },
-  other: {
-    "http-equiv:X-Content-Type-Options": "nosniff",
-    "http-equiv:X-Frame-Options": "DENY",
-    referrer: "strict-origin-when-cross-origin",
-  },
 };
 
 export default function RootLayout({
@@ -107,10 +102,9 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">
-            {/* Scripts não críticos podem ser carregados depois */}
             <SpeedInsights />
-            <Header />
             <SubHeader />
+            <Header />
             {children}
             <Footer />
             <CookiesTerms />

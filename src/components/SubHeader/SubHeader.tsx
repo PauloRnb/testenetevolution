@@ -1,19 +1,38 @@
 "use client";
 
-import { useMediaQuery } from "@/Hooks/useIsMediaQuery";
-import dynamic from "next/dynamic";
-
-const SubHeaderMobile = dynamic(() => import("./SubHeaderMobile"), {
-  ssr: false,
-});
-const SubHeaderDesktop = dynamic(() => import("./SubHeaderDesktop"), {
-  ssr: false,
-});
+import { useState, useEffect } from "react";
+import SubHeaderMobile from "./SubHeaderMobile";
+import SubHeaderDesktop from "./SubHeaderDesktop";
 
 export default function SubHeader() {
-  const isMobile = useMediaQuery("(max-width: 1024px)");
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
-  if (isMobile === null) return null; // ou um loader ou placeholder
+  useEffect(() => {
+    // Inicializa no client
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+    const handleChange = () => setIsMobile(mediaQuery.matches);
+
+    // Set inicial
+    handleChange();
+
+    // Listener
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  // Renderiza um placeholder enquanto decide mobile ou desktop
+  if (isMobile === null) {
+    return (
+      <nav
+        id="top"
+        className="sticky top-0 z-20 w-full min-w-[375px] bg-blue-700 dark:bg-zinc-800"
+      >
+        {/* Placeholder mínimo para LCP */}
+        <div className="h-16 w-full" />
+      </nav>
+    );
+  }
 
   return (
     <nav
