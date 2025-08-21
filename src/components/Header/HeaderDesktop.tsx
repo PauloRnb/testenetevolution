@@ -94,7 +94,6 @@ export default function HeaderDesktop() {
                           </Link>
                           <Link
                             href="/ConnectedHouse"
-                            prefetch
                             className="text-base font-medium text-zinc-600 transition-colors duration-200 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 dark:focus-visible:text-cyan-500"
                           >
                             Casa Conectada

@@ -54,7 +54,7 @@ export function SectionCombos() {
               alt="Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal."
               width={436}
               height={343}
-              loading="lazy"
+              priority
               className="hidden md:block xl:hidden"
             />
             <Image
@@ -62,7 +62,7 @@ export function SectionCombos() {
               alt="Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal."
               width={401}
               height={315}
-              loading="lazy"
+              priority
               className="hidden w-full xl:block"
             />
           </div>
