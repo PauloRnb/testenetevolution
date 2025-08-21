@@ -1,8 +1,17 @@
 "use client";
 
 import { Tabs } from "@ark-ui/react/tabs";
-import EmblaCarouselPlans from "./EmblaCarouselPlans";
-import EmblaCarousel from "./Plans/EmblaCarousel";
+import dynamic from "next/dynamic";
+
+const EmblaCarousel = dynamic(
+  () => import("@/components/SectionsHome/Plans/EmblaCarousel"),
+  { ssr: false },
+);
+
+const EmblaCarouselPlans = dynamic(
+  () => import("@/components/SectionsHome/EmblaCarouselPlans"),
+  { ssr: false },
+);
 
 export function SectionOfferHome() {
   return (
