@@ -11,7 +11,6 @@ const slides = [
   {
     id: 1,
     title: "Os melhores filmes e as melhores séries.",
-    bg: "/bgslider001.webp",
     imageDesk: "/dexterparamountplusdesk.webp",
     imageMob: "/dexterparamountplusmob.webp",
     card: "/cardofferparamount.webp",
@@ -19,7 +18,6 @@ const slides = [
   {
     id: 2,
     title: "Os melhores filmes e as melhores séries.",
-    bg: "/bgslider001.webp",
     imageDesk: "/1923paramountplusdesk.webp",
     imageMob: "/1923paramountplusmob.webp",
     card: "/cardofferparamount.webp",
@@ -27,7 +25,6 @@ const slides = [
   {
     id: 3,
     title: "Os melhores filmes e as melhores séries.",
-    bg: "/bgslider001.webp",
     imageDesk: "/landmanparamountplusdesk.webp",
     imageMob: "/landmanparamountplusmob.webp",
     card: "/cardofferparamount.webp",
