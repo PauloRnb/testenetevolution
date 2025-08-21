@@ -26,8 +26,8 @@ export function SelfService() {
                   className="text-zinc-600 group-hover:text-white dark:text-white"
                 />
               }
-              titleMain="Internet Fibra"
-              descriptionTitle="Internet 100% fibra óptica e wi-fi premium."
+              titleMain="2ª Via da Fatura"
+              descriptionTitle="Tire suas faturas rápido e fácil, através da nossa área do cliente."
               link="https://netevolution.sgp.tsmx.com.br/accounts/central/login/"
             />
 
