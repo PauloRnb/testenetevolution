@@ -24,10 +24,6 @@ module.exports = {
         "32xl": "1166px",
       },
       keyframes: {
-        pulseDot: {
-          "0, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.5)" },
-        },
         enterFromRight: {
           from: { opacity: "0", transform: "translateX(200px)" },
           to: { opacity: "1", transform: "translateX(0)" },
@@ -70,7 +66,6 @@ module.exports = {
         enterFromRight: "enterFromRight 250ms ease",
         exitToLeft: "exitToLeft 250ms ease",
         exitToRight: "exitToRight 250ms ease",
-        pulseDot: "pulseDot 1s ease-in-out infinite",
       },
       borderRadius: {
         lg: "var(--radius)",
