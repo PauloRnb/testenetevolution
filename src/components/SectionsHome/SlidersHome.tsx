@@ -62,7 +62,7 @@ export default function SlidersHome() {
       >
         <SwiperSlide>
           <div className="container flex h-full w-full flex-col bg-blue-600">
-            <h1>SLIDER</h1>
+            <h1>HELLO</h1>
           </div>
         </SwiperSlide>
 

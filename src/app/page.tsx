@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionContent } from "@/components/SectionsHome/SectionContent";
 import { SectionHome } from "@/components/SectionsHome/SectionHome";
 
