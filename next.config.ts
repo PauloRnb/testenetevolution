@@ -1,10 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  compiler: {
-    styledComponents: false,
-  },
   async headers() {
     return [
       {
@@ -27,24 +23,6 @@ const nextConfig: NextConfig = {
             `
               .replace(/\s{2,}/g, " ")
               .trim(),
-          },
-        ],
-      },
-      {
-        source: "/:all*(js|css|png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/:all*(html)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=3600, must-revalidate",
           },
         ],
       },
