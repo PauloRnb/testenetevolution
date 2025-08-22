@@ -54,23 +54,5 @@ export const metadata: Metadata = {
 };
 
 export default function Head() {
-  return (
-    <>
-      {/* Preconnect para Google Fonts */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
-      />
-      {/* Preload da fonte Figtree */}
-      <link
-        href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-        as="style"
-      />
-      {/* LCP otimizado: carregando imagem principal imediatamente */}
-      <link rel="preload" as="image" href="/imagens/banner-lcp.jpg" />
-    </>
-  );
+  return null; // tudo gerenciado pelo `metadata` do Next.js 15+
 }
