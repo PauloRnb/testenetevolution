@@ -16,7 +16,7 @@ import {
 
 export default function HeaderDesktop() {
   return (
-    <div className="container hidden h-full items-center justify-between gap-2 px-6 lg:flex 32lg:px-0">
+    <div className="container flex h-full items-center justify-between gap-2 px-6 32lg:px-0">
       <div className="flex h-full items-center justify-start gap-9">
         <Tooltip>
           <TooltipTrigger asChild>
@@ -34,7 +34,6 @@ export default function HeaderDesktop() {
                 alt="Logo Net Evolution"
                 width={180}
                 height={35}
-                priority
                 className="hidden dark:block"
               />
             </Link>
