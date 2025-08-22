@@ -34,6 +34,7 @@ export default function HeaderDesktop() {
                 alt="Logo Net Evolution"
                 width={180}
                 height={35}
+                loading="lazy"
                 className="hidden dark:block"
               />
             </Link>

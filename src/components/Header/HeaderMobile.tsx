@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeaderMobile() {
   return (
-    <nav className="flex h-full w-full items-center justify-between px-5 dark:bg-zinc-900 lg:hidden lg:px-6">
+    <nav className="flex h-full w-full items-center justify-between px-5 dark:bg-zinc-900 lg:px-6">
       <Link href="/" className="select-none">
         <Image
           src="/logoblue.svg"
@@ -20,7 +20,7 @@ export default function HeaderMobile() {
           alt="Logo Net Evolution"
           width={150}
           height={29}
-          priority
+          loading="lazy"
           className="hidden dark:block"
         />
       </Link>
