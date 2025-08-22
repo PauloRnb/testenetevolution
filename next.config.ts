@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Configura headers de segurança
   async headers() {
     return [
       {
@@ -28,6 +29,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  // Minificação já é automática no Next 15
+  reactStrictMode: true, // opcional, mas recomendado
 };
 
 export default nextConfig;
