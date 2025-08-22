@@ -61,7 +61,9 @@ export default function SlidersHome() {
         className="h-full"
       >
         <SwiperSlide>
-          <div className="container flex h-full w-full flex-col bg-blue-600"></div>
+          <div className="container flex h-full w-full flex-col bg-blue-600">
+            <h1>SLIDER</h1>
+          </div>
         </SwiperSlide>
 
         <CustomPrevButton />
