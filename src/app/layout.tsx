@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+/*import { SpeedInsights } from "@vercel/speed-insights/next"; */
 import { ThemeProvider } from "./ThemeProvider/ThemeProvider";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import SubHeader from "@/components/SubHeader/SubHeader";
-//import { CookiesTerms } from "@/components/CookiesTerms/CookiesTerms";
 import { Footer } from "@/components/Footer/Footer";
 
 const figtree = Figtree({
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
     "ftth",
   ],
   authors: [{ name: "Net Evolution" }],
-  openGraph: {
+  /*openGraph: {
     title:
       "Net Evolution - Provedor de Internet Fibra Óptica | Conexão Rápida e Estável",
     description:
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
     description:
       "Internet fibra óptica com alta velocidade e estabilidade para residências e empresas. Suporte 24h e planos personalizados.",
     images: ["https://www.seusite.com.br/imagens/twitter-image.jpg"], // substitua pela imagem real
-  },
+  }, */
 };
 
 export default function RootLayout({
@@ -81,7 +80,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="relative flex min-h-screen flex-col">
-            <SpeedInsights />
+            {/* <SpeedInsights /> */}
             <SubHeader />
             <Header />
             {children}
