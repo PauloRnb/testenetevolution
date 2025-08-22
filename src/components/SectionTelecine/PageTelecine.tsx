@@ -7,6 +7,30 @@ import Image from "next/image";
 import { CardBannersStreaming } from "../SectionParamount/ParamountPageComponents/CardBannersStreaming";
 
 export function PageTelecine() {
+  const banners = [
+    {
+      imageBanner: "/todotempotelecineimage.webp",
+      altImage: "Banner filme Todo Tempo que Temos | Telecine.",
+      titleMain: "Drama",
+      descriptionTitle:
+        "Aqui você assiste aos dramas mais emocionantes. Assine Telecine.",
+    },
+    {
+      imageBanner: "/vitoriatelecineimage.webp",
+      altImage: "Banner filme Vitoria | Telecine",
+      titleMain: "Biografia",
+      descriptionTitle:
+        "Aqui você acompanha histórias reais e inspiradoras. Assine Telecine.",
+    },
+    {
+      imageBanner: "/apocalipstelecineimage.webp",
+      altImage: "Banner filme Depois do Apocalipse | Telecine.",
+      titleMain: "Policial",
+      descriptionTitle:
+        "Aqui você acompanha os melhores filmes policiais. Assine Telecine.",
+    },
+  ];
+
   return (
     <>
       {/* Section Banner */}
@@ -38,6 +62,8 @@ export function PageTelecine() {
                 />
               </div>
             </div>
+
+            {/* Banner responsivo */}
             <Image
               src="/telecinepagesmobilessmall.webp"
               alt="Banner filme Emilia Pérez | Telecine"
@@ -65,10 +91,13 @@ export function PageTelecine() {
           </div>
         </div>
       </section>
+
       {/* Section Cards Plans Telecine */}
       <SectionPlansTelecine />
+
       {/* Section Cards Advantages */}
       <SectionAdvantages />
+
       {/* Section Cards Banner */}
       <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
         <div className="container px-5 xl:px-0">
@@ -78,29 +107,16 @@ export function PageTelecine() {
             align="left"
           />
 
-          <div className="pt-16">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 pt-16 md:grid-cols-3">
+            {banners.map((banner, index) => (
               <CardBannersStreaming
-                imageBanner="/todotempotelecineimage.webp"
-                altImage="Banner filme Todo Tempo que Temos | Telecine."
-                titleMain="Drama"
-                descriptionTtitle="Aqui você assiste aos dramas mais emocionantes. Assine Telecine."
+                key={index}
+                imageBanner={banner.imageBanner}
+                altImage={banner.altImage}
+                titleMain={banner.titleMain}
+                descriptionTtitle={banner.descriptionTitle}
               />
-
-              <CardBannersStreaming
-                imageBanner="/vitoriatelecineimage.webp"
-                altImage="Banner filme Vitoria | Telecine"
-                titleMain="Biografia."
-                descriptionTtitle="Aqui você acompanha histórias reais e inspiradoras. Assine Telecine."
-              />
-
-              <CardBannersStreaming
-                imageBanner="/apocalipstelecineimage.webp"
-                altImage="Banner filme Depois do Apocalipse | Telecine."
-                titleMain="Policial"
-                descriptionTtitle="Aqui você acompanha os melhores filmes policiais. Assine Telecine."
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>

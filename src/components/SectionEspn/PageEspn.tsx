@@ -17,7 +17,7 @@ export function PageEspn() {
               <div className="flex flex-col items-center justify-center gap-y-3 md:items-start md:justify-start md:gap-2">
                 <Image
                   src="/logoespnfull.webp"
-                  alt="Logo do Telecine"
+                  alt="Logo da ESPN"
                   width={142}
                   height={35}
                   priority
@@ -40,7 +40,7 @@ export function PageEspn() {
             </div>
             <Image
               src="/espnpagesmobilessmall.webp"
-              alt="Banner filme Emilia Pérez | Telecine"
+              alt="Banner mobile ESPN"
               width={748}
               height={321}
               priority
@@ -48,7 +48,7 @@ export function PageEspn() {
             />
             <Image
               src="/espnpagestablet.webp"
-              alt="Banner filme Emilia Pérez | Telecine"
+              alt="Banner tablet ESPN"
               width={436}
               height={343}
               priority
@@ -56,7 +56,7 @@ export function PageEspn() {
             />
             <Image
               src="/espnpagestablet.webp"
-              alt="Banner filme Emilia Pérez | Telecine"
+              alt="Banner desktop ESPN"
               width={401}
               height={315}
               priority
@@ -65,10 +65,13 @@ export function PageEspn() {
           </div>
         </div>
       </section>
-      {/* Section Cards Plans Telecine */}
+
+      {/* Section Cards Plans ESPN */}
       <SectionPlansEspn />
+
       {/* Section Cards Advantages */}
       <SectionAdvantagesEspn />
+
       {/* Section Cards Banner */}
       <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
         <div className="container px-5 xl:px-0">
@@ -89,14 +92,14 @@ export function PageEspn() {
 
               <CardBannersStreaming
                 imageBanner="/sportcenterespn.webp"
-                altImage="Banner Programa SportCenter | ESPN."
+                altImage="Banner Programa SportCenter | ESPN"
                 titleMain="SportCenter"
                 descriptionTtitle="Notícias, gols e destaques do esporte mundial no SportsCenter."
               />
 
               <CardBannersStreaming
                 imageBanner="/nbaespn.webp"
-                altImage="Banner NBA | ESPN."
+                altImage="Banner NBA | ESPN"
                 titleMain="NBA"
                 descriptionTtitle="NBA ao vivo com os maiores craques em quadra para você vibrar a cada jogada."
               />

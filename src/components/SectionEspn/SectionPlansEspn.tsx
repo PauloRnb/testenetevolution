@@ -5,6 +5,29 @@ import { Card } from "../CardPlans";
 import { Separator } from "../ui/separator";
 import Image from "next/image";
 
+const planos = [
+  {
+    tipo: "INDIVIDUAL",
+    mega: "500MEGA",
+    download: "500Mbps",
+    upload: "250Mbps",
+    precoDe: "114,99",
+    precoPor: "109,99",
+    logo: "/logoespn.webp",
+    mensagem: "Olá gostaria de assinar o plano: 500Mbps + ESPN | R$109,99.",
+  },
+  {
+    tipo: "PLANO FAMÍLIA",
+    mega: "600MEGA",
+    download: "600Mbps",
+    upload: "300Mbps",
+    precoDe: "119,99",
+    precoPor: "114",
+    logo: "/logoespn.webp",
+    mensagem: "Olá gostaria de assinar o plano: 600Mbps + ESPN | R$114,99.",
+  },
+];
+
 export function SectionPlansEspn() {
   return (
     <section className="py-24">
@@ -14,19 +37,21 @@ export function SectionPlansEspn() {
           descriptionTitle="Com a melhor internet fibra, assista aos grandes duelos do futebol e outros esportes ao vivo na ESPN, com qualidade e sem interrupções."
           align="left"
         />
-
-        <div className="pt-16">
-          <div className="flex flex-wrap gap-4 md:flex-row">
-            <Card.Root className="border-blue-700 md:w-[335px]">
+        <div className="flex flex-wrap gap-4 pt-16 md:flex-row">
+          {planos.map((plano) => (
+            <Card.Root
+              key={plano.mega}
+              className="border-blue-700 md:w-[335px]"
+            >
               <Card.Top className="bg-blue-700">
                 <Card.Mtop>
-                  <Card.Items text="INDIVIDUAL" className="text-blue-700" />
+                  <Card.Items text={plano.tipo} className="text-blue-700" />
                   <Card.ModalTwo
-                    textMbOne="500MEGA"
-                    textMbTwo="Download 500Mbps"
-                    textMbThree="Upload 250Mbps"
-                    textPriceOne="de 114,99"
-                    textPriceTwo="109,99"
+                    textMbOne={plano.mega}
+                    textMbTwo={`Download ${plano.download}`}
+                    textMbThree={`Upload ${plano.upload}`}
+                    textPriceOne={`de ${plano.precoDe}`}
+                    textPriceTwo={plano.precoPor}
                     customContent={
                       <div className="flex flex-col gap-1 px-5">
                         <span className="text-xs font-medium text-zinc-600 dark:text-white">
@@ -35,8 +60,8 @@ export function SectionPlansEspn() {
                         <Card.Combo>
                           <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                             <Image
-                              src="/logoespn.webp"
-                              alt="Logo da ESPN"
+                              src={plano.logo}
+                              alt={`Logo da ESPN`}
                               width={30}
                               height={30}
                               loading="lazy"
@@ -49,28 +74,28 @@ export function SectionPlansEspn() {
                     <Card.ModalBox>
                       <Card.ModalCombos
                         text="ASSINE AGORA"
-                        message="Olá gostaria de assinar o plano: 500Mbps + Paramount | R$109,99."
+                        message={plano.mensagem}
                         className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 dark:focus:bg-blue-500"
                       />
                     </Card.ModalBox>
                   </Card.ModalTwo>
                 </Card.Mtop>
-                <Card.Item text="500MEGA" />
+                <Card.Item text={plano.mega} />
               </Card.Top>
               <Card.Content>
                 <Card.Infor>
                   <Card.List
                     className="ml-[15px] bg-blue-700"
-                    text="Download 500Mbps"
-                    textTwo="Upload 250Mbps"
+                    text={`Download ${plano.download}`}
+                    textTwo={`Upload ${plano.upload}`}
                   />
                   <Separator className="h-[2px] rounded-full bg-zinc-300" />
                   <Card.Includes>
                     <Card.Combo>
                       <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
                         <Image
-                          src="/logoespn.webp"
-                          alt="Logo da ESPN"
+                          src={plano.logo}
+                          alt={`Logo da ESPN`}
                           width={30}
                           height={30}
                           loading="lazy"
@@ -78,86 +103,16 @@ export function SectionPlansEspn() {
                       </div>
                     </Card.Combo>
                   </Card.Includes>
-                  <Card.Price text="109" />
+                  <Card.Price text={plano.precoPor} />
                 </Card.Infor>
               </Card.Content>
               <Card.BtnCombos
                 text="ASSINE AGORA"
-                message="Olá gostaria de assinar o plano: 500Mbps + Paramount | R$109,99."
+                message={plano.mensagem}
                 className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
               />
             </Card.Root>
-            <Card.Root className="border-blue-700 md:w-[335px]">
-              <Card.Top className="bg-blue-700">
-                <Card.Mtop>
-                  <Card.Items text="PLANO FAMÍLIA" className="text-blue-700" />
-                  <Card.ModalTwo
-                    textMbOne="600MEGA"
-                    textMbTwo="Download 600Mbps"
-                    textMbThree="Upload 300Mbps"
-                    textPriceOne="de 119,99"
-                    textPriceTwo="114"
-                    customContent={
-                      <div className="flex flex-col gap-1 px-5">
-                        <span className="text-xs font-medium text-zinc-600 dark:text-white">
-                          INCLUSO NO PLANO:
-                        </span>
-                        <Card.Combo>
-                          <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
-                            <Image
-                              src="/logoespn.webp"
-                              alt="Logo da ESPN"
-                              width={30}
-                              height={30}
-                              loading="lazy"
-                            />
-                          </div>
-                        </Card.Combo>
-                      </div>
-                    }
-                  >
-                    <Card.ModalBox>
-                      <Card.ModalCombos
-                        text="ASSINE AGORA"
-                        message="Olá gostaria de assinar o plano: 600Mbps + Paramount | R$114,99."
-                        className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 dark:focus:bg-blue-500"
-                      />
-                    </Card.ModalBox>
-                  </Card.ModalTwo>
-                </Card.Mtop>
-                <Card.Item text="600MEGA" />
-              </Card.Top>
-              <Card.Content>
-                <Card.Infor>
-                  <Card.List
-                    className="ml-[15px] bg-blue-700"
-                    text="Download 600Mbps"
-                    textTwo="Upload 300Mbps"
-                  />
-                  <Separator className="h-[2px] rounded-full bg-zinc-300" />
-                  <Card.Includes>
-                    <Card.Combo>
-                      <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
-                        <Image
-                          src="/logoespn.webp"
-                          alt="Logo da ESPN"
-                          width={30}
-                          height={30}
-                          loading="lazy"
-                        />
-                      </div>
-                    </Card.Combo>
-                  </Card.Includes>
-                  <Card.Price text="114" />
-                </Card.Infor>
-              </Card.Content>
-              <Card.BtnCombos
-                text="ASSINE AGORA"
-                message="Olá gostaria de assinar o plano: 600Mbps + Paramount | R$114,99."
-                className="bg-blue-700 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none dark:focus:bg-blue-500"
-              />
-            </Card.Root>
-          </div>
+          ))}
         </div>
       </div>
     </section>

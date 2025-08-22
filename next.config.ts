@@ -29,9 +29,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
-  // Minificação já é automática no Next 15
-  reactStrictMode: true, // opcional, mas recomendado
 };
 
 export default nextConfig;

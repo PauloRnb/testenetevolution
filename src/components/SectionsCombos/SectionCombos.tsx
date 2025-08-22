@@ -1,10 +1,36 @@
 "use client";
 
-import EmblaCarouselPlans from "../SectionsHome/EmblaCarouselPlans";
 import Image from "next/image";
-
+import EmblaCarouselPlans from "../SectionsHome/EmblaCarouselPlans";
 import EmblaCarouselApps from "./EmblaCarouselApps";
 import { TitlePages } from "../TitlePages/TitlesPages";
+
+const bannerImages = [
+  {
+    src: "/combopagesmobilessmall.webp",
+    alt: "Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal.",
+    className: "block w-full rounded-t-2xl md:hidden",
+    width: 748,
+    height: 321,
+    priority: true,
+  },
+  {
+    src: "/combopagestablet.webp",
+    alt: "Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal.",
+    className: "hidden md:block xl:hidden",
+    width: 436,
+    height: 343,
+    priority: true,
+  },
+  {
+    src: "/combopagestablet.webp",
+    alt: "Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal.",
+    className: "hidden w-full xl:block",
+    width: 401,
+    height: 315,
+    priority: true,
+  },
+];
 
 export function SectionCombos() {
   return (
@@ -41,33 +67,24 @@ export function SectionCombos() {
                 </a>
               </div>
             </div>
-            <Image
-              src="/combopagesmobilessmall.webp"
-              alt="Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal."
-              width={748}
-              height={321}
-              priority={true}
-              className="block w-full rounded-t-2xl md:hidden"
-            />
-            <Image
-              src="/combopagestablet.webp"
-              alt="Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal."
-              width={436}
-              height={343}
-              priority={true}
-              className="hidden md:block xl:hidden"
-            />
-            <Image
-              src="/combopagestablet.webp"
-              alt="Banner filmes e séries - HBO Max: Chernobyl - Paramount: Terra da Mafia - Telecine: A Profecia do Mal."
-              width={401}
-              height={315}
-              priority={true}
-              className="hidden w-full xl:block"
-            />
+
+            {/* Map das imagens para otimização */}
+            {bannerImages.map((img, index) => (
+              <Image
+                key={index}
+                src={img.src}
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                priority={img.priority}
+                className={img.className}
+                loading="eager" // LCP otimizado
+              />
+            ))}
           </div>
         </div>
       </section>
+
       {/* Section Plans */}
       <section className="py-24">
         <div className="container px-5 xl:px-0">
@@ -76,22 +93,20 @@ export function SectionCombos() {
             descriptionTitle="Temos as melhores ofertas de combos para você e toda sua família maratonar filmes, séries e muito futebol ao vivo."
             align="left"
           />
-
           <div className="pt-16">
             <EmblaCarouselPlans />
           </div>
         </div>
       </section>
+
+      {/* Section Apps */}
       <section className="bg-white py-24 dark:bg-zinc-800">
         <div className="container px-5 xl:px-0">
           <TitlePages
             titleMain="Nossos streaming"
-            descriptionTitle="Aqui você encontra os melhores streamings para você e sua família 
-            
-            se divertirem à vontade."
+            descriptionTitle="Aqui você encontra os melhores streamings para você e sua família se divertirem à vontade."
             align="left"
           />
-
           <div className="pt-16">
             <EmblaCarouselApps />
           </div>

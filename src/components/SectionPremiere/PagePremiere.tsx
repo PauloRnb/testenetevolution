@@ -6,6 +6,29 @@ import { CardBannersStreaming } from "../SectionParamount/ParamountPageComponent
 import { SectionAdvantagesPremiere } from "./SectionAdvantagesPremiere";
 import { SectionPlansPremiere } from "./SectionPlansPremiere";
 
+const bannersStreaming = [
+  {
+    imageBanner: "/brasileiraopremiere.webp",
+    altImage: "Banner Brasileirão | Premiere",
+    titleMain: "Brasileirão A e B",
+    descriptionTtitle:
+      "Acompanhe todos os jogos do Brasileirão Série A e B ao vivo.",
+  },
+  {
+    imageBanner: "/copadobrimage.webp",
+    altImage: "Banner Copa Betano do Brasil.",
+    titleMain: "Copa do Brasil",
+    descriptionTtitle: "A Copa do Brasil é ainda mais emocionante no Premiere.",
+  },
+  {
+    imageBanner: "/copinhasicredipremiere.webp",
+    altImage: "Banner Copinha Sicredi.",
+    titleMain: "Copinha Sicredi",
+    descriptionTtitle:
+      "Futebol de base com cobertura completa para os verdadeiros apaixonados.",
+  },
+];
+
 export function PagePremiere() {
   return (
     <>
@@ -21,6 +44,8 @@ export function PagePremiere() {
                   width={208}
                   height={48}
                   priority
+                  placeholder="blur"
+                  blurDataURL="/logopremierefull.webp"
                 />
                 <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
                   Acompanhe todos os jogos do Brasileirão e outros campeonatos
@@ -35,9 +60,13 @@ export function PagePremiere() {
                   width={208}
                   height={48}
                   priority
+                  placeholder="blur"
+                  blurDataURL="/logowhite.svg"
                 />
               </div>
             </div>
+
+            {/* Banner Responsivo */}
             <Image
               src="/premierepagesmobilessmall.webp"
               alt="Banner filme Emilia Pérez | Telecine"
@@ -65,10 +94,13 @@ export function PagePremiere() {
           </div>
         </div>
       </section>
+
       {/* Section Cards Plans Telecine */}
       <SectionPlansPremiere />
+
       {/* Section Cards Advantages */}
       <SectionAdvantagesPremiere />
+
       {/* Section Cards Banner */}
       <section className="bg-zinc-100 py-24 dark:bg-zinc-900">
         <div className="container px-5 xl:px-0">
@@ -78,29 +110,16 @@ export function PagePremiere() {
             align="left"
           />
 
-          <div className="pt-16">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 pt-16 md:grid-cols-3">
+            {bannersStreaming.map((banner, index) => (
               <CardBannersStreaming
-                imageBanner="/brasileiraopremiere.webp"
-                altImage="Banner Brasileirão | Premiere"
-                titleMain="Brasileirão A e B"
-                descriptionTtitle="Acompanhe todos os jogos do Brasileirão Série A e B ao vivo."
+                key={index}
+                imageBanner={banner.imageBanner}
+                altImage={banner.altImage}
+                titleMain={banner.titleMain}
+                descriptionTtitle={banner.descriptionTtitle}
               />
-
-              <CardBannersStreaming
-                imageBanner="/copadobrimage.webp"
-                altImage="Banner Copa Betano do Brasil."
-                titleMain="Copa do Brasil"
-                descriptionTtitle="A Copa do Brasil é ainda mais emocionante no Premiere."
-              />
-
-              <CardBannersStreaming
-                imageBanner="/copinhasicredipremiere.webp"
-                altImage="Banner Copinha Sicredi."
-                titleMain="Copinha Sicredi"
-                descriptionTtitle="Futebol de base com cobertura completa para os verdadeiros apaixonados."
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
