@@ -54,12 +54,13 @@ export default function SwiperHome() {
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
             className="mySwiper"
           >
-            <SwiperSlide className="bg-blue-900">Slide 1</SwiperSlide>
-            <SwiperSlide className="bg-emerald-900">Slide 2</SwiperSlide>
-            <SwiperSlide className="bg-slate-900">Slide 3</SwiperSlide>
-            <SwiperSlide className="bg-amber-900">Slide 4</SwiperSlide>
+            <SwiperSlide className="bg-white">Slide 1</SwiperSlide>
+            <SwiperSlide className="bg-emerald-500">Slide 2</SwiperSlide>
+            <SwiperSlide className="bg-slate-600">Slide 3</SwiperSlide>
+            <SwiperSlide className="bg-amber-500">Slide 4</SwiperSlide>
             {/* Botões customizados */}
             <button
+              aria-label="Slider anterior"
               ref={prevRef}
               className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-blue-700 shadow-lg hover:bg-white 32md:flex"
             >
@@ -81,6 +82,7 @@ export default function SwiperHome() {
             </button>
 
             <button
+              aria-label="Próximo slider"
               ref={nextRef}
               className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-blue-700 shadow-lg hover:bg-white 32md:flex"
             >
