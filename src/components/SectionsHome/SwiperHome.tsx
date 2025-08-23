@@ -57,7 +57,7 @@ export default function SwiperHome() {
             <button
               aria-label="Slider anterior"
               ref={prevRef}
-              className="absolute left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700"
+              className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700 32md:flex"
             >
               {/* SVG seta esquerda */}
               <ChevronLeft />
@@ -66,7 +66,7 @@ export default function SwiperHome() {
             <button
               aria-label="Próximo slider"
               ref={nextRef}
-              className="absolute right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700"
+              className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700 32md:flex"
             >
               {/* SVG seta direita */}
               <ChevronRight />

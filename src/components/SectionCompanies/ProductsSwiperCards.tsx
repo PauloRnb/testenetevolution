@@ -98,15 +98,18 @@ export default function ProductsSwiperCards() {
                 <button
                   aria-label="Slider anterior"
                   ref={prevRef}
-                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 text-white transition-colors hover:bg-orange-500"
+                  className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
                 >
+                  {/* SVG seta esquerda */}
                   <ChevronLeft />
                 </button>
+
                 <button
                   aria-label="Próximo slider"
                   ref={nextRef}
-                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 text-white transition-colors hover:bg-orange-500"
+                  className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
                 >
+                  {/* SVG seta direita */}
                   <ChevronRight />
                 </button>
               </div>
