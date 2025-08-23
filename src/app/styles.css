@@ -6,21 +6,12 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Pagination Bullets */
+/* Pagination Pattern */
 .swiper-pagination-bullet {
   right: 0;
   height: 0.25rem;
@@ -36,6 +27,31 @@
   cursor: not-allowed;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  opacity: 1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+  animation-duration: 0.3s;
+}
+
+/* Pagination Cards */
+.dots-pagination-cards {
+  text-align: left;
+}
+.dots-pagination-cards .swiper-pagination-bullet {
+  left: 0;
+  height: 0.25rem;
+  width: 1.5rem;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  opacity: 0.4;
+}
+.dots-pagination-cards .swiper-pagination-bullet-active {
+  width: 2.5rem;
+  cursor: not-allowed;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
   opacity: 1;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -2,7 +2,7 @@
 
 import { Tabs } from "@ark-ui/react/tabs";
 import AppsSwiperPlans from "./AppsSwiperPlans";
-import EmblaCarousel from "./Plans/EmblaCarousel";
+import NormalSwiperPlans from "./NormalSwiperPlans";
 
 export function SectionOfferHome() {
   return (
@@ -39,7 +39,7 @@ export function SectionOfferHome() {
               <AppsSwiperPlans />
             </Tabs.Content>
             <Tabs.Content value="internet" className="pt-7 focus:outline-none">
-              <EmblaCarousel />
+              <NormalSwiperPlans />
             </Tabs.Content>
           </Tabs.Root>
         </div>

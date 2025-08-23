@@ -14,6 +14,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
+import "@/app/styles.css";
+
 // Import required modules
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
 
@@ -25,11 +27,12 @@ export default function AppsSwiperPlans() {
   const nextRef = useRef<HTMLButtonElement | null>(null);
   return (
     <>
-      <div className="h-[503px]">
+      <div>
         <div className="container h-full">
           <Swiper
             pagination={{
               clickable: true,
+              el: ".dots-pagination-cards",
             }}
             freeMode={true}
             slidesPerView={1}
@@ -454,25 +457,25 @@ export default function AppsSwiperPlans() {
                 />
               </Card.Root>
             </SwiperSlide>
-
-            {/* Botões customizados */}
-            <button
-              aria-label="Slider anterior"
-              ref={prevRef}
-              className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700 32md:flex"
-            >
-              {/* SVG seta esquerda */}
-              <ChevronLeft />
-            </button>
-
-            <button
-              aria-label="Próximo slider"
-              ref={nextRef}
-              className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700 32md:flex"
-            >
-              {/* SVG seta direita */}
-              <ChevronRight />
-            </button>
+            <div className="mt-4 flex items-center justify-between">
+              <div className="dots-pagination-cards"></div>
+              <div className="flex justify-end gap-4">
+                <button
+                  aria-label="Slider anterior"
+                  ref={prevRef}
+                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 text-white transition-colors hover:bg-orange-500"
+                >
+                  <ChevronLeft />
+                </button>
+                <button
+                  aria-label="Próximo slider"
+                  ref={nextRef}
+                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 text-white transition-colors hover:bg-orange-500"
+                >
+                  <ChevronRight />
+                </button>
+              </div>
+            </div>
           </Swiper>
         </div>
       </div>

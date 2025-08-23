@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import EmblaCarouselApps from "./EmblaCarouselApps";
 import { TitlePages } from "../TitlePages/TitlesPages";
 import AppsSwiperPlans from "../SectionsHome/AppsSwiperPlans";
+import AppsSwiperStreaming from "./AppSwiperStreaming";
 
 const bannerImages = [
   {
@@ -108,7 +108,7 @@ export function SectionCombos() {
             align="left"
           />
           <div className="pt-16">
-            <EmblaCarouselApps />
+            <AppsSwiperStreaming />
           </div>
         </div>
       </section>

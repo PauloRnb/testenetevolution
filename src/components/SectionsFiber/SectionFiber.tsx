@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import EmblaCarousel from "../SectionsHome/Plans/EmblaCarousel";
 import { Globe, CirclePercent, Airplay, Headset } from "lucide-react";
 import { TitlePages } from "../TitlePages/TitlesPages";
 import { CardBenefits } from "./FiberPageComponents/CardBenefits";
+import NormalSwiperPlans from "../SectionsHome/NormalSwiperPlans";
 
 export function SectionFiber() {
   return (
@@ -81,7 +81,7 @@ export function SectionFiber() {
           />
 
           <div className="pt-16">
-            <EmblaCarousel />
+            <NormalSwiperPlans />
           </div>
         </div>
       </section>

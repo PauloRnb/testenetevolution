@@ -39,11 +39,11 @@ export function CardStreaming({
         />
       </div>
       <div className="flex flex-col gap-[2px]">
-        <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+        <h3 className="text-left text-xl font-semibold text-zinc-900 dark:text-white">
           {titleMain}
         </h3>
         <Separator className="!h-[2px] !w-10 rounded-full bg-blue-700 dark:bg-white" />
-        <p className="mt-4 text-base font-medium text-zinc-600 dark:text-zinc-300">
+        <p className="mt-4 text-left text-base font-medium text-zinc-600 dark:text-zinc-300">
           {descriptionTitle}
         </p>
       </div>
