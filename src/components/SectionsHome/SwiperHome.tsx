@@ -12,8 +12,11 @@ import "swiper/css/effect-fade";
 
 import "@/app/styles.css";
 
-// import required modules
+// Import required modules
 import { Navigation, Pagination, EffectFade, Autoplay } from "swiper/modules";
+
+// Import Icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function SwiperHome() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
@@ -23,10 +26,6 @@ export default function SwiperHome() {
       <div className="h-[503px] bg-blue-700">
         <div className="container h-full">
           <Swiper
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
             pagination={{
               clickable: true,
             }}
@@ -36,20 +35,16 @@ export default function SwiperHome() {
               delay: 4000,
               disableOnInteraction: false,
             }}
-            onSwiper={(swiper) => {
-              // depois que o swiper monta, liga de novo os botões
-              setTimeout(() => {
-                if (
-                  swiper.params.navigation &&
-                  typeof swiper.params.navigation !== "boolean"
-                ) {
-                  swiper.params.navigation.prevEl = prevRef.current;
-                  swiper.params.navigation.nextEl = nextRef.current;
-                  swiper.navigation.destroy();
-                  swiper.navigation.init();
-                  swiper.navigation.update();
-                }
-              });
+            onBeforeInit={(swiper) => {
+              if (typeof swiper.params.navigation === "boolean") {
+                swiper.params.navigation = {
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                };
+              } else if (swiper.params.navigation) {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }
             }}
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
             className="mySwiper"
@@ -62,45 +57,19 @@ export default function SwiperHome() {
             <button
               aria-label="Slider anterior"
               ref={prevRef}
-              className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-blue-700 shadow-lg hover:bg-white 32md:flex"
+              className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700 32md:flex"
             >
               {/* SVG seta esquerda */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
+              <ChevronLeft />
             </button>
 
             <button
               aria-label="Próximo slider"
               ref={nextRef}
-              className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-blue-700 shadow-lg hover:bg-white 32md:flex"
+              className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white text-white transition-colors duration-150 hover:bg-white hover:text-blue-700 32md:flex"
             >
               {/* SVG seta direita */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <ChevronRight />
             </button>
           </Swiper>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Tabs } from "@ark-ui/react/tabs";
-import EmblaCarouselPlans from "./EmblaCarouselPlans";
+import AppsSwiperPlans from "./AppsSwiperPlans";
 import EmblaCarousel from "./Plans/EmblaCarousel";
 
 export function SectionOfferHome() {
@@ -36,7 +36,7 @@ export function SectionOfferHome() {
             </Tabs.List>
 
             <Tabs.Content value="combos" className="pt-7 focus:outline-none">
-              <EmblaCarouselPlans />
+              <AppsSwiperPlans />
             </Tabs.Content>
             <Tabs.Content value="internet" className="pt-7 focus:outline-none">
               <EmblaCarousel />

@@ -17,7 +17,7 @@ export function CardContentItemsTop({
         <p
           {...rest}
           className={twMerge(
-            "text-3xl font-bold leading-[28px] tracking-tight text-white",
+            "text-left text-3xl font-bold leading-[28px] tracking-tight text-white",
             rest.className,
           )}
         >
@@ -26,7 +26,7 @@ export function CardContentItemsTop({
         <p
           {...rest}
           className={twMerge(
-            "mb-1 text-xs font-medium leading-[14px] text-white",
+            "mb-1 text-left text-xs font-medium leading-[14px] text-white",
             rest.className,
           )}
         >
