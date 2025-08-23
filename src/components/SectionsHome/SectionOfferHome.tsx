@@ -6,7 +6,7 @@ import NormalSwiperPlans from "./NormalSwiperPlans";
 
 export function SectionOfferHome() {
   return (
-    <section id="section-offer-home" className="py-24">
+    <section id="section-offer-home" className="h-[900px] py-24">
       <div className="container px-5 32lg:px-0">
         <div className="flex flex-col gap-y-1">
           <h2 className="text-left text-3xl font-semibold text-blue-700 dark:text-white sm:text-4xl lg:text-5xl">

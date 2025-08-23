@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Card } from "@/components/CardPlans";
 import { Separator } from "@/components/ui/separator";
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -25,11 +25,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function AppsSwiperPlans() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
+  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+  useEffect(() => {
+    if (swiperInstance && prevRef.current && nextRef.current) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+  }, [swiperInstance]);
   return (
     <>
       <div>
         <div className="container h-full">
           <Swiper
+            onSwiper={setSwiperInstance}
             pagination={{
               clickable: true,
               el: ".dots-pagination-cards",
