@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import EmblaCarouselCompanies from "./EmblaCarouselCopanies";
 import { Mail, PhoneCall } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { RiVipCrown2Line } from "react-icons/ri";
-import EmblaCarouselProducts from "./EmblaCarouselProducts";
+import ProductsSwiperCards from "./ProductsSwiperCards";
+import PlansSwiperCompanies from "./PlansSwiperCompanies";
 
 export function SectionCompanies() {
   return (
@@ -83,7 +83,7 @@ export function SectionCompanies() {
           </div>
 
           <div className="pt-16">
-            <EmblaCarouselCompanies />
+            <PlansSwiperCompanies />
           </div>
         </div>
       </section>
@@ -100,7 +100,7 @@ export function SectionCompanies() {
           </div>
 
           <div className="pt-16">
-            <EmblaCarouselProducts />
+            <ProductsSwiperCards />
           </div>
         </div>
       </section>

@@ -1,0 +1,119 @@
+"use client";
+
+import { CardProducts } from "./CompaniesPageComponents/CardProducts";
+
+import React, { useRef } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import "@/app/styles.css";
+
+// Import required modules
+import { Navigation, Pagination, FreeMode } from "swiper/modules";
+
+// Import Icons
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+export default function ProductsSwiperCards() {
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
+  return (
+    <>
+      <div>
+        <div className="container h-full">
+          <Swiper
+            pagination={{
+              clickable: true,
+              el: ".dots-pagination-cards",
+            }}
+            freeMode={true}
+            slidesPerView={1}
+            breakpoints={{
+              427: { slidesPerView: "auto" },
+            }}
+            spaceBetween={20}
+            onBeforeInit={(swiper) => {
+              if (typeof swiper.params.navigation === "boolean") {
+                swiper.params.navigation = {
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
+                };
+              } else if (swiper.params.navigation) {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }
+            }}
+            modules={[Navigation, Pagination, FreeMode]}
+            className="mySwiper"
+          >
+            {/* Card 1 */}
+            <SwiperSlide className="!w-full sm:!w-[375px]">
+              <CardProducts
+                bgImageUrl="/wificardbg.webp"
+                titleMain="Internet"
+                descriptionTitle="Internet 100% fibra óptica e wi-fi premium."
+                linkText="ASSINE AGORA"
+                linkHref="https://wa.me/5585997362750?text=Olá, gostaria de assinar internet fibra empresarial."
+              />
+            </SwiperSlide>
+            {/* Card 4 */}
+            <SwiperSlide className="!w-full sm:!w-[375px]">
+              <CardProducts
+                bgImageUrl="/linkdedicadocardbg.webp"
+                titleMain="Link Dedicado"
+                descriptionTitle="Conexão exclusiva para sua empresa."
+                linkText="ASSINE AGORA"
+                linkHref="https://wa.me/5585997362750?text=Olá, gostaria de um link dedicado para minha empresa."
+              />
+            </SwiperSlide>
+            {/* Card 5 */}
+            <SwiperSlide className="!w-full sm:!w-[375px]">
+              <CardProducts
+                bgImageUrl="/ipfixocardbg.webp"
+                titleMain="IP Fixo"
+                descriptionTitle="IP fixo que garante estabilidade e segurança."
+                linkText="ASSINE AGORA"
+                linkHref="https://wa.me/5585997362750?text=Olá, gostaria de um IP Fixo."
+              />
+            </SwiperSlide>
+            {/* Card 6 */}
+            <SwiperSlide className="!w-full sm:!w-[375px]">
+              <CardProducts
+                bgImageUrl="/lantolancardbg.webp"
+                titleMain="Lan-To-Lan"
+                descriptionTitle="Conexão direta e rápida."
+                linkText="ASSINE AGORA"
+                linkHref="https://wa.me/5585997362750?text=Olá, gostaria de contratar o cabeamento Lan-To-Lan."
+              />
+            </SwiperSlide>
+            <div className="mt-4 flex items-center justify-between">
+              <div className="dots-pagination-cards"></div>
+              <div className="flex justify-end gap-4">
+                <button
+                  aria-label="Slider anterior"
+                  ref={prevRef}
+                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 text-white transition-colors hover:bg-orange-500"
+                >
+                  <ChevronLeft />
+                </button>
+                <button
+                  aria-label="Próximo slider"
+                  ref={nextRef}
+                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-white bg-orange-600 text-white transition-colors hover:bg-orange-500"
+                >
+                  <ChevronRight />
+                </button>
+              </div>
+            </div>
+          </Swiper>
+        </div>
+      </div>
+    </>
+  );
+}
