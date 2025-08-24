@@ -30,16 +30,14 @@ export function SectionPrivacyMobile() {
                   className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
                 >
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
-                    Política de Privacidade
+                    1. Política de Privacidade
                   </AccordionTrigger>
                   <AccordionContent className="flex w-full flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Na NetEvolution, valorizamos a transparência e a
-                      segurança. Nosso site foi criado para fornecer informações
-                      sobre nossos serviços e planos de internet sem coletar
-                      dados pessoais. Você pode navegar livremente, com total
-                      segurança e privacidade.
+                      Nós respeitamos a sua privacidade e garantimos que a
+                      navegação em nosso site seja segura. Não realizamos coleta
+                      de informações pessoais diretamente por meio deste site.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -49,15 +47,19 @@ export function SectionPrivacyMobile() {
                   className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
                 >
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
-                    Nenhum dado pessoal coletado
+                    2. Coleta de Informações
                   </AccordionTrigger>
                   <AccordionContent className="flex w-full flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Não solicitamos cadastros, e não pedimos seu nome, e-mail,
-                      telefone ou qualquer outro dado pessoal. Toda a navegação
-                      em nosso site é anônima e sem necessidade de
-                      identificação.
+                      Nosso site não utiliza formulários e não armazena dados de
+                      visitantes. O contato é feito exclusivamente através de
+                      links externos, como: WhatsApp | Para atendimento e
+                      suporte. SGP Central do Assinante | Para acesso de
+                      clientes já cadastrados. Fast.com | Para teste de
+                      velocidade da internet. Qualquer dado eventualmente
+                      solicitado em plataformas externas segue a Política de
+                      Privacidade própria de cada serviço.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -67,16 +69,13 @@ export function SectionPrivacyMobile() {
                   className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
                 >
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
-                    Links para WhatsApp
+                    3. Uso de Cookies
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Alguns links do nosso site podem direcionar você para o
-                      WhatsApp para falar diretamente com nossa equipe. Esses
-                      links são apenas um meio de comunicação, e qualquer
-                      informação compartilhada nesse canal fica sujeita à
-                      política de privacidade do próprio WhatsApp.
+                      Nosso site não utiliza cookies para rastrear ou
+                      identificar usuários.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -86,16 +85,16 @@ export function SectionPrivacyMobile() {
                   className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
                 >
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
-                    Cookies e tecnologias semelhantes
+                    4. Links Externos
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Utilizamos cookies e tecnologias semelhantes apenas para
-                      melhorar a navegação e o desempenho do site. Esses dados
-                      são anônimos e não permitem identificar visitantes
-                      individualmente. Você pode gerenciar ou desativar cookies
-                      diretamente pelo seu navegador, se desejar.
+                      Ao clicar em links externos (como WhatsApp, SGP ou
+                      Fast.com), você será direcionado para sites de terceiros,
+                      que possuem suas próprias políticas de privacidade e
+                      segurança. Recomendamos que leia as políticas de cada
+                      plataforma para entender como seus dados são tratados.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -105,15 +104,14 @@ export function SectionPrivacyMobile() {
                   className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
                 >
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
-                    Segurança do site
+                    5. Segurança do Site
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Embora não coletemos informações pessoais, adotamos
-                      medidas de segurança para garantir que o site funcione
-                      corretamente e que sua experiência de navegação seja
-                      sempre segura.
+                      Como não coletamos nem armazenamos informações pessoais em
+                      nosso site, não existe risco de exposição ou
+                      compartilhamento de dados por meio desta página.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -123,16 +121,54 @@ export function SectionPrivacyMobile() {
                   className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
                 >
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
-                    Atualizações desta Política
+                    6. Alterações nesta Política
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Podemos atualizar esta Política de Privacidade de tempos
-                      em tempos. Recomendamos que você consulte esta página
-                      regularmente para se manter informado sobre eventuais
-                      mudanças.
+                      Podemos atualizar esta Política de Privacidade para
+                      refletir mudanças em nossos serviços. Sempre que isso
+                      ocorrer, a nova versão será publicada nesta página.
                     </p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem
+                  value="item-7"
+                  className="rounded-xl bg-white transition-colors data-[state=open]:border data-[state=open]:border-blue-700 dark:bg-zinc-800 data-[state=open]:dark:border-cyan-400"
+                >
+                  <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
+                    7. Nosso Contato
+                  </AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                    <Separator className="rounded-full bg-zinc-400" />
+                    <p className="text-zinc-600 dark:text-zinc-300">
+                      Podemos atualizar esta Política de Privacidade para
+                      refletir mudanças em nossos serviços. Sempre que isso
+                      ocorrer, a nova versão será publicada nesta página.
+                    </p>
+                    <div className="mt-3 flex flex-col gap-2">
+                      <span className="font-medium text-zinc-600 dark:text-white">
+                        E-mail:{" "}
+                        <a
+                          className="font-medium text-zinc-900 dark:text-cyan-400"
+                          href="mailto:evolutionnet221@gmail.com"
+                        >
+                          evolutionnet221@gmail.com
+                        </a>
+                      </span>
+                      <span className="font-medium text-zinc-600 dark:text-white">
+                        WhatsApp:{" "}
+                        <a
+                          className="font-medium text-zinc-900 dark:text-cyan-400"
+                          href="https://wa.me/5585997362750?text=Olá, estou com dúvidas sobre a Política de Privacidade."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          (85) 9 9736-2750
+                        </a>
+                      </span>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

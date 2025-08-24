@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { SectionPrivacyMobile } from "./SectionPrivacyMobile";
+import { SectionPrivacyDesktop } from "./SectionPrivacyDesktop";
 
 export function SectionPrivacy() {
   return (
@@ -53,6 +54,8 @@ export function SectionPrivacy() {
 
       {/* Section Terms Mobile */}
       <SectionPrivacyMobile />
+      {/* Section Terms Desktop */}
+      <SectionPrivacyDesktop />
     </>
   );
 }
