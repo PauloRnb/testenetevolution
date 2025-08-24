@@ -461,6 +461,7 @@ export default function AppsSwiperPlans() {
               <div className="dots-pagination-cards"></div>
               <div className="flex justify-end gap-4">
                 <button
+                  type="button"
                   aria-label="Slider anterior"
                   ref={prevRef}
                   className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
@@ -470,6 +471,7 @@ export default function AppsSwiperPlans() {
                 </button>
 
                 <button
+                  type="button"
                   aria-label="Próximo slider"
                   ref={nextRef}
                   className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
