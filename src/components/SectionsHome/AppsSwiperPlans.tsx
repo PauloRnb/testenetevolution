@@ -464,7 +464,7 @@ export default function AppsSwiperPlans() {
                   type="button"
                   aria-label="Slider anterior"
                   ref={prevRef}
-                  className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
+                  className="pointer-events-auto z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
                 >
                   {/* SVG seta esquerda */}
                   <ChevronLeft />
@@ -474,7 +474,7 @@ export default function AppsSwiperPlans() {
                   type="button"
                   aria-label="Próximo slider"
                   ref={nextRef}
-                  className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
+                  className="pointer-events-auto z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
                 >
                   {/* SVG seta direita */}
                   <ChevronRight />
