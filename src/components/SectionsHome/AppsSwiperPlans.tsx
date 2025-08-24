@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Card } from "@/components/CardPlans";
 import { Separator } from "@/components/ui/separator";
 
-import React, { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
