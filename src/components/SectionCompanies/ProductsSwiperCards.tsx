@@ -2,7 +2,6 @@
 
 import { CardProducts } from "./CompaniesPageComponents/CardProducts";
 
-import React, { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -21,8 +20,6 @@ import { Navigation, Pagination, FreeMode } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ProductsSwiperCards() {
-  const prevRef = useRef<HTMLButtonElement | null>(null);
-  const nextRef = useRef<HTMLButtonElement | null>(null);
   return (
     <>
       <div>
@@ -32,23 +29,16 @@ export default function ProductsSwiperCards() {
               clickable: true,
               el: ".dots-pagination-cards",
             }}
+            navigation={{
+              prevEl: ".btn-cards-plans-prev",
+              nextEl: ".btn-cards-plans-next",
+            }}
             freeMode={true}
             slidesPerView={1}
             breakpoints={{
-              427: { slidesPerView: "auto" },
+              426: { slidesPerView: "auto" },
             }}
             spaceBetween={20}
-            onBeforeInit={(swiper) => {
-              if (typeof swiper.params.navigation === "boolean") {
-                swiper.params.navigation = {
-                  prevEl: prevRef.current,
-                  nextEl: nextRef.current,
-                };
-              } else if (swiper.params.navigation) {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-              }
-            }}
             modules={[Navigation, Pagination, FreeMode]}
             className="mySwiper"
           >
@@ -97,8 +87,7 @@ export default function ProductsSwiperCards() {
               <div className="flex justify-end gap-4">
                 <button
                   aria-label="Slider anterior"
-                  ref={prevRef}
-                  className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
+                  className="btn-cards-plans-prev z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
                 >
                   {/* SVG seta esquerda */}
                   <ChevronLeft />
@@ -106,8 +95,7 @@ export default function ProductsSwiperCards() {
 
                 <button
                   aria-label="Próximo slider"
-                  ref={nextRef}
-                  className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
+                  className="btn-cards-plans-next z-10 flex h-10 w-10 items-center justify-center rounded-full bg-orange-600 text-white transition-colors duration-150 hover:bg-orange-700"
                 >
                   {/* SVG seta direita */}
                   <ChevronRight />
