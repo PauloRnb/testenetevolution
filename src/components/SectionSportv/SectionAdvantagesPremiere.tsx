@@ -3,7 +3,7 @@
 import { TitlePages } from "../TitlePages/TitlesPages";
 
 import { Medal, Mic, Clapperboard } from "lucide-react";
-import { CardAdvantagesSportv } from "./PremierePageComponets/CardAdvantagesSportv";
+import { CardAdvantagesSportv } from "./SportvPageComponets/CardAdvantagesSportv";
 
 export function SectionAdvantagesPremiere() {
   return (

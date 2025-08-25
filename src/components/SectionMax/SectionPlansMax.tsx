@@ -58,9 +58,9 @@ export function SectionPlansMax() {
                             INCLUSO NO PLANO:
                           </span>
                           <Card.Combo>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
-                                src="/logomax.webp"
+                                src="/logoapp-max.webp"
                                 alt="Logo HBO Max"
                                 width={30}
                                 height={30}
@@ -92,9 +92,9 @@ export function SectionPlansMax() {
                     <Separator className="h-[2px] rounded-full bg-zinc-300" />
                     <Card.Includes>
                       <Card.Combo>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
-                            src="/logomax.webp"
+                            src="/logoapp-max.webp"
                             alt="Logo HBO Max"
                             width={30}
                             height={30}

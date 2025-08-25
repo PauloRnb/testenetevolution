@@ -10,21 +10,21 @@ export function PageTelecine() {
   const banners = [
     {
       imageBanner: "/todotempotelecineimage.webp",
-      altImage: "Banner filme Todo Tempo que Temos | Telecine.",
+      altImage: "Banner filme, Todo Tempo que Temos | Telecine.",
       titleMain: "Drama",
       descriptionTitle:
         "Aqui você assiste aos dramas mais emocionantes. Assine Telecine.",
     },
     {
       imageBanner: "/vitoriatelecineimage.webp",
-      altImage: "Banner filme Vitoria | Telecine",
+      altImage: "Banner filme, Vitoria | Telecine",
       titleMain: "Biografia",
       descriptionTitle:
         "Aqui você acompanha histórias reais e inspiradoras. Assine Telecine.",
     },
     {
       imageBanner: "/apocalipstelecineimage.webp",
-      altImage: "Banner filme Depois do Apocalipse | Telecine.",
+      altImage: "Banner filme, Depois do Apocalipse | Telecine.",
       titleMain: "Policial",
       descriptionTitle:
         "Aqui você acompanha os melhores filmes policiais. Assine Telecine.",
