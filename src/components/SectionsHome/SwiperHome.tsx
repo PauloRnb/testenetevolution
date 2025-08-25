@@ -63,7 +63,6 @@ export default function SwiperHome() {
                   width={440}
                   height={293}
                   priority
-                  fetchPriority="high"
                   sizes="(max-width: 440px) 100vw, 21rem"
                 />
               </div>
@@ -74,7 +73,6 @@ export default function SwiperHome() {
                 width={200}
                 height={300}
                 priority
-                fetchPriority="high"
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
@@ -89,7 +87,7 @@ export default function SwiperHome() {
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
                   width={440}
                   height={293}
-                  loading="lazy"
+                  priority
                   sizes="(max-width: 440px) 100vw, 21rem"
                 />
               </div>
@@ -99,7 +97,7 @@ export default function SwiperHome() {
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
-                loading="lazy"
+                priority
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
@@ -114,7 +112,7 @@ export default function SwiperHome() {
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
                   width={440}
                   height={293}
-                  loading="lazy"
+                  priority
                   sizes="(max-width: 440px) 100vw, 21rem"
                 />
               </div>
@@ -124,7 +122,7 @@ export default function SwiperHome() {
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
-                loading="lazy"
+                priority
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
@@ -139,7 +137,7 @@ export default function SwiperHome() {
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
                   width={440}
                   height={293}
-                  loading="lazy"
+                  priority
                   sizes="(max-width: 440px) 100vw, 21rem"
                 />
               </div>
@@ -149,7 +147,7 @@ export default function SwiperHome() {
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
-                loading="lazy"
+                priority
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
