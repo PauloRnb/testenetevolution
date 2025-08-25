@@ -59,21 +59,21 @@ export default function SwiperHome() {
                 <Image
                   src="/ofertaparamountslider-001.webp"
                   alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  width={448} // maior tamanho exibido (28rem ≈ 448px)
+                  height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  width={400}
-                  height={182}
                   priority
-                  sizes="(max-width: 400px) 100vw, 21rem"
+                  sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                width={320} // largura máxima que você quer exibir
+                height={480} // mantém proporção
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                width={200}
-                height={300}
                 priority
-                sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
@@ -84,21 +84,21 @@ export default function SwiperHome() {
                 <Image
                   src="/ofertaparamountslider-001.webp"
                   alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  width={448} // maior tamanho exibido (28rem ≈ 448px)
+                  height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  width={400}
-                  height={182}
                   loading="lazy"
-                  sizes="(max-width: 400px) 100vw, 21rem"
+                  sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                width={320} // largura máxima que você quer exibir
+                height={480} // mantém proporção
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                width={200}
-                height={300}
                 loading="lazy"
-                sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
@@ -109,21 +109,21 @@ export default function SwiperHome() {
                 <Image
                   src="/ofertaparamountslider-001.webp"
                   alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  width={448} // maior tamanho exibido (28rem ≈ 448px)
+                  height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  width={400}
-                  height={182}
                   loading="lazy"
-                  sizes="(max-width: 400px) 100vw, 21rem"
+                  sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                width={320} // largura máxima que você quer exibir
+                height={480} // mantém proporção
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                width={200}
-                height={300}
                 loading="lazy"
-                sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
@@ -134,21 +134,21 @@ export default function SwiperHome() {
                 <Image
                   src="/ofertaparamountslider-001.webp"
                   alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  width={448} // maior tamanho exibido (28rem ≈ 448px)
+                  height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  width={400}
-                  height={182}
                   loading="lazy"
-                  sizes="(max-width: 400px) 100vw, 21rem"
+                  sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                width={320} // largura máxima que você quer exibir
+                height={480} // mantém proporção
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                width={200}
-                height={300}
                 loading="lazy"
-                sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
             {/* Botões customizados */}
