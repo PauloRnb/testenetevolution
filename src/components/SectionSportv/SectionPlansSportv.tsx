@@ -12,7 +12,7 @@ const plansSportv = [
     download: "500Mbps",
     upload: "250Mbps",
     priceFrom: "114,99",
-    priceTo: "109,99",
+    priceTo: "109",
     message: "Olá gostaria de assinar o plano: 500Mbps + Paramount | R$109,99.",
   },
   {
@@ -21,7 +21,7 @@ const plansSportv = [
     download: "600Mbps",
     upload: "300Mbps",
     priceFrom: "119,99",
-    priceTo: "114,99",
+    priceTo: "114",
     message: "Olá gostaria de assinar o plano: 600Mbps + Paramount | R$114,99.",
   },
 ];

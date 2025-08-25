@@ -62,7 +62,7 @@ export default function AppsSwiperPlans() {
                             INCLUSO NO PLANO:
                           </span>
                           <Card.Combo>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logotelecine.webp"
                                 alt="Logo Telecine"
@@ -71,7 +71,7 @@ export default function AppsSwiperPlans() {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logoapp-paramountplus.webp"
                                 alt="Logo Paramount"
@@ -105,7 +105,7 @@ export default function AppsSwiperPlans() {
                     <Separator className="h-[2px] rounded-full bg-zinc-300 dark:bg-orange-600" />
                     <Card.Includes>
                       <Card.Combo>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logotelecine.webp"
                             alt="Logo Telecine"
@@ -114,7 +114,7 @@ export default function AppsSwiperPlans() {
                             loading="lazy"
                           />
                         </div>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logoapp-paramountplus.webp"
                             alt="Logo Paramount"
@@ -156,7 +156,7 @@ export default function AppsSwiperPlans() {
                             INCLUSO NO PLANO:
                           </span>
                           <Card.Combo>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logotelecine.webp"
                                 alt="Logo Telecine"
@@ -165,7 +165,7 @@ export default function AppsSwiperPlans() {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logosportv.webp"
                                 alt="Logo SporTV"
@@ -174,7 +174,7 @@ export default function AppsSwiperPlans() {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logoapp-paramountplus.webp"
                                 alt="Logo Paramount"
@@ -208,7 +208,7 @@ export default function AppsSwiperPlans() {
                     <Separator className="h-[2px] rounded-full bg-zinc-300" />
                     <Card.Includes>
                       <Card.Combo>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logotelecine.webp"
                             alt="Logo Telecine"
@@ -217,7 +217,7 @@ export default function AppsSwiperPlans() {
                             loading="lazy"
                           />
                         </div>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logosportv.webp"
                             alt="Logo SporTV"
@@ -226,7 +226,7 @@ export default function AppsSwiperPlans() {
                             loading="lazy"
                           />
                         </div>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logoapp-paramountplus.webp"
                             alt="Logo Paramount"
@@ -265,7 +265,7 @@ export default function AppsSwiperPlans() {
                             INCLUSO NO PLANO:
                           </span>
                           <Card.Combo>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logosportv.webp"
                                 alt="Logo SporTV"
@@ -274,7 +274,7 @@ export default function AppsSwiperPlans() {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logoapp-premiere.webp"
                                 alt="Logo Premiere"
@@ -283,7 +283,7 @@ export default function AppsSwiperPlans() {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logoapp-max.webp"
                                 alt="Logo HBO Max"
@@ -292,7 +292,7 @@ export default function AppsSwiperPlans() {
                                 loading="lazy"
                               />
                             </div>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logoapp-paramountplus.webp"
                                 alt="Logo Paramount"
@@ -326,7 +326,7 @@ export default function AppsSwiperPlans() {
                     <Separator className="h-[2px] rounded-full bg-zinc-300" />
                     <Card.Includes>
                       <Card.Combo>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logosportv.webp"
                             alt="Logo SporTV"
@@ -335,7 +335,7 @@ export default function AppsSwiperPlans() {
                             loading="lazy"
                           />
                         </div>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logoapp-premiere.webp"
                             alt="Logo SporTV"
@@ -344,7 +344,7 @@ export default function AppsSwiperPlans() {
                             loading="lazy"
                           />
                         </div>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logoapp-max.webp"
                             alt="Logo HBO Max"
@@ -353,7 +353,7 @@ export default function AppsSwiperPlans() {
                             loading="lazy"
                           />
                         </div>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logoapp-paramountplus.webp"
                             alt="Logo Paramount"
@@ -392,7 +392,7 @@ export default function AppsSwiperPlans() {
                             INCLUSO NO PLANO:
                           </span>
                           <Card.Combo>
-                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                            <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                               <Image
                                 src="/logoapp-max.webp"
                                 alt="Logo Max"
@@ -426,7 +426,7 @@ export default function AppsSwiperPlans() {
                     <Separator className="h-[2px] rounded-full bg-zinc-300" />
                     <Card.Includes>
                       <Card.Combo>
-                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                        <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                           <Image
                             src="/logoapp-max.webp"
                             alt="Logo Max"

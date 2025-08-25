@@ -12,7 +12,7 @@ const plansPremiere = [
     download: "Download 500Mbps",
     upload: "Upload 250Mbps",
     oldPrice: "114,99",
-    price: "109,99",
+    price: "109",
     message: "Olá gostaria de assinar o plano: 500Mbps + Paramount | R$109,99.",
   },
   {

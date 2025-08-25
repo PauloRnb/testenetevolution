@@ -12,7 +12,7 @@ const planos = [
     download: "500Mbps",
     upload: "250Mbps",
     precoDe: "114,99",
-    precoPor: "109,99",
+    precoPor: "109",
     logo: "/logoapp-espn.webp",
     mensagem: "Olá gostaria de assinar o plano: 500Mbps + ESPN | R$109,99.",
   },

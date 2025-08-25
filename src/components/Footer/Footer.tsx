@@ -248,7 +248,7 @@ export function Footer() {
                   <TooltipTrigger asChild>
                     <Link
                       href="/"
-                      aria-label="Página inicial da Net Evolution"
+                      aria-label="Voltar à Página"
                       className="select-none focus:outline-none"
                     >
                       <Image

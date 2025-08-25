@@ -36,9 +36,13 @@ export function CardProducts({
         ></div>
 
         {/* Textos */}
-        <div className="absolute top-[12.5rem] z-20 -translate-y-1/2 p-6 px-3 pt-0 duration-500">
-          <h2 className="mb-3 text-xl font-semibold text-white">{titleMain}</h2>
-          <p className="text-sm font-medium text-white">{descriptionTitle}</p>
+        <div className="absolute top-[12.5rem] z-20 -translate-y-1/2 p-6 px-3 pb-0 pt-0 duration-500">
+          <h2 className="mb-1 text-left text-xl font-semibold text-white">
+            {titleMain}
+          </h2>
+          <p className="text-left text-sm font-medium text-white">
+            {descriptionTitle}
+          </p>
         </div>
 
         {/* Botão */}
