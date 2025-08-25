@@ -63,6 +63,7 @@ export default function SwiperHome() {
                   width={440}
                   height={293}
                   priority
+                  fetchPriority="high"
                   sizes="(max-width: 440px) 100vw, 21rem"
                 />
               </div>
@@ -73,6 +74,7 @@ export default function SwiperHome() {
                 width={200}
                 height={300}
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
