@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { TitlePages } from "../TitlePages/TitlesPages";
 import { Separator } from "../ui/separator";
+import { CardContentInforPrivacy } from "./PrivacyPageComponents/CardContentInforPrivacy";
 
 export function SectionPrivacyDesktop() {
   const sections = [
@@ -68,8 +69,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#privacy-policy"
                           onClick={() => handleClick("privacy-policy")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Política de Privacidade
                           <span>1</span>
@@ -84,8 +86,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#information-gathering"
                           onClick={() => handleClick("information-gathering")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Coleta de Informações
                           <span>2</span>
@@ -100,8 +103,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#use-of-cookies"
                           onClick={() => handleClick("use-of-cookies")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Uso de Cookies
                           <span>3</span>
@@ -116,8 +120,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#external-links"
                           onClick={() => handleClick("external-links")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Links Externos
                           <span>4</span>
@@ -132,8 +137,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#website-security"
                           onClick={() => handleClick("website-security")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Segurança do Site
                           <span>5</span>
@@ -148,8 +154,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#change-in-this-policy"
                           onClick={() => handleClick("change-in-this-policy")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Alteração Nesta Política
                           <span>6</span>
@@ -164,8 +171,9 @@ export function SectionPrivacyDesktop() {
                         }`}
                       >
                         <a
+                          href="#our-contact"
                           onClick={() => handleClick("our-contact")}
-                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium group-hover:text-white dark:group-hover:text-zinc-800"
+                          className="flex cursor-pointer items-center justify-between p-4 text-lg font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 group-hover:text-white dark:focus-visible:ring-cyan-400 dark:group-hover:text-zinc-800"
                         >
                           Nosso Contato
                           <span>7</span>
@@ -176,149 +184,53 @@ export function SectionPrivacyDesktop() {
                 </aside>
               </div>
               <section className="flex flex-col gap-6 lg:gap-10">
-                {/* TODOS OS SEUS ARTICLES ORIGINAIS */}
-                <article
-                  id="privacy-policy"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    1. Política de Privacidade
-                  </h3>
-                  <div>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-white">
-                      A sua privacidade é importante para nós. Esta Política de
-                      Privacidade explica como coletamos, usamos e protegemos as
-                      informações pessoais dos usuários que acessam nosso site e
-                      utilizam nossos serviços.
-                    </p>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="privacy-policy"
+                  textMainCard="1. Política de Privacidade"
+                  textDescriptionCard="A sua privacidade é importante para nós. Esta Política de Privacidade explica como coletamos, usamos e protegemos as informações pessoais dos usuários que acessam nosso site e utilizam nossos serviços."
+                />
 
-                <article
-                  id="information-gathering"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    2. Coleta de Informações
-                  </h3>
-                  <div>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-white">
-                      Nosso site não utiliza formulários e não armazena dados de
-                      visitantes. O contato é feito exclusivamente através de
-                      links externos, como: WhatsApp | Para atendimento e
-                      suporte. SGP | Central do Assinante, para acesso de
-                      clientes já cadastrados. Fast.com | Para teste de
-                      velocidade da internet. Qualquer dado eventualmente
-                      solicitado em plataformas externas segue a Política de
-                      Privacidade própria de cada serviço.
-                    </p>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="information-gathering"
+                  textMainCard="2. Coleta de Informações"
+                  textDescriptionCard="Nosso site não utiliza formulários e não armazena dados de visitantes. O contato é feito exclusivamente através de links externos, como: WhatsApp | Para atendimento e suporte. SGP | Central do Assinante, para acesso de clientes já cadastrados. Fast.com | Para teste de velocidade da internet. Qualquer dado eventualmente solicitado em plataformas externas segue a Política de Privacidade própria de cada serviço."
+                />
 
-                <article
-                  id="use-of-cookies"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    3. Uso de Cookies
-                  </h3>
-                  <div>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-white">
-                      Nosso site não utiliza cookies para rastrear ou
-                      identificar usuários.
-                    </p>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="use-of-cookies"
+                  textMainCard="3. Uso de Cookies"
+                  textDescriptionCard="Nosso site não utiliza cookies para rastrear ou identificar usuários."
+                />
 
-                <article
-                  id="external-links"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    4. Links Externos
-                  </h3>
-                  <div>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-white">
-                      Ao clicar em links externos (como WhatsApp, SGP ou
-                      Fast.com), você será direcionado para sites de terceiros,
-                      que possuem suas próprias políticas de privacidade e
-                      segurança. Recomendamos que leia as políticas de cada
-                      plataforma para entender como seus dados são tratados.
-                    </p>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="external-links"
+                  textMainCard="4. Links Externos"
+                  textDescriptionCard="Ao clicar em links externos como:(WhatsApp, SGP ou Fast.com), você será direcionado para sites de terceiros, que possuem suas próprias políticas de privacidade e segurança. Recomendamos que leia as políticas de cada plataforma para entender como seus dados são tratados."
+                />
 
-                <article
-                  id="website-security"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    5. Segurança do Site
-                  </h3>
-                  <div>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-white">
-                      Como não coletamos nem armazenamos informações pessoais em
-                      nosso site, não existe risco de exposição ou
-                      compartilhamento de dados por meio desta página.
-                    </p>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="website-security"
+                  textMainCard="5. Segurança do Site"
+                  textDescriptionCard="Como não coletamos nem armazenamos informações pessoais em nosso site, não existe risco de exposição ou compartilhamento de dados por meio desta página."
+                />
 
-                <article
-                  id="change-in-this-policy"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    6. Alterações nesta Política
-                  </h3>
-                  <div>
-                    <p className="mt-6 text-base text-zinc-600 dark:text-white">
-                      Podemos atualizar esta Política de Privacidade para
-                      refletir mudanças em nossos serviços. Sempre que isso
-                      ocorrer, a nova versão será publicada nesta página.
-                    </p>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="change-in-this-policy"
+                  textMainCard="6. Alterações nesta Política"
+                  textDescriptionCard="Podemos atualizar esta Política de Privacidade para refletir mudanças em nossos serviços. Sempre que isso ocorrer, a nova versão será publicada nesta página."
+                />
 
-                <article
-                  id="our-contact"
-                  className="w-full scroll-mt-24 rounded-lg border border-blue-700 bg-white p-12 dark:border-white dark:bg-zinc-800"
-                >
-                  <h3 className="text-2xl font-medium dark:text-white md:mb-8">
-                    7. Nosso Contato
-                  </h3>
-                  <div className="mt-6">
-                    <div>
-                      <p className="text-base text-zinc-600 dark:text-white">
-                        Se tiver dúvidas sobre esta Política de Privacidade,
-                        entre em contato pelos nossos canais de atendimento
-                        oficiais:
-                      </p>
-                      <div className="mt-3 flex flex-col gap-2">
-                        <span className="font-medium text-zinc-600 dark:text-white">
-                          E-mail:{" "}
-                          <a
-                            className="font-medium text-zinc-900 dark:text-cyan-400"
-                            href="mailto:evolutionnet221@gmail.com"
-                          >
-                            evolutionnet221@gmail.com
-                          </a>
-                        </span>
-                        <span className="font-medium text-zinc-600 dark:text-white">
-                          WhatsApp:{" "}
-                          <a
-                            className="font-medium text-zinc-900 dark:text-cyan-400"
-                            href="https://wa.me/5585997362750?text=Olá, estou com dúvidas sobre a Política de Privacidade."
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            (85) 9 9736-2750
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                <CardContentInforPrivacy
+                  textId="our-contact"
+                  textMainCard="7. Nosso Contato"
+                  textDescriptionCard="Se tiver dúvidas sobre esta Política de Privacidade, entre em contato pelos nossos canais de atendimento oficiais:"
+                  emailText="E-mail: "
+                  emailLink="mailto:evolutionnet221@gmail.com"
+                  emailAdress="evolutionnet221@gmail.com"
+                  whatsAppText="WhatsApp: "
+                  whatsAppLink="https://wa.me/5585997362750?text=Olá, estou com dúvidas sobre a Política de Privacidade."
+                  whatsAppNumber="(85) 9 9736-2750"
+                />
               </section>
             </div>
           </div>

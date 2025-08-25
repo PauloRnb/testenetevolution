@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import React, { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,8 +25,8 @@ export default function SwiperHome() {
   const nextRef = useRef<HTMLButtonElement | null>(null);
   return (
     <>
-      <div className="h-[503px] bg-blue-700">
-        <div className="container h-full">
+      <div className="bg-blue-700 md:h-[495px]">
+        <div className="container h-full px-5">
           <Swiper
             pagination={{
               clickable: true,
@@ -49,10 +51,106 @@ export default function SwiperHome() {
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
             className="mySwiper"
           >
-            <SwiperSlide className="bg-white">Slide 1</SwiperSlide>
-            <SwiperSlide className="bg-emerald-500">Slide 2</SwiperSlide>
-            <SwiperSlide className="bg-slate-600">Slide 3</SwiperSlide>
-            <SwiperSlide className="bg-amber-500">Slide 4</SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+              <div className="flex w-fit flex-col items-center justify-center md:items-start">
+                <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
+                  Super Oferta Paramount
+                </h1>
+                <Image
+                  src="/ofertaparamountslider-001.webp"
+                  alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
+                  width={400}
+                  height={182}
+                  priority
+                  sizes="(max-width: 400px) 100vw, 21rem"
+                />
+              </div>
+              <Image
+                src="/capathecrowgirlsliderparamount-001.webp"
+                alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
+                width={200}
+                height={300}
+                priority
+                sizes="(max-width: 293px) 100vw, 21rem"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+              <div className="flex w-fit flex-col items-center justify-center md:items-start">
+                <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
+                  Super Oferta Paramount
+                </h1>
+                <Image
+                  src="/ofertaparamountslider-001.webp"
+                  alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
+                  width={400}
+                  height={182}
+                  loading="lazy"
+                  sizes="(max-width: 400px) 100vw, 21rem"
+                />
+              </div>
+              <Image
+                src="/capathecrowgirlsliderparamount-001.webp"
+                alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
+                width={200}
+                height={300}
+                loading="lazy"
+                sizes="(max-width: 293px) 100vw, 21rem"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+              <div className="flex w-fit flex-col items-center justify-center md:items-start">
+                <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
+                  Super Oferta Paramount
+                </h1>
+                <Image
+                  src="/ofertaparamountslider-001.webp"
+                  alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
+                  width={400}
+                  height={182}
+                  loading="lazy"
+                  sizes="(max-width: 400px) 100vw, 21rem"
+                />
+              </div>
+              <Image
+                src="/capathecrowgirlsliderparamount-001.webp"
+                alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
+                width={200}
+                height={300}
+                loading="lazy"
+                sizes="(max-width: 293px) 100vw, 21rem"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+              <div className="flex w-fit flex-col items-center justify-center md:items-start">
+                <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
+                  Super Oferta Paramount
+                </h1>
+                <Image
+                  src="/ofertaparamountslider-001.webp"
+                  alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
+                  width={400}
+                  height={182}
+                  loading="lazy"
+                  sizes="(max-width: 400px) 100vw, 21rem"
+                />
+              </div>
+              <Image
+                src="/capathecrowgirlsliderparamount-001.webp"
+                alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
+                width={200}
+                height={300}
+                loading="lazy"
+                sizes="(max-width: 293px) 100vw, 21rem"
+              />
+            </SwiperSlide>
             {/* Botões customizados */}
             <button
               aria-label="Slider anterior"
