@@ -49,7 +49,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     2. Coleta de Informações
                   </AccordionTrigger>
-                  <AccordionContent className="flex w-full flex-col gap-4 text-balance pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex w-full flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Nosso site não utiliza formulários e não armazena dados de
@@ -71,7 +71,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     3. Uso de Cookies
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Nosso site não utiliza cookies para rastrear ou
@@ -87,7 +87,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     4. Links Externos
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Ao clicar em links externos (como WhatsApp, SGP ou
@@ -106,7 +106,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     5. Segurança do Site
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Como não coletamos nem armazenamos informações pessoais em
@@ -123,7 +123,7 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     6. Alterações nesta Política
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
                       Podemos atualizar esta Política de Privacidade para
@@ -140,12 +140,11 @@ export function SectionPrivacyMobile() {
                   <AccordionTrigger className="p-4 text-lg font-semibold text-zinc-600">
                     7. Nosso Contato
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance pb-4 font-medium text-zinc-600 dark:text-zinc-300">
+                  <AccordionContent className="flex flex-col gap-4 text-balance px-4 pb-4 font-medium text-zinc-600 dark:text-zinc-300">
                     <Separator className="rounded-full bg-zinc-400" />
                     <p className="text-zinc-600 dark:text-zinc-300">
-                      Podemos atualizar esta Política de Privacidade para
-                      refletir mudanças em nossos serviços. Sempre que isso
-                      ocorrer, a nova versão será publicada nesta página.
+                      Se tiver dúvidas sobre esta Política de Privacidade, entre
+                      em contato pelos nossos canais de atendimento oficiais:
                     </p>
                     <div className="mt-3 flex flex-col gap-2">
                       <span className="font-medium text-zinc-600 dark:text-white">
