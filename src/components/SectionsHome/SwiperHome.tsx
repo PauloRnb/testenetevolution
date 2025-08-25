@@ -69,10 +69,10 @@ export default function SwiperHome() {
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
-                width={320} // largura máxima que você quer exibir
-                height={480} // mantém proporção
-                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                width={256} // maior largura que a imagem realmente aparece
+                height={384} // mantém proporção
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
                 priority
               />
             </SwiperSlide>
@@ -87,18 +87,18 @@ export default function SwiperHome() {
                   width={448} // maior tamanho exibido (28rem ≈ 448px)
                   height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  loading="lazy"
+                  priority
                   sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
-                width={320} // largura máxima que você quer exibir
-                height={480} // mantém proporção
-                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                width={256} // maior largura que a imagem realmente aparece
+                height={384} // mantém proporção
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                loading="lazy"
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                priority
               />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
@@ -112,18 +112,18 @@ export default function SwiperHome() {
                   width={448} // maior tamanho exibido (28rem ≈ 448px)
                   height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  loading="lazy"
+                  priority
                   sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
-                width={320} // largura máxima que você quer exibir
-                height={480} // mantém proporção
-                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                width={256} // maior largura que a imagem realmente aparece
+                height={384} // mantém proporção
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                loading="lazy"
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                priority
               />
             </SwiperSlide>
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
@@ -137,18 +137,18 @@ export default function SwiperHome() {
                   width={448} // maior tamanho exibido (28rem ≈ 448px)
                   height={204} // mantém proporção (182 / 400 * 448 ≈ 204)
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
-                  loading="lazy"
+                  priority
                   sizes="(max-width: 640px) 16rem, (max-width: 1024px) 21rem, 28rem"
                 />
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
                 alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
-                width={320} // largura máxima que você quer exibir
-                height={480} // mantém proporção
-                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                width={256} // maior largura que a imagem realmente aparece
+                height={384} // mantém proporção
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
-                loading="lazy"
+                sizes="(max-width: 640px) 10rem, (max-width: 1024px) 14rem, 16rem"
+                priority
               />
             </SwiperSlide>
             {/* Botões customizados */}
