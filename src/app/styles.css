@@ -1,40 +1,27 @@
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-/* todos invisíveis por padrão */
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
+/* Todos invisíveis por padrão apenas no SwiperHome */
+.mySwiperHome .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0 !important;
   pointer-events: none;
   transition: opacity 0.5s ease-in-out;
-  position: relative;
+  position: relative; /* manter relativo para não sumir */
   z-index: 0;
 }
 
-/* garante visibilidade no carregamento inicial */
-.swiper-slide:first-child {
-  opacity: 1 !important;
-  pointer-events: auto;
-  z-index: 1;
-}
-
-/* apenas o slide ativo pode aparecer */
-.swiper-slide:not(.swiper-slide-active) {
-  opacity: 0 !important;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.swiper-slide.swiper-slide-active {
+/* Apenas o slide ativo é visível */
+.mySwiperHome .swiper-slide.swiper-slide-active {
   opacity: 1 !important;
   pointer-events: auto;
   z-index: 2;
+}
+
+/* prev/next e clones ficam invisíveis atrás do ativo */
+.mySwiperHome .swiper-slide.swiper-slide-prev,
+.mySwiperHome .swiper-slide.swiper-slide-next {
+  opacity: 0 !important;
+  z-index: 1;
 }
 
 /* Pagination Pattern */

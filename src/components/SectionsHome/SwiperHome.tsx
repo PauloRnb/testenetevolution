@@ -49,9 +49,9 @@ export default function SwiperHome() {
               }
             }}
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
-            className="mySwiper"
+            className="mySwiperHome"
           >
-            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-14 md:flex-row md:!justify-around">
+            <SwiperSlide className="!flex w-full !flex-col items-center justify-center gap-8 py-14 md:!flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
                   Super Oferta Paramount
@@ -76,7 +76,7 @@ export default function SwiperHome() {
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
-            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+            <SwiperSlide className="!flex w-full !flex-col items-center justify-center gap-8 py-14 md:!flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
                   Super Oferta HBO Max
@@ -101,7 +101,7 @@ export default function SwiperHome() {
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
-            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+            <SwiperSlide className="!flex w-full !flex-col items-center justify-center gap-8 py-14 md:!flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
                   Super Oferta Telecine
@@ -126,7 +126,7 @@ export default function SwiperHome() {
                 sizes="(max-width: 293px) 100vw, 21rem"
               />
             </SwiperSlide>
-            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+            <SwiperSlide className="!flex w-full !flex-col items-center justify-center gap-8 py-14 md:!flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
                   Super Oferta Premiere
