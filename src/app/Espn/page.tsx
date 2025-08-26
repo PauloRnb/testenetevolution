@@ -1,4 +1,4 @@
-import { SectionContentEspn } from "@/components/SectionEspn/SectionContentEspn";
+import { SectionContentEspn } from "@/components/PageEspn/SectionContentEspn";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

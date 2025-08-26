@@ -1,4 +1,4 @@
-import { SectionContentSportv } from "@/components/SectionSportv/SectionContentSportv";
+import { SectionContentSportv } from "@/components/PageSportv/SectionContentSportv";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

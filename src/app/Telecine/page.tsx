@@ -1,4 +1,4 @@
-import { SectionContentTelecine } from "@/components/SectionTelecine/SectionContentTelecine";
+import { SectionContentTelecine } from "@/components/PageTelecine/SectionContentTelecine";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

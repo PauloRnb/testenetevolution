@@ -1,5 +1,5 @@
-import { SectionContent } from "@/components/SectionsHome/SectionContent";
-import SwiperHome from "@/components/SectionsHome/SwiperHome";
+import { SectionContent } from "@/components/PageHome/SectionContent";
+import SwiperHome from "@/components/PageHome/SwiperHome";
 
 import "@radix-ui/themes/styles.css";
 

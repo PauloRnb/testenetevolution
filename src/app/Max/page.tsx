@@ -1,4 +1,4 @@
-import { SectionContentMax } from "@/components/SectionMax/SectionContentMax";
+import { SectionContentMax } from "@/components/PageMax/SectionContentMax";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

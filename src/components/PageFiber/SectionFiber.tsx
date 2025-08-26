@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Globe, CirclePercent, Airplay, Headset } from "lucide-react";
 import { TitlePages } from "../TitlePages/TitlesPages";
 import { CardBenefits } from "./FiberPageComponents/CardBenefits";
-import NormalSwiperPlans from "../SectionsHome/NormalSwiperPlans";
+import NormalSwiperPlans from "../PageHome/NormalSwiperPlans";
 
 export function SectionFiber() {
   return (

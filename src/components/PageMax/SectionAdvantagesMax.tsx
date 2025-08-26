@@ -1,6 +1,6 @@
 "use client";
 
-import { CardAdvantages } from "../SectionTelecine/TelecinePageComponets/CardAdvantages";
+import { CardAdvantages } from "../PageTelecine/TelecinePageComponets/CardAdvantages";
 import { TitlePages } from "../TitlePages/TitlesPages";
 import {
   GalleryVerticalEnd,

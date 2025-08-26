@@ -1,4 +1,4 @@
-import { SectionCompanies } from "@/components/SectionCompanies/SectionCompanies";
+import { SectionCompanies } from "@/components/PageCompanies/SectionCompanies";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

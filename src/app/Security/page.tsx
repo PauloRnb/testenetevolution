@@ -1,11 +1,17 @@
-import { SectionCompanies } from "@/components/SectionCompanies/SectionCompanies";
+import { SectionContentSecurity } from "@/components/PageSecurity/SectionContentSecurity";
 import "@radix-ui/themes/styles.css";
 
-export default function Security() {
+export const metadata = {
+  title: "Segurança | Net Evolution",
+  description:
+    "Internet 100% fibra Net Evolution: conexão confiável e rápida para streaming, jogos e home office com atendimento especializado.",
+};
+
+export default function Privacy() {
   return (
     <div className="z-[1] min-w-[375px] flex-1">
       <main className="min-w-[375px]">
-        <SectionCompanies />
+        <SectionContentSecurity />
       </main>
     </div>
   );

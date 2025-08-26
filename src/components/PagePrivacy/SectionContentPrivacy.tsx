@@ -1,6 +1,6 @@
 "use cliente";
 
-import { SelfService } from "../SectionsHome/SelfService";
+import { SelfService } from "../PageHome/SelfService";
 import { SectionPrivacy } from "./SectionPrivacy";
 
 export function SectionContentPrivacy() {

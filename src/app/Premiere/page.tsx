@@ -1,4 +1,4 @@
-import { SectionContentPremiere } from "@/components/SectionPremiere/SectionContentPremiere";
+import { SectionContentPremiere } from "@/components/PagePremiere/SectionContentPremiere";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

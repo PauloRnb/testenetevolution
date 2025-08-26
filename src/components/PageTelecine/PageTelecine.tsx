@@ -4,7 +4,7 @@ import { TitlePages } from "../TitlePages/TitlesPages";
 import { SectionAdvantages } from "./SectionAdvantages";
 import { SectionPlansTelecine } from "./SectionPlansTelecine";
 import Image from "next/image";
-import { CardBannersStreaming } from "../SectionParamount/ParamountPageComponents/CardBannersStreaming";
+import { CardBannersStreaming } from "../PageParamount/ParamountPageComponents/CardBannersStreaming";
 
 export function PageTelecine() {
   const banners = [

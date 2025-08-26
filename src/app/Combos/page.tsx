@@ -1,4 +1,4 @@
-import { SectionContentCombos } from "@/components/SectionsCombos/SectionContentCombos";
+import { SectionContentCombos } from "@/components/PageCombos/SectionContentCombos";
 
 import "@radix-ui/themes/styles.css";
 

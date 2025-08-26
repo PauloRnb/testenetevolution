@@ -2,35 +2,34 @@
 
 import { TitlePages } from "../TitlePages/TitlesPages";
 import Image from "next/image";
-import { CardBannersStreaming } from "../SectionParamount/ParamountPageComponents/CardBannersStreaming";
+import { CardBannersStreaming } from "../PageParamount/ParamountPageComponents/CardBannersStreaming";
 import { SectionAdvantagesPremiere } from "./SectionAdvantagesPremiere";
-import { SectionPlansSportv } from "./SectionPlansSportv";
+import { SectionPlansPremiere } from "./SectionPlansPremiere";
 
 const bannersStreaming = [
   {
-    imageBanner: "/sportssportv.webp",
-    altImage:
-      "Banner SuperLiga Feminina de Volei e Stock Car Automobilismo. | SporTV",
-    titleMain: "Competições",
-    descriptionTitle:
+    imageBanner: "/brasileiraopremiere.webp",
+    altImage: "Banner Brasileirão | Premiere",
+    titleMain: "Brasileirão A e B",
+    descriptionTtitle:
       "Acompanhe todos os jogos do Brasileirão Série A e B ao vivo.",
   },
   {
-    imageBanner: "/trocadepassessportv.webp",
-    altImage: "Banner Programa Troca de Passes. | SporTV",
-    titleMain: "Troca de Passes",
-    descriptionTitle: "A Copa do Brasil é ainda mais emocionante no Premiere.",
+    imageBanner: "/copadobrimage.webp",
+    altImage: "Banner Copa Betano do Brasil.",
+    titleMain: "Copa do Brasil",
+    descriptionTtitle: "A Copa do Brasil é ainda mais emocionante no Premiere.",
   },
   {
-    imageBanner: "/sportvnewssportv.webp",
-    altImage: "Banner Programa SporTV News. | SporTV",
-    titleMain: "SporTV News",
-    descriptionTitle:
+    imageBanner: "/copinhasicredipremiere.webp",
+    altImage: "Banner Copinha Sicredi.",
+    titleMain: "Copinha Sicredi",
+    descriptionTtitle:
       "Futebol de base com cobertura completa para os verdadeiros apaixonados.",
   },
 ];
 
-export function PageSportv() {
+export function PagePremiere() {
   return (
     <>
       {/* Section Banner */}
@@ -40,49 +39,53 @@ export function PageSportv() {
             <div className="flex flex-col gap-y-8 px-5 pt-12 md:px-0 md:pt-0">
               <div className="flex flex-col items-center justify-center gap-y-3 md:items-start md:justify-start md:gap-2">
                 <Image
-                  src="/logosportvfull.webp"
-                  alt="Logo do SporTV"
+                  src="/logopremierefull.webp"
+                  alt="Logo do Telecine"
                   width={208}
                   height={48}
                   priority
+                  placeholder="blur"
+                  blurDataURL="/logopremierefull.webp"
                 />
                 <p className="text-center text-base font-medium text-white md:text-left md:text-lg 32lg:text-2xl">
-                  Muito além do futebol, o SporTV traz vôlei, basquete, lutas e
-                  diversas modalidades com transmissões exclusivas e
-                  comentaristas especializados.
+                  Acompanhe todos os jogos do Brasileirão e outros campeonatos
+                  no Premiere. Transmissão em alta definição para você não
+                  perder nenhum lance, onde e quando quiser.
                 </p>
               </div>
               <div className="flex items-center justify-center gap-4 md:justify-start">
                 <Image
                   src="/logowhite.svg"
-                  alt="Logo White"
+                  alt="Logo do Telecine"
                   width={208}
                   height={48}
                   priority
+                  placeholder="blur"
+                  blurDataURL="/logowhite.svg"
                 />
               </div>
             </div>
 
-            {/* Imagens responsivas */}
+            {/* Banner Responsivo */}
             <Image
-              src="/sportvpagesmobilessmall.webp"
-              alt="Banner mobile SporTV"
+              src="/premierepagesmobilessmall.webp"
+              alt="Banner filme Emilia Pérez | Telecine"
               width={748}
               height={321}
               priority
               className="block w-full rounded-t-2xl md:hidden"
             />
             <Image
-              src="/sportvpagestablet.webp"
-              alt="Banner tablet SporTV"
+              src="/premierepagestablet.webp"
+              alt="Banner filme Emilia Pérez | Telecine"
               width={436}
               height={343}
               priority
               className="hidden md:block xl:hidden"
             />
             <Image
-              src="/sportvpagestablet.webp"
-              alt="Banner desktop SporTV"
+              src="/premierepagestablet.webp"
+              alt="Banner filme Emilia Pérez | Telecine"
               width={401}
               height={315}
               priority
@@ -92,8 +95,8 @@ export function PageSportv() {
         </div>
       </section>
 
-      {/* Section Cards Plans SporTV */}
-      <SectionPlansSportv />
+      {/* Section Cards Plans Telecine */}
+      <SectionPlansPremiere />
 
       {/* Section Cards Advantages */}
       <SectionAdvantagesPremiere />
@@ -103,22 +106,20 @@ export function PageSportv() {
         <div className="container px-5 xl:px-0">
           <TitlePages
             titleMain="Aproveite os melhores conteúdos"
-            descriptionTitle="Desfrute de transmissões ao vivo, programas especiais e os destaques do esporte nacional e internacional tudo com qualidade."
+            descriptionTitle="Aqui você aproveita histórias emocionantes, aventuras épicas e muito entretenimento para maratonar quando quiser."
             align="left"
           />
 
-          <div className="pt-16">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-              {bannersStreaming.map((banner, idx) => (
-                <CardBannersStreaming
-                  key={idx}
-                  imageBanner={banner.imageBanner}
-                  altImage={banner.altImage}
-                  titleMain={banner.titleMain}
-                  descriptionTtitle={banner.descriptionTitle}
-                />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 gap-5 pt-16 md:grid-cols-3">
+            {bannersStreaming.map((banner, index) => (
+              <CardBannersStreaming
+                key={index}
+                imageBanner={banner.imageBanner}
+                altImage={banner.altImage}
+                titleMain={banner.titleMain}
+                descriptionTtitle={banner.descriptionTtitle}
+              />
+            ))}
           </div>
         </div>
       </section>

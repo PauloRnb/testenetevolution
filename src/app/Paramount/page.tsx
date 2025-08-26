@@ -1,4 +1,4 @@
-import { SectionContentParamount } from "@/components/SectionParamount/SectionContentParamount";
+import { SectionContentParamount } from "@/components/PageParamount/SectionContentParamount";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {

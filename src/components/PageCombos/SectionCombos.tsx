@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { TitlePages } from "../TitlePages/TitlesPages";
-import AppsSwiperPlans from "../SectionsHome/AppsSwiperPlans";
+import AppsSwiperPlans from "../PageHome/AppsSwiperPlans";
 import AppsSwiperStreaming from "./AppSwiperStreaming";
 
 const bannerImages = [

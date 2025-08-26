@@ -1,4 +1,4 @@
-import { SectionContentFiber } from "@/components/SectionsFiber/SectionContentFiber";
+import { SectionContentFiber } from "@/components/PageFiber/SectionContentFiber";
 
 import "@radix-ui/themes/styles.css";
 

@@ -2,7 +2,7 @@
 
 import { TitlePages } from "../TitlePages/TitlesPages";
 import Image from "next/image";
-import { CardBannersStreaming } from "../SectionParamount/ParamountPageComponents/CardBannersStreaming";
+import { CardBannersStreaming } from "../PageParamount/ParamountPageComponents/CardBannersStreaming";
 import { SectionAdvantagesEspn } from "./SectionAdvantagesEspn";
 import { SectionPlansEspn } from "./SectionPlansEspn";
 
