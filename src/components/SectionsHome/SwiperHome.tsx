@@ -51,7 +51,7 @@ export default function SwiperHome() {
             modules={[Navigation, Pagination, EffectFade, Autoplay]}
             className="mySwiper"
           >
-            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
+            <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-14 md:flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
                   Super Oferta Paramount
@@ -68,7 +68,7 @@ export default function SwiperHome() {
               </div>
               <Image
                 src="/capathecrowgirlsliderparamount-001.webp"
-                alt="Capa da Série The Crow Girl | 500 MEGA Por R$99,99 Mensal."
+                alt="Capa da Série Paramount Plus | The Crow Girl."
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
@@ -79,7 +79,7 @@ export default function SwiperHome() {
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
-                  Super Oferta Paramount
+                  Super Oferta HBO Max
                 </h1>
                 <Image
                   src="/ofertaparamountslider-001.webp"
@@ -92,8 +92,8 @@ export default function SwiperHome() {
                 />
               </div>
               <Image
-                src="/capathecrowgirlsliderparamount-001.webp"
-                alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                src="/capapacificadorhbomaxslider-003.webp"
+                alt="Capa Série HBO Max | Pacificador"
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
@@ -104,11 +104,11 @@ export default function SwiperHome() {
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
-                  Super Oferta Paramount
+                  Super Oferta Telecine
                 </h1>
                 <Image
                   src="/ofertaparamountslider-001.webp"
-                  alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  alt="Oferta Telecine | 500 MEGA Por R$99,99 Mensal."
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
                   width={440}
                   height={293}
@@ -117,8 +117,8 @@ export default function SwiperHome() {
                 />
               </div>
               <Image
-                src="/capathecrowgirlsliderparamount-001.webp"
-                alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                src="/capapetsemacaotelecineslider-002.webp"
+                alt="Capa Filme Telecine | Pets Em Ação"
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
@@ -129,11 +129,11 @@ export default function SwiperHome() {
             <SwiperSlide className="flex flex-col items-center justify-center gap-8 py-10 md:flex-row md:!justify-around">
               <div className="flex w-fit flex-col items-center justify-center md:items-start">
                 <h1 className="text-3xl font-semibold text-white md:text-left md:text-4xl">
-                  Super Oferta Paramount
+                  Super Oferta Premiere
                 </h1>
                 <Image
                   src="/ofertaparamountslider-001.webp"
-                  alt="Oferta Paramount | 500 MEGA Por R$99,99 Mensal."
+                  alt="Oferta Premiere | 500 MEGA Por R$99,99 Mensal."
                   className="mt-6 w-[16rem] sm:w-[21rem] 32md:w-[28rem]"
                   width={440}
                   height={293}
@@ -142,8 +142,8 @@ export default function SwiperHome() {
                 />
               </div>
               <Image
-                src="/capathecrowgirlsliderparamount-001.webp"
-                alt="Capa da Série The Crow Girl | 500 MEGA Por R$99,99 Mensal."
+                src="/capabrasileiraopremiereslider-004.webp"
+                alt="Capa do Brasileirão 2025 | Premiere "
                 className="w-[10rem] sm:w-[14rem] 32md:w-[16rem]"
                 width={200}
                 height={300}
