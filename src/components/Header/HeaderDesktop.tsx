@@ -331,7 +331,7 @@ export default function HeaderDesktop() {
                         href="https://play.google.com/store/apps/details?id=br.net.tsmx.meuappprovedor&hl=pt-Br"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex h-11 w-[14.5rem] items-center justify-center gap-1 rounded-md bg-blue-700 px-2 py-2 font-semibold text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
+                        className="flex h-11 w-[14.5rem] items-center justify-center gap-1 rounded bg-blue-700 px-2 py-2 font-semibold text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
                       >
                         <span className="text-base">
                           Download Via Google Play
@@ -343,7 +343,7 @@ export default function HeaderDesktop() {
                         href="https://play.google.com/store/apps/details?id=br.net.tsmx.meuappprovedor&hl=pt-Br"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex h-11 w-[14.5rem] items-center justify-center gap-1 rounded-md bg-blue-700 px-2 py-2 font-semibold text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
+                        className="flex h-11 w-[14.5rem] items-center justify-center gap-1 rounded bg-blue-700 px-2 py-2 font-semibold text-white transition-colors duration-200 hover:bg-blue-500 focus:outline-none focus-visible:bg-blue-500 dark:bg-cyan-400 dark:text-zinc-800 dark:hover:bg-cyan-500 dark:focus-visible:bg-cyan-500"
                       >
                         <span className="text-base">
                           Download Via App Store
@@ -361,7 +361,7 @@ export default function HeaderDesktop() {
                       href="https://netevolution.sgp.tsmx.com.br/accounts/central/login/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="dark: flex h-11 w-[14.5rem] items-center justify-center rounded-md border-2 border-blue-700 bg-transparent px-2 py-2 text-base font-semibold text-blue-700 transition-colors duration-200 hover:bg-blue-700 hover:text-white focus:outline-none focus-visible:bg-blue-700 focus-visible:text-white dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-cyan-400 dark:hover:text-zinc-800 dark:focus-visible:bg-cyan-400 dark:focus-visible:text-zinc-800"
+                      className="dark: flex h-11 w-[14.5rem] items-center justify-center rounded border-2 border-blue-700 bg-transparent px-2 py-2 text-base font-semibold text-blue-700 transition-colors duration-200 hover:bg-blue-700 hover:text-white focus:outline-none focus-visible:bg-blue-700 focus-visible:text-white dark:border-cyan-400 dark:text-cyan-400 dark:hover:bg-cyan-400 dark:hover:text-zinc-800 dark:focus-visible:bg-cyan-400 dark:focus-visible:text-zinc-800"
                     >
                       Central do Assinante
                     </a>

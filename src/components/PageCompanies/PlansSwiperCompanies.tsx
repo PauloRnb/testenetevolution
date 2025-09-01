@@ -188,11 +188,11 @@ export default function PlansSwiperCompanies() {
                   <Card.Mtop>
                     <Card.Items text="PLANO MASTER" className="text-blue-700" />
                     <Card.ModalTwo
-                      textMbOne="800"
+                      textMbOne="800MEGA"
                       textMbTwo="Download 800Mbps"
                       textMbThree="Upload 400Mbps"
                       textPriceOne="de 139,99"
-                      textPriceTwo="134,99"
+                      textPriceTwo="134"
                     >
                       <Card.ModalBox>
                         <Card.ModalCombos
@@ -216,7 +216,7 @@ export default function PlansSwiperCompanies() {
                     <Card.Includes>
                       <Card.Rede className="bg-blue-700" />
                     </Card.Includes>
-                    <Card.Price text="134,99" />
+                    <Card.Price text="134" />
                   </Card.Infor>
                 </Card.Content>
                 <Card.BtnCombos

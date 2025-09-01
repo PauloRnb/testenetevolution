@@ -22,7 +22,7 @@ export function CardBenefits({ icon, title, description }: CardBenefitsProps) {
       <p className="ml-11 text-sm font-medium text-zinc-600 group-hover:text-white dark:text-zinc-300 dark:group-hover:text-cyan-400 md:text-base">
         {description}
       </p>
-      <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-lg bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
+      <div className="absolute left-0 top-[16px] h-9 w-[4px] rounded-r-full bg-blue-700 group-hover:bg-white dark:bg-white dark:group-hover:bg-cyan-400"></div>
     </div>
   );
 }

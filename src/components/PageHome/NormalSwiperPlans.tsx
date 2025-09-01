@@ -192,7 +192,7 @@ export default function NormalSwiperPlans() {
                       textMbTwo="Download 700Mbps"
                       textMbThree="Upload 350Mbps"
                       textPriceOne="de 124,99"
-                      textPriceTwo="116,99"
+                      textPriceTwo="116"
                     >
                       <Card.ModalBox>
                         <Card.ModalCombos
@@ -216,7 +216,7 @@ export default function NormalSwiperPlans() {
                     <Card.Includes>
                       <Card.Rede className="bg-blue-700" />
                     </Card.Includes>
-                    <Card.Price text="116,99" />
+                    <Card.Price text="116" />
                   </Card.Infor>
                 </Card.Content>
                 <Card.BtnCombos

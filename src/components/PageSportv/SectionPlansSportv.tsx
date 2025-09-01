@@ -57,7 +57,7 @@ export function SectionPlansSportv() {
                           INCLUSO NO PLANO:
                         </span>
                         <Card.Combo>
-                          <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                          <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                             <Image
                               src="/logosportv.webp"
                               alt="Logo do SporTV"
@@ -92,7 +92,7 @@ export function SectionPlansSportv() {
                   <Separator className="h-[2px] rounded-full bg-zinc-300" />
                   <Card.Includes>
                     <Card.Combo>
-                      <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded-sm">
+                      <div className="flex h-[1.875rem] w-[1.875rem] items-center justify-center overflow-hidden rounded">
                         <Image
                           src="/logosportv.webp"
                           alt="Logo do SporTV"

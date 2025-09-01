@@ -1,4 +1,4 @@
-import { SectionContentSecurity } from "@/components/PageSecurity/SectionContentSecurity";
+import { SectionContentPrivacy } from "@/components/PagePrivacy/SectionContentPrivacy";
 import "@radix-ui/themes/styles.css";
 
 export const metadata = {
@@ -11,7 +11,7 @@ export default function Privacy() {
   return (
     <div className="z-[1] min-w-[375px] flex-1">
       <main className="min-w-[375px]">
-        <SectionContentSecurity />
+        <SectionContentPrivacy />
       </main>
     </div>
   );

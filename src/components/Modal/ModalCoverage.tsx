@@ -51,7 +51,7 @@ export function ModalCoverage() {
             <DialogClose asChild>
               <button
                 type="button"
-                className="rounded-xs absolute right-4 top-4 text-zinc-600 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:text-zinc-800 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground dark:text-white dark:focus-visible:text-cyan-400 [&_svg:not([class*='size-'])]:size-7 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+                className="absolute right-4 top-4 rounded text-zinc-600 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus-visible:text-zinc-800 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground dark:text-white dark:focus-visible:text-cyan-400 [&_svg:not([class*='size-'])]:size-7 [&_svg]:pointer-events-none [&_svg]:shrink-0"
               >
                 <CircleX size={28} />
               </button>

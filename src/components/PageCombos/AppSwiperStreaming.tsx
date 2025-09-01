@@ -108,7 +108,7 @@ export default function AppsSwiperStreaming() {
                 altImageStraming="Logo do SporTV"
                 titleMain="SporTV"
                 descriptionTitle="Assista aos principais campeonatos e programas esportivos."
-                linkStreaming="/Esportv"
+                linkStreaming="/Sportv"
                 linkText="SABER MAIS"
                 bgImageDiv="bg-blue-950"
               />

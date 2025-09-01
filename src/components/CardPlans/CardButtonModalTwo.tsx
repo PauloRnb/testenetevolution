@@ -74,7 +74,7 @@ export function CardButtonModalTwo({
                 100% FIBRA ÓPTICA
               </p>
             </div>
-            <Separator className="h-[3px] !w-10 rounded-full bg-blue-700" />
+            <Separator className="!h-[3px] !w-10 rounded-full bg-blue-700" />
           </div>
           <div>
             <ul className="grid grid-cols-1 gap-y-1 px-5">
